@@ -1,48 +1,21 @@
 [gd_scene load_steps=5 format=3 uid="uid://dc48lkekxqu2l"]
 
 [ext_resource type="Texture2D" uid="uid://dxiid5fb4k47q" path="res://icon.svg" id="1_eod6t"]
-[ext_resource type="Script" path="res://blackJack.gd" id="2_8jdnp"]
-[ext_resource type="Script" path="res://hit_button.gd" id="2_vigfh"]
-[ext_resource type="Script" path="res://stand_button.gd" id="3_t1axo"]
+[ext_resource type="Script" path="res://black_jack_dealer.gd" id="4_34ld6"]
+[ext_resource type="Script" path="res://card.gd" id="4_fq4gf"]
+[ext_resource type="Script" path="res://gambler.gd" id="6_k5wo8"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(128, 115)
+[node name="Card" type="Node2D" parent="."]
+position = Vector2(160, 321)
+script = ExtResource("4_fq4gf")
+
+[node name="CardFace" type="Sprite2D" parent="Card"]
 texture = ExtResource("1_eod6t")
 
-[node name="ScoreLabel" type="Label" parent="."]
-offset_left = 464.0
-offset_top = 144.0
-offset_right = 599.0
-offset_bottom = 167.0
-text = "Gamble Amount: "
+[node name="Gambler" type="Node" parent="."]
+script = ExtResource("6_k5wo8")
 
-[node name="HandLabel" type="Label" parent="."]
-offset_left = 461.0
-offset_top = 260.0
-offset_right = 616.0
-offset_bottom = 283.0
-text = "Your hand contains:"
-
-[node name="HitButton" type="Button" parent="."]
-offset_left = 382.0
-offset_top = 398.0
-offset_right = 455.0
-offset_bottom = 429.0
-text = "Hit"
-script = ExtResource("2_vigfh")
-
-[node name="StandButton" type="Button" parent="."]
-offset_left = 615.0
-offset_top = 398.0
-offset_right = 660.0
-offset_bottom = 429.0
-text = "Stand"
-script = ExtResource("3_t1axo")
-
-[node name="BlackJackMaster" type="Node2D" parent="."]
-script = ExtResource("2_8jdnp")
-
-[connection signal="pressed" from="HitButton" to="HitButton" method="_on_pressed"]
-[connection signal="pressed" from="StandButton" to="StandButton" method="_on_pressed"]
+[node name="BlackJackDealer" type="Node" parent="."]
+script = ExtResource("4_34ld6")
