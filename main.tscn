@@ -19,3 +19,20 @@ script = ExtResource("6_k5wo8")
 
 [node name="BlackJackDealer" type="Node" parent="."]
 script = ExtResource("4_34ld6")
+
+[node name="Player" type="Node" parent="."]
+
+[node name="Gambler" type="Node" parent="Player"]
+script = ExtResource("6_k5wo8")
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 38.0
+offset_top = 30.0
+offset_right = 139.0
+offset_bottom = 61.0
+text = "Start Round"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[connection signal="pressed" from="StartButton" to="BlackJackDealer" method="_on_start_button_pressed"]

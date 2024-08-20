@@ -1,7 +1,7 @@
 class_name Gambler extends Node
 
 var hand = []
-var isPlayer = false
+var isPlayer = false #Denotes that this gambler is being controlled by the player. Or the opposite.
 
 	#Adds a random card to hand using the randCard() func from the Card Class.
 func getCard():
@@ -9,8 +9,13 @@ func getCard():
 	newCard.randCard()
 	hand.push_front(newCard)
 	
+	#Remove all cards from gambler's hand.
 func clearHand():
 	hand.clear()
+	
+	#Return an array of cards. The gambler's hand.
+func getHand():
+	return hand
 	
 	#Debug Stuff
 func readHand():

@@ -2,6 +2,7 @@ class_name Card extends Node2D
 
 var suit = ""
 var value = 0
+var cardImage = Sprite2D.new()
 
 func setCard(newSuit, newValue):
 	suit = newSuit
@@ -25,7 +26,11 @@ func randCard():
 		value = 10
 	else:
 		value = cardType
+	add_child(cardImage)
+	updateCardFace()
 	
+func updateCardFace():
+	cardImage.texture = load("res://icon.svg")
 	
 func getValue():
 	return value
