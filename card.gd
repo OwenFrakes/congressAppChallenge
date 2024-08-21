@@ -1,14 +1,19 @@
-class_name Card extends Node2D
+class_name Card extends Sprite2D
 
 var suit = ""
 var value = 0
-var cardImage = Sprite2D.new()
+var faceUp = false
 
 func setCard(newSuit, newValue):
 	suit = newSuit
 	value = newValue
 	
-func randCard():
+func randCard(newFaceUp: bool = false):
+	if(newFaceUp):
+		faceUp = true
+	else:
+		faceUp = false
+	
 	var suitNum = randi_range(1,4)
 	match(suitNum):
 		1:
@@ -26,11 +31,13 @@ func randCard():
 		value = 10
 	else:
 		value = cardType
-	add_child(cardImage)
 	updateCardFace()
 	
 func updateCardFace():
-	cardImage.texture = load("res://icon.svg")
+	if(faceUp):
+		texture = load("res://TestSpadeAce.png")
+	else :
+		texture = load("res://TestSpadeBack.png")
 	
 func getValue():
 	return value

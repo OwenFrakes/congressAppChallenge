@@ -4,9 +4,10 @@ var hand = []
 var isPlayer = false #Denotes that this gambler is being controlled by the player. Or the opposite.
 
 	#Adds a random card to hand using the randCard() func from the Card Class.
-func getCard():
+func getCard(faceUp: bool = false):
 	var newCard = Card.new()
-	newCard.randCard()
+	newCard.randCard(faceUp)
+	add_child(newCard)
 	hand.push_front(newCard)
 	
 	#Remove all cards from gambler's hand.

@@ -1,21 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dc48lkekxqu2l"]
+[gd_scene load_steps=3 format=3 uid="uid://dc48lkekxqu2l"]
 
-[ext_resource type="Texture2D" uid="uid://dxiid5fb4k47q" path="res://icon.svg" id="1_eod6t"]
 [ext_resource type="Script" path="res://black_jack_dealer.gd" id="4_34ld6"]
-[ext_resource type="Script" path="res://card.gd" id="4_fq4gf"]
 [ext_resource type="Script" path="res://gambler.gd" id="6_k5wo8"]
 
 [node name="Node2D" type="Node2D"]
-
-[node name="Card" type="Node2D" parent="."]
-position = Vector2(160, 321)
-script = ExtResource("4_fq4gf")
-
-[node name="CardFace" type="Sprite2D" parent="Card"]
-texture = ExtResource("1_eod6t")
-
-[node name="Gambler" type="Node" parent="."]
-script = ExtResource("6_k5wo8")
 
 [node name="BlackJackDealer" type="Node" parent="."]
 script = ExtResource("4_34ld6")
@@ -35,4 +23,22 @@ text = "Start Round"
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 
+[node name="HitButton" type="Button" parent="."]
+offset_left = 502.0
+offset_top = 314.0
+offset_right = 533.0
+offset_bottom = 345.0
+disabled = true
+text = "Hit"
+
+[node name="StayButton" type="Button" parent="."]
+offset_left = 569.0
+offset_top = 316.0
+offset_right = 577.0
+offset_bottom = 324.0
+disabled = true
+text = "Stay"
+
 [connection signal="pressed" from="StartButton" to="BlackJackDealer" method="_on_start_button_pressed"]
+[connection signal="pressed" from="HitButton" to="BlackJackDealer" method="_on_hit_button_pressed"]
+[connection signal="pressed" from="StayButton" to="BlackJackDealer" method="_on_stay_button_pressed"]
