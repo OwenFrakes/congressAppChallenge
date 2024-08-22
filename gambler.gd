@@ -9,22 +9,26 @@ func getCard(faceUp: bool = false):
 	newCard.randCard(faceUp)
 	add_child(newCard)
 	hand.push_front(newCard)
-	
-	#Remove all cards from gambler's hand.
+
+#Remove all cards from gambler's hand.
 func clearHand():
 	hand.clear()
-	
-	#Return an array of cards. The gambler's hand.
+	var kids = get_children()
+	for kid in kids:
+		remove_child(kid)
+
+#Return an array of cards. The gambler's hand.
 func getHand():
 	return hand
-	
-	#Debug Stuff
+
+#Debug Stuff
 func readHand():
 	for i in range(len(hand)):
 		print("Card: " + str(i+1))
 		print(hand[i].getSuit())
 		print(hand[i].getValue())
-	
+
+#Signals
 func _on_hit_button_pressed() -> void:
 	getCard()
 	readHand()
