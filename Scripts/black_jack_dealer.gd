@@ -59,7 +59,8 @@ func arrangeDealerHand():
 	var dealerHand = dealer.getHand()
 	var dealerPos = 0
 	for card in dealerHand:
-		card.position = Vector2((1152.0/2.0 + dealerPos - 50), 100)
+		card.updateCardFace()
+		card.position = Vector2((1280.0/2.0 + dealerPos - 75), 150)
 		dealerPos += 50
 
 #Arranges the player's hand.
@@ -67,7 +68,8 @@ func arrangePlayerHand():
 	var playerHand = playerRef.getHand()
 	var playerPos = 0
 	for card in playerHand:
-		card.position = Vector2((1152.0/2.0 + playerPos - 50), 550)
+		card.updateCardFace()
+		card.position = Vector2((1280.0/2.0 + playerPos - 75), 550)
 		playerPos += 50
 
 # Gets the total of a given hand, needs a hand as a parameter.

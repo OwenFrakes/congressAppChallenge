@@ -1,8 +1,13 @@
-class_name Card extends Sprite2D
+class_name Card extends AnimatedSprite2D
 
 var suit = ""
 var value = 0
 var faceUp = false
+
+func _ready():
+	sprite_frames = load("res://ClubsSpriteSheet.tres")
+	set_texture_filter(1)
+	#set_scale(Vector2(0.75, 0.75))
 
 func setCard(newSuit, newValue):
 	suit = newSuit
@@ -35,9 +40,10 @@ func randCard(newFaceUp: bool = false):
 	
 func updateCardFace():
 	if(faceUp):
-		texture = load("res://TestSpadeAce.png")
+		pause()
+		set_frame_and_progress(getValue() - 1, frame_progress) 
 	else :
-		texture = load("res://TestSpadeBack.png")
+		frame = 13
 	
 func getValue():
 	return value
