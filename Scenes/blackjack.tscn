@@ -1,17 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://dc48lkekxqu2l"]
 
-[ext_resource type="Script" path="res://Scripts/black_jack_dealer.gd" id="4_34ld6"]
-[ext_resource type="Script" path="res://Scripts/gambler.gd" id="6_k5wo8"]
+[ext_resource type="Script" path="res://Scripts/black_jack_dealer.gd" id="1_ic5ah"]
+[ext_resource type="Script" path="res://Scripts/gambler.gd" id="2_jpwsu"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="BlackJackDealer" type="Node" parent="."]
-script = ExtResource("4_34ld6")
+script = ExtResource("1_ic5ah")
 
 [node name="Player" type="Node" parent="."]
 
 [node name="Gambler" type="Node" parent="Player"]
-script = ExtResource("6_k5wo8")
+script = ExtResource("2_jpwsu")
 
 [node name="StartButton" type="Button" parent="."]
 offset_left = 38.0

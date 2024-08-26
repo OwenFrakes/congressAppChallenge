@@ -60,7 +60,7 @@ func arrangeDealerHand():
 	var dealerPos = 0
 	for card in dealerHand:
 		card.updateCardFace()
-		card.position = Vector2((1280.0/2.0 + dealerPos - 75), 150)
+		card.position = Vector2((1280.0/2.0 + dealerPos - 75), 170)
 		dealerPos += 50
 
 #Arranges the player's hand.

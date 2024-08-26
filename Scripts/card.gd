@@ -5,7 +5,7 @@ var value = 0
 var faceUp = false
 
 func _ready():
-	sprite_frames = load("res://ClubsSpriteSheet.tres")
+	sprite_frames = load("res://Resources/ClubsSpriteSheet.tres")
 	set_texture_filter(1)
 	#set_scale(Vector2(0.75, 0.75))
 
