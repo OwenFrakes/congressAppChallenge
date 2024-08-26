@@ -5,7 +5,6 @@ var value = 0
 var faceUp = false
 
 func _ready():
-	sprite_frames = load("res://Resources/ClubsSpriteSheet.tres")
 	set_texture_filter(1)
 	#set_scale(Vector2(0.75, 0.75))
 
@@ -39,6 +38,15 @@ func randCard(newFaceUp: bool = false):
 	updateCardFace()
 	
 func updateCardFace():
+	match(getSuit()):
+			"Spades":
+				sprite_frames = load("res://Resources/SpadesSpriteSheet.tres")
+			"Clubs":
+				sprite_frames = load("res://Resources/ClubsSpriteSheet.tres")
+			"Hearts":
+				sprite_frames = load("res://Resources/ClubsSpriteSheet.tres")
+			"Diamonds":
+				sprite_frames = load("res://Resources/ClubsSpriteSheet.tres")
 	if(faceUp):
 		pause()
 		set_frame_and_progress(getValue() - 1, frame_progress) 

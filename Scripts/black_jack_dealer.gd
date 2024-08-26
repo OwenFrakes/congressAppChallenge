@@ -1,11 +1,13 @@
 extends Node
 
-@onready var playerRef : Gambler = $"../Player/Gambler"
+var playerRef : Gambler 
 var dealer : Gambler
 
 func _ready():
 	dealer = Gambler.new()
 	add_child(dealer)
+	playerRef = Gambler.new()
+	add_child(playerRef)
 
 func startRound():
 	#Make sure no other cards are in their hands, for whatever reason.
@@ -57,19 +59,26 @@ func startRound():
 #Arranges the dealer's hand.
 func arrangeDealerHand():
 	var dealerHand = dealer.getHand()
-	var dealerPos = 0
+	var dealerPos = 0 # Shifts each of the cards over.
+	var dVisLayer = 1 # Changes the order the cards are seen when overlaping.
 	for card in dealerHand:
 		card.updateCardFace()
 		card.position = Vector2((1280.0/2.0 + dealerPos - 75), 170)
+		card.set_z_index(dVisLayer)
+		dVisLayer += 1
 		dealerPos += 50
+		print(card.getSuit() + " " + str(card.getValue()))
 
 #Arranges the player's hand.
 func arrangePlayerHand():
 	var playerHand = playerRef.getHand()
-	var playerPos = 0
+	var playerPos = 0 # Shifts each of the cards over.
+	var pVisLayer = 1 # Changes the order the cards are seen when overlaping.
 	for card in playerHand:
 		card.updateCardFace()
 		card.position = Vector2((1280.0/2.0 + playerPos - 75), 550)
+		card.set_z_index(pVisLayer)
+		pVisLayer += 1
 		playerPos += 50
 
 # Gets the total of a given hand, needs a hand as a parameter.
