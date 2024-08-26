@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2wq7f7milbu7"
-path="res://.godot/imported/ClubsSheet3.png-2e02c0bb8eca9c2a2c27cd665edc4c46.ctex"
+uid="uid://dcoc4i26xtfq"
+path="res://.godot/imported/ClubsSheet4.png-5788c6e373ce4d0a3b2b03c146a1c348.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ClubsSheet3.png"
-dest_files=["res://.godot/imported/ClubsSheet3.png-2e02c0bb8eca9c2a2c27cd665edc4c46.ctex"]
+source_file="res://ClubsSheet4.png"
+dest_files=["res://.godot/imported/ClubsSheet4.png-5788c6e373ce4d0a3b2b03c146a1c348.ctex"]
 
 [params]
 
