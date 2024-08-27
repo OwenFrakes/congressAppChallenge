@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcoc4i26xtfq"
-path="res://.godot/imported/ClubsSheet4.png-c659bac0ecbd44149257404b6da09a81.ctex"
+uid="uid://8ysc1vufq5kf"
+path="res://.godot/imported/SpadesSheet.png-9e9266cddb5fd60cb1f46c3cbcec1518.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/ClubsSheet4.png"
-dest_files=["res://.godot/imported/ClubsSheet4.png-c659bac0ecbd44149257404b6da09a81.ctex"]
+source_file="res://Resources/SpadesSheet.png"
+dest_files=["res://.godot/imported/SpadesSheet.png-9e9266cddb5fd60cb1f46c3cbcec1518.ctex"]
 
 [params]
 

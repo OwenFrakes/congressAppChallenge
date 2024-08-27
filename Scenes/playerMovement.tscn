@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0no6puo6onw3"]
+[gd_scene load_steps=5 format=3 uid="uid://d0no6puo6onw3"]
 
+[ext_resource type="Script" path="res://Scenes/level.gd" id="1_3w6kp"]
 [ext_resource type="Script" path="res://Scripts/player_mover.gd" id="1_qnrmp"]
 [ext_resource type="Script" path="res://Scenes/player.gd" id="2_aa37n"]
+[ext_resource type="Script" path="res://Scenes/world.gd" id="3_of3cb"]
 
 [node name="PlayerMovement" type="Node2D"]
+script = ExtResource("1_3w6kp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -18,6 +21,9 @@ text = "Blackjack
 
 [node name="PlayerMover" type="Node" parent="."]
 script = ExtResource("1_qnrmp")
+
+[node name="World" type="Node" parent="."]
+script = ExtResource("3_of3cb")
 
 [node name="Player" type="Node" parent="."]
 script = ExtResource("2_aa37n")

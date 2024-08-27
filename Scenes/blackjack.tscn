@@ -1,17 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://dc48lkekxqu2l"]
 
 [ext_resource type="Script" path="res://Scripts/black_jack_dealer.gd" id="1_ic5ah"]
-[ext_resource type="Script" path="res://Scripts/gambler.gd" id="2_jpwsu"]
+[ext_resource type="Script" path="res://Scenes/player.gd" id="2_h7nlf"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="BlackJackDealer" type="Node" parent="."]
 script = ExtResource("1_ic5ah")
-
-[node name="Player" type="Node" parent="."]
-
-[node name="Gambler" type="Node" parent="Player"]
-script = ExtResource("2_jpwsu")
 
 [node name="StartButton" type="Button" parent="."]
 offset_left = 38.0
@@ -38,6 +33,9 @@ offset_right = 610.0
 offset_bottom = 381.0
 disabled = true
 text = "Stay"
+
+[node name="Player" type="Node" parent="."]
+script = ExtResource("2_h7nlf")
 
 [connection signal="pressed" from="StartButton" to="BlackJackDealer" method="_on_start_button_pressed"]
 [connection signal="pressed" from="HitButton" to="BlackJackDealer" method="_on_hit_button_pressed"]

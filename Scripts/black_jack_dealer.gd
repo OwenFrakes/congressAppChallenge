@@ -67,7 +67,7 @@ func arrangeDealerHand():
 		card.set_z_index(dVisLayer)
 		dVisLayer += 1
 		dealerPos += 50
-		print(card.getSuit() + " " + str(card.getValue()))
+		print("Dealer" + card.getSuit() + " " + str(card.getValue()))
 
 #Arranges the player's hand.
 func arrangePlayerHand():
@@ -80,6 +80,7 @@ func arrangePlayerHand():
 		card.set_z_index(pVisLayer)
 		pVisLayer += 1
 		playerPos += 50
+		print("Player" + card.getSuit() + " " + str(card.getValue()))
 
 # Gets the total of a given hand, needs a hand as a parameter.
 func handTotal(hand):
