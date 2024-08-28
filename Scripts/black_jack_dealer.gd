@@ -61,12 +61,13 @@ func arrangeDealerHand():
 	var dealerHand = dealer.getHand()
 	var dealerPos = 0 # Shifts each of the cards over.
 	var dVisLayer = 1 # Changes the order the cards are seen when overlaping.
+	var dCardOffset = ((101 * (len(dealer.getHand()) - 1))) / 2
 	for card in dealerHand:
 		card.updateCardFace()
-		card.position = Vector2((1280.0/2.0 + dealerPos - 75), 170)
+		card.position = Vector2(((1280.0/2.0) - dCardOffset + dealerPos), 150)
 		card.set_z_index(dVisLayer)
 		dVisLayer += 1
-		dealerPos += 50
+		dealerPos += 101
 		print("Dealer" + card.getSuit() + " " + str(card.getValue()))
 
 #Arranges the player's hand.
@@ -74,31 +75,33 @@ func arrangePlayerHand():
 	var playerHand = playerRef.getHand()
 	var playerPos = 0 # Shifts each of the cards over.
 	var pVisLayer = 1 # Changes the order the cards are seen when overlaping.
+	var pCardOffset = ((101 * (len(dealer.getHand()) - 1))) / 2
 	for card in playerHand:
 		card.updateCardFace()
-		card.position = Vector2((1280.0/2.0 + playerPos - 75), 550)
+		card.position = Vector2(((1280.0/2.0) - pCardOffset + playerPos), 550)
 		card.set_z_index(pVisLayer)
 		pVisLayer += 1
-		playerPos += 50
+		playerPos += 101
+		print(card.position)
 		print("Player" + card.getSuit() + " " + str(card.getValue()))
 
 # Gets the total of a given hand, needs a hand as a parameter.
 func handTotal(hand):
-	var handTotal = 0
+	var total = 0
 	for card in hand:
-		handTotal += card.getValue()
-	return handTotal
+		total += card.getValue()
+	return total
 
 #Automatically checks the players hand. And only the players hand.
 #"ends" the round by turning the buttons on/off, otherwise contiunes.
 func checkHand():
-	var handTotal = handTotal(playerRef.getHand())
+	var playerTotal = handTotal(playerRef.getHand())
 	
-	if(handTotal == 21):
+	if(playerTotal == 21):
 		print("Blackjack")
 		toggleHitStay(false)
 		toggleStartBtn(true)
-	elif(handTotal > 21):
+	elif(playerTotal > 21):
 		print("Player Bust: " + str(handTotal))
 		toggleHitStay(false)
 		toggleStartBtn(true)
@@ -153,6 +156,7 @@ func playerStay():
 		print("Player lost"+ str(handTotal(playerRef.getHand()))+"|Dealer's hand" + str(handTotal(dealer.getHand())))
 	else:
 		print("Player won over dealer. " + str(handTotal(playerRef.getHand())))
+		
 		
 	toggleStartBtn(true)
 

@@ -5,5 +5,13 @@ extends Node
 
 #Changes the scene to blackjack.
 func _on_black_jack_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/blackjack.tscn")
+	var newScene = load("res://Scenes/blackjack.tscn")
+	get_tree().change_scene_to_packed(newScene)
 	
+
+func changeToMain():
+	var mainScene = load("res://Scenes/playerMovement.tscn")
+	get_tree().change_scene_to_packed(mainScene)
+
+func _on_pressed() -> void:
+	changeToMain()

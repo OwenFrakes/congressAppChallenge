@@ -6,7 +6,7 @@ var cardType = 0
 var faceUp = false
 
 func _ready():
-	set_texture_filter(1)
+	set_texture_filter(TEXTURE_FILTER_NEAREST)
 
 func setCard(newSuit, newValue):
 	suit = newSuit

@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/playerMovement.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://Resources/icon.svg"
 
+[autoload]
+
+StaticPlayerVariables="*res://Scripts/static_player_variables.gd"
+
 [display]
 
 window/size/viewport_width=1280
