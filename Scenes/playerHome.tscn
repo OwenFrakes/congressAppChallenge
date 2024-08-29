@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcvn32dyf1qv7"]
+
+[ext_resource type="Script" path="res://Scenes/homeControl.gd" id="1_g3vfg"]
+[ext_resource type="Script" path="res://Scripts/player_mover.gd" id="2_67f0d"]
+
+[node name="PlayerHome" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="moneyLabel" type="Label" parent="."]
+offset_left = 153.0
+offset_top = 75.0
+offset_right = 193.0
+offset_bottom = 98.0
+text = "Player's Money: "
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("1_g3vfg")
+
+[node name="TownButton" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 142.0
+offset_bottom = 61.0
+text = "Back to Town"
+script = ExtResource("2_67f0d")
+
+[connection signal="pressed" from="TownButton" to="TownButton" method="_on_pressed"]

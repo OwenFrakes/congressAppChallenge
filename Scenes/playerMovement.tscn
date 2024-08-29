@@ -10,10 +10,10 @@
 anchor_mode = 0
 
 [node name="BlackJackButton" type="Button" parent="."]
-offset_left = 249.0
-offset_top = 119.0
-offset_right = 330.0
-offset_bottom = 150.0
+offset_left = 30.0
+offset_top = 90.0
+offset_right = 111.0
+offset_bottom = 121.0
 text = "Blackjack
 "
 
@@ -26,4 +26,12 @@ script = ExtResource("3_of3cb")
 [node name="Player" type="Node" parent="."]
 script = ExtResource("2_aa37n")
 
+[node name="HomeButton" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 109.0
+offset_bottom = 61.0
+text = "Go home"
+
 [connection signal="pressed" from="BlackJackButton" to="PlayerMover" method="_on_black_jack_button_pressed"]
+[connection signal="pressed" from="HomeButton" to="PlayerMover" method="_on_home_button_pressed"]
