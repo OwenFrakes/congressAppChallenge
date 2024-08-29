@@ -26,4 +26,13 @@ script = ExtResource("3_of3cb")
 [node name="Player" type="Node" parent="."]
 script = ExtResource("2_aa37n")
 
+[node name="SlotsButton" type="Button" parent="."]
+offset_left = 249.0
+offset_top = 173.0
+offset_right = 329.0
+offset_bottom = 203.0
+text = "Slots"
+
 [connection signal="pressed" from="BlackJackButton" to="PlayerMover" method="_on_black_jack_button_pressed"]
+[connection signal="pressed" from="SlotsButton" to="PlayerMover" method="_on_button_pressed"]
+[connection signal="pressed" from="SlotsButton" to="PlayerMover" method="_on_slots_button_pressed"]

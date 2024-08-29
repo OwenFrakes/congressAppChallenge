@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvcnpudfilq4h"]
+
+[ext_resource type="Texture2D" uid="uid://cywlyamdicsed" path="res://Resources/SlotMachine.png" id="1_0ends"]
+
+[node name="Slots" type="Node2D"]
+
+[node name="SlotMachine" type="Sprite2D" parent="."]
+position = Vector2(639, 413)
+scale = Vector2(1.53, 1.53)
+texture = ExtResource("1_0ends")
+
+[node name="homeButton" type="Button" parent="."]
+offset_left = 36.0
+offset_top = 100.0
+offset_right = 146.0
+offset_bottom = 145.0
+text = "Return"

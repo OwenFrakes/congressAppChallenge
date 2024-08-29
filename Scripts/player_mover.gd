@@ -15,3 +15,7 @@ func changeToMain():
 
 func _on_pressed() -> void:
 	changeToMain()
+
+func _on_slots_button_pressed() -> void:
+	var newScene = load("res://Scenes/slots.tscn")
+	get_tree().change_scene_to_packed(newScene)
