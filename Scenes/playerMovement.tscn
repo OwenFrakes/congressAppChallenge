@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0no6puo6onw3"]
+
+[ext_resource type="Script" path="res://Scripts/player_mover.gd" id="1_qnrmp"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="2_aa37n"]
+[ext_resource type="Script" path="res://Scripts/world.gd" id="3_of3cb"]
+
+[node name="PlayerMovement" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="BlackJackButton" type="Button" parent="."]
+offset_left = 249.0
+offset_top = 119.0
+offset_right = 330.0
+offset_bottom = 150.0
+text = "Blackjack
+"
+
+[node name="PlayerMover" type="Node" parent="."]
+script = ExtResource("1_qnrmp")
+
+[node name="World" type="Node" parent="."]
+script = ExtResource("3_of3cb")
+
+[node name="Player" type="Node" parent="."]
+script = ExtResource("2_aa37n")
+
+[connection signal="pressed" from="BlackJackButton" to="PlayerMover" method="_on_black_jack_button_pressed"]

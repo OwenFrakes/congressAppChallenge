@@ -1,12 +1,16 @@
 extends Node
 
-@onready var playerRef : Gambler = $"../Player/Gambler"
+var playerRef : Gambler 
 var dealer : Gambler
 
 func _ready():
+	#They may exist in script, but not the node tree, add them as children to actually use them.
 	dealer = Gambler.new()
 	add_child(dealer)
+	playerRef = Gambler.new()
+	add_child(playerRef)
 
+# Stage 1, 2 cards each, dealer has 1 face down. ---------------------------------------------------------
 func startRound():
 	#Make sure no other cards are in their hands, for whatever reason.
 	dealer.clearHand()
@@ -51,44 +55,59 @@ func startRound():
 	#Turn on the hit / stay buttons, after .5 second timeout/sleep.
 	await wait(.5)
 	#From here player chooses to hit or stay.
-	toggleHitStay(true)
+	toggleHitStay(true) # End of startRound() ------------------------------------------------------------
 
-#The screen is 1152 pixels wide. And 648 Tall.
-#Arranges the dealer's hand.
-func arrangeDealerHand():
-	var dealerHand = dealer.getHand()
-	var dealerPos = 0
-	for card in dealerHand:
-		card.updateCardFace()
-		card.position = Vector2((1280.0/2.0 + dealerPos - 75), 150)
-		dealerPos += 50
+# Player hits, or stays.
+# Add a card to the players hand, arrange, then check for blackjack or bust.
+func playerHit():
+	playerRef.getCard(true)
+	arrangePlayerHand()
+	checkHand()
 
-#Arranges the player's hand.
-func arrangePlayerHand():
-	var playerHand = playerRef.getHand()
-	var playerPos = 0
-	for card in playerHand:
-		card.updateCardFace()
-		card.position = Vector2((1280.0/2.0 + playerPos - 75), 550)
-		playerPos += 50
+# Progress to final stage of blackjack. ------------------------------------------------------------------
+# The play cannot stay with bust cards. So their hand is always valid, no need to bust check the player.
+func playerStay():
+	
+	#Reveals dealer's face down card.
+	toggleHitStay(false)
+	#Face down card will be the first one in the dealer's hand until further cards are added.
+	dealer.getHand()[0].faceUp = true
+	dealer.getHand()[0].updateCardFace()
+	await wait(.5)
+	
+	#If dealer's hand total is 16 or lower, get another card.
+	#Else, check for bust, then check against player's hand total.
+	while(handTotal(dealer.getHand()) <= 16):
+		dealer.getCard(true)
+		arrangeDealerHand()
+		await wait(.5)
+	
+	if(handTotal(dealer.getHand()) > 21):
+		print("Dealer bust")
+	elif(handTotal(dealer.getHand()) > handTotal(playerRef.getHand())):
+		print("Player lost"+ str(handTotal(playerRef.getHand()))+"|Dealer's hand" + str(handTotal(dealer.getHand())))
+	else:
+		print("Player won over dealer. " + str(handTotal(playerRef.getHand())))
+	
+	toggleStartBtn(true) # End of playerStay() ----------------------------------------------------------
 
 # Gets the total of a given hand, needs a hand as a parameter.
 func handTotal(hand):
-	var handTotal = 0
+	var total = 0
 	for card in hand:
-		handTotal += card.getValue()
-	return handTotal
+		total += card.getValue()
+	return total
 
 #Automatically checks the players hand. And only the players hand.
 #"ends" the round by turning the buttons on/off, otherwise contiunes.
 func checkHand():
-	var handTotal = handTotal(playerRef.getHand())
+	var playerTotal = handTotal(playerRef.getHand())
 	
-	if(handTotal == 21):
+	if(playerTotal == 21):
 		print("Blackjack")
 		toggleHitStay(false)
 		toggleStartBtn(true)
-	elif(handTotal > 21):
+	elif(playerTotal > 21):
 		print("Player Bust: " + str(handTotal))
 		toggleHitStay(false)
 		toggleStartBtn(true)
@@ -111,44 +130,35 @@ func toggleHitStay(boolean):
 		$"../HitButton".disabled = true
 		$"../StayButton".disabled = true
 
-# Add a card to the players hand, arrange, then check for blackjack or bust.
-func playerHit():
-	playerRef.getCard(true)
-	arrangePlayerHand()
-	checkHand()
-
-# Progress to final stage of blackjack.
-func playerStay():
-	
-	#Reveals dealer's face down card.
-	toggleHitStay(false)
-	for card in dealer.getHand():
-		card.faceUp = true
+#The screen is 1280 pixels wide. And 720 tall.
+#Arranges the dealer's hand.
+func arrangeDealerHand():
+	var dealerHand = dealer.getHand()
+	var dealerPos = 0 # Shifts each of the cards over.
+	var dVisLayer = 1 # Changes the order the cards are seen when overlaping.
+	var dCardOffset = ((101 * (len(dealerHand) - 1))) / 2 # Positions the group of cards dead center on x.
+	for card in dealerHand:
 		card.updateCardFace()
-	arrangeDealerHand()
-	
-	await wait(.5)
-	
-	#If dealer's hand total is 16 or lower, get another card.
-	#Else, check for bust, then check against player's hand total.
-	
-	while(handTotal(dealer.getHand()) <= 16):
-		dealer.getCard(true)
-		arrangeDealerHand()
-		await wait(.5)
-	
-	if(handTotal(dealer.getHand()) > 21):
-		print("Dealer bust")
-	elif(handTotal(dealer.getHand()) > handTotal(playerRef.getHand())):
-		print("Player lost"+ str(handTotal(playerRef.getHand()))+"|Dealer's hand" + str(handTotal(dealer.getHand())))
-	else:
-		print("Player won over dealer. " + str(handTotal(playerRef.getHand())))
-		
-	toggleStartBtn(true)
+		card.position = Vector2(((1280.0/2.0) - dCardOffset + dealerPos), 150 + 20)
+		card.set_z_index(dVisLayer)
+		dVisLayer += 1
+		dealerPos += 101
+		print("Dealer" + card.getSuit() + " " + str(card.getValue()))
 
-func closeRound():
-	
-	pass
+#Arranges the player's hand.
+func arrangePlayerHand():
+	var playerHand = playerRef.getHand()
+	var playerPos = 0 # Shifts each of the cards over.
+	var pVisLayer = 1 # Changes the order the cards are seen when overlaping.
+	var pCardOffset = ((101 * (len(playerHand) - 1))) / 2
+	for card in playerHand:
+		card.updateCardFace()
+		card.position = Vector2(((1280.0/2.0) - pCardOffset + playerPos), (720 - 150) - 20)
+		card.set_z_index(pVisLayer)
+		pVisLayer += 1
+		playerPos += 101
+		print(card.position)
+		print("Player" + card.getSuit() + " " + str(card.getValue()))
 
 func wait(seconds: float):
 	await get_tree().create_timer(seconds).timeout

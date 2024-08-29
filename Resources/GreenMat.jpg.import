@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5rwd44vp5yv5"
-path="res://.godot/imported/TestSpadeBack.png-fcfe73ff358d2412cecbc34c4de148d0.ctex"
+uid="uid://bmdaurgbuqqbu"
+path="res://.godot/imported/GreenMat.jpg-ddf6318d9584d776daedbc65cdf44820.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TestSpadeBack.png"
-dest_files=["res://.godot/imported/TestSpadeBack.png-fcfe73ff358d2412cecbc34c4de148d0.ctex"]
+source_file="res://Resources/GreenMat.jpg"
+dest_files=["res://.godot/imported/GreenMat.jpg-ddf6318d9584d776daedbc65cdf44820.ctex"]
 
 [params]
 

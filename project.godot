@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="congressAppChallenge"
-run/main_scene="res://main.tscn"
+run/main_scene="res://Scenes/playerMovement.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Resources/icon.svg"
+
+[autoload]
+
+StaticPlayerVariables="*res://Scripts/static_player_variables.gd"
 
 [display]
 

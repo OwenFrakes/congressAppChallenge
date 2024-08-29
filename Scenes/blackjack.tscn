@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://dc48lkekxqu2l"]
+
+[ext_resource type="Script" path="res://Scripts/black_jack_dealer.gd" id="1_ic5ah"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="2_h7nlf"]
+[ext_resource type="Script" path="res://Scripts/player_mover.gd" id="3_wl8o3"]
+[ext_resource type="Texture2D" uid="uid://bmdaurgbuqqbu" path="res://Resources/GreenMat.jpg" id="4_vls64"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BlackJackDealer" type="Node" parent="."]
+script = ExtResource("1_ic5ah")
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 590.0
+offset_top = 345.0
+offset_right = 691.0
+offset_bottom = 376.0
+text = "Start Round"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="HitButton" type="Button" parent="."]
+z_index = 2
+offset_left = 547.0
+offset_top = 345.0
+offset_right = 578.0
+offset_bottom = 376.0
+disabled = true
+text = "Hit"
+
+[node name="StayButton" type="Button" parent="."]
+z_index = 2
+offset_left = 702.0
+offset_top = 345.0
+offset_right = 743.0
+offset_bottom = 376.0
+disabled = true
+text = "Stay"
+
+[node name="Player" type="Node" parent="."]
+script = ExtResource("2_h7nlf")
+
+[node name="MainButton" type="Button" parent="."]
+offset_left = 40.0
+offset_top = 85.0
+offset_right = 169.0
+offset_bottom = 116.0
+text = "Return  to Main
+"
+script = ExtResource("3_wl8o3")
+
+[node name="TopMat" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(640, 170)
+scale = Vector2(2, 0.9)
+texture = ExtResource("4_vls64")
+
+[node name="BottomMat" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(640, 550)
+scale = Vector2(2, 0.9)
+texture = ExtResource("4_vls64")
+
+[connection signal="pressed" from="StartButton" to="BlackJackDealer" method="_on_start_button_pressed"]
+[connection signal="pressed" from="HitButton" to="BlackJackDealer" method="_on_hit_button_pressed"]
+[connection signal="pressed" from="StayButton" to="BlackJackDealer" method="_on_stay_button_pressed"]
+[connection signal="pressed" from="MainButton" to="MainButton" method="_on_pressed"]
