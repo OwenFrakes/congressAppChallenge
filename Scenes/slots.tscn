@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvcnpudfilq4h"]
+[gd_scene load_steps=5 format=3 uid="uid://cvcnpudfilq4h"]
 
 [ext_resource type="Texture2D" uid="uid://cywlyamdicsed" path="res://Resources/SlotMachine.png" id="1_0ends"]
+[ext_resource type="Script" path="res://Scripts/player_mover.gd" id="1_3r35x"]
 [ext_resource type="Texture2D" uid="uid://diku4gi3yok6b" path="res://Resources/Spinny Part.png" id="1_lb5vh"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5ndvy"]
@@ -13,6 +14,7 @@ offset_top = 100.0
 offset_right = 146.0
 offset_bottom = 145.0
 text = "Return"
+script = ExtResource("1_3r35x")
 
 [node name="SpinnyPartLeft" type="Sprite2D" parent="."]
 position = Vector2(636, 429)
@@ -40,3 +42,5 @@ scale = Vector2(561.769, 2262.62)
 position = Vector2(639, 425)
 scale = Vector2(1.53, 1.53)
 texture = ExtResource("1_0ends")
+
+[connection signal="pressed" from="ReturnButton" to="ReturnButton" method="_on_pressed"]
