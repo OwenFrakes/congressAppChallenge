@@ -1,17 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvcnpudfilq4h"]
+[gd_scene load_steps=4 format=3 uid="uid://cvcnpudfilq4h"]
 
 [ext_resource type="Texture2D" uid="uid://cywlyamdicsed" path="res://Resources/SlotMachine.png" id="1_0ends"]
+[ext_resource type="Texture2D" uid="uid://diku4gi3yok6b" path="res://Resources/Spinny Part.png" id="1_lb5vh"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5ndvy"]
 
 [node name="Slots" type="Node2D"]
 
-[node name="SlotMachine" type="Sprite2D" parent="."]
-position = Vector2(639, 413)
-scale = Vector2(1.53, 1.53)
-texture = ExtResource("1_0ends")
-
-[node name="homeButton" type="Button" parent="."]
+[node name="ReturnButton" type="Button" parent="."]
 offset_left = 36.0
 offset_top = 100.0
 offset_right = 146.0
 offset_bottom = 145.0
 text = "Return"
+
+[node name="SpinnyPartLeft" type="Sprite2D" parent="."]
+position = Vector2(636, 429)
+scale = Vector2(1.94, 1.3025)
+texture = ExtResource("1_lb5vh")
+
+[node name="SpinnyPartMiddle" type="Sprite2D" parent="."]
+position = Vector2(544, 429)
+scale = Vector2(1.92, 1.3025)
+texture = ExtResource("1_lb5vh")
+
+[node name="SpinnyPartRight" type="Sprite2D" parent="."]
+position = Vector2(737, 429)
+scale = Vector2(1.94, 1.3025)
+texture = ExtResource("1_lb5vh")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+light_mask = 512
+material = SubResource("CanvasItemMaterial_5ndvy")
+position = Vector2(-6.10352e-05, -3.05176e-05)
+rotation = 3.14159
+scale = Vector2(561.769, 2262.62)
+
+[node name="SlotMachine" type="Sprite2D" parent="."]
+position = Vector2(639, 425)
+scale = Vector2(1.53, 1.53)
+texture = ExtResource("1_0ends")

@@ -8,14 +8,13 @@ func _on_black_jack_button_pressed() -> void:
 	var newScene = load("res://Scenes/blackjack.tscn")
 	get_tree().change_scene_to_packed(newScene)
 	
-
+func _on_slots_button_pressed() -> void:
+	var newScene = load("res://Scenes/slots.tscn")
+	get_tree().change_scene_to_packed(newScene)
+	
 func changeToMain():
 	var mainScene = load("res://Scenes/playerMovement.tscn")
 	get_tree().change_scene_to_packed(mainScene)
 
 func _on_pressed() -> void:
 	changeToMain()
-
-func _on_slots_button_pressed() -> void:
-	var newScene = load("res://Scenes/slots.tscn")
-	get_tree().change_scene_to_packed(newScene)
