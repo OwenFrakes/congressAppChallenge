@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cc5lmshbii28o"]
+
+[ext_resource type="Texture2D" uid="uid://ctc7w5efen5ce" path="res://Resources/Roulette Wheel.png" id="1_03cgx"]
+[ext_resource type="Script" path="res://Scenes/roulette_wheel.gd" id="2_11oam"]
+[ext_resource type="Texture2D" uid="uid://bxub2d4eblfn4" path="res://Resources/Roulette Wheel ball.png" id="3_b2ls2"]
+[ext_resource type="Script" path="res://Scenes/ball.gd" id="4_q07vo"]
+
+[node name="Roulette" type="Node2D"]
+
+[node name="Roulette wheel" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(646, 332)
+texture = ExtResource("1_03cgx")
+script = ExtResource("2_11oam")
+
+[node name="Ball" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(647, 331)
+texture = ExtResource("3_b2ls2")
+script = ExtResource("4_q07vo")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 866.0
+offset_top = 510.0
+offset_right = 960.0
+offset_bottom = 541.0
+text = "Spin Wheel"
