@@ -1,0 +1,38 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://0r70wpffta1t"]
+
+[ext_resource type="Texture2D" uid="uid://c68o5bmbgoanv" path="res://Resources/Poker Chips/$1 Poker chip.png" id="1_4pged"]
+[ext_resource type="Texture2D" uid="uid://jahnwcaplxje" path="res://Resources/Poker Chips/$5 Poker chip.png" id="2_bnsp0"]
+[ext_resource type="Texture2D" uid="uid://bnxnstaxstqyg" path="res://Resources/Poker Chips/$10 Poker chip.png" id="3_4iul8"]
+[ext_resource type="Texture2D" uid="uid://bi4sfmhg5mpkm" path="res://Resources/Poker Chips/$20 Poker chip.png" id="4_t8nav"]
+[ext_resource type="Texture2D" uid="uid://ds0rjx6ctp6a0" path="res://Resources/Poker Chips/$50 Poker chip.png" id="5_lcj4n"]
+[ext_resource type="Texture2D" uid="uid://c63iqwvy7e86x" path="res://Resources/Poker Chips/$100 Poker chip.png" id="6_jlxjd"]
+[ext_resource type="Texture2D" uid="uid://d8mrcwg6m18y" path="res://Resources/error.png" id="7_4w72y"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4pged")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bnsp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4iul8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_t8nav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lcj4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jlxjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4w72y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
