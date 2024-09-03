@@ -10,6 +10,7 @@
 [node name="Roulette wheel" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(646, 332)
+rotation = 0.00677012
 texture = ExtResource("1_03cgx")
 script = ExtResource("2_11oam")
 
