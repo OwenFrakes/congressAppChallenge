@@ -4,6 +4,7 @@ var value = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	set_scale(Vector2(0.1,0.1))
 	sprite_frames = load("res://Resources/SpriteSheets/chips.tres")
 	
 
