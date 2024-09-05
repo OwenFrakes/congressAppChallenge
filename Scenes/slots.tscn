@@ -83,6 +83,5 @@ position = Vector2(0.33, 16.325)
 scale = Vector2(1.249, 0.853)
 texture = ExtResource("1_lb5vh")
 
-[connection signal="pressed" from="SpinButton" to="ReturnButton" method="_on_spin_button_pressed"]
-[connection signal="pressed" from="SpinButton" to="ClippingMaskL/SpinnyPartL" method="_on_spin_button_pressed"]
+[connection signal="pressed" from="SpinButton" to="SpinButton" method="_on_pressed"]
 [connection signal="pressed" from="ReturnButton" to="ReturnButton" method="_on_pressed"]
