@@ -5,6 +5,13 @@ var playerBet = 0
 var playerAmount = 0
 var chips = []
 
+func _process(delta: float) -> void:
+	await get_tree().create_timer(0.1).timeout
+	StaticPlayerVariables.globalPlayerMoney = playerAmount
+
+func _exit_tree() -> void:
+	StaticPlayerVariables.globalPlayerMoney = playerAmount
+
 func _ready() -> void:
 	playerAmount = StaticPlayerVariables.globalPlayerMoney
 	print(str(playerAmount))
@@ -34,8 +41,21 @@ func sortChips():
 	var yOffset = 0
 	for chip in chips:
 		#chip.updateChipFace()
-		chip.position = Vector2(30, 700 - yOffset)
-		yOffset += 10
+		chip.position = Vector2(50, 650 - yOffset)
+		yOffset += 30
+
+func loseBet():
+	playerBet = 0
+	sortChips()
+
+# Guess what, you do returnMultiplyer < 1, and the eplayer loses money, rM > 1, they get money.
+func winBet(returnMultipler : float):
+	playerAmount += playerBet * returnMultipler
+	playerBet = 0
+	sortChips()
+
+func getPlayerBet():
+	return playerBet
 
 func addBet(value, tBet):
 	chips.push_back(makeChip(value))
@@ -48,19 +68,26 @@ func makeChip(value):
 	chip.updateChipFace()
 	return chip
 
-func add1():
-	if(playerAmount >= 1):
-		print("Bet +1")
-		playerBet += 1
-		playerAmount -= 1
+func add(value):
+	var tempChip = Chip.new()
+	tempChip.setValue(value)
+	if(typeof(tempChip.getValue()) != TYPE_STRING && playerAmount >= value):
+		print("Bet +" + str(value))
+		playerBet += value
+		playerAmount -= value
 	else:
-		print("Player cannot afford $1")
+		print("Player cannot afford $" + str(value))
+	tempChip.free()
 	sortChips()
 
-func remove1():
-	if(playerBet >= 1):
-		playerAmount += 1
-		playerBet -= 1
+func remove(value):
+	var tempChip = Chip.new()
+	tempChip.setValue(value)
+	if(typeof(tempChip.getValue()) != TYPE_STRING && playerBet >= value):
+		print("Bet -" + str(value))
+		playerAmount += value
+		playerBet -= value
 	else:
-		print("Player has not bet enough to take out 1")
+		print("Player has not bet enough to take out " + str(value))
+	tempChip.free()
 	sortChips()
