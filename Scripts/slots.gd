@@ -6,6 +6,6 @@ func _ready() -> void:
 	print_tree_pretty()
 	
 func _on_spin_button_pressed() -> void:
-	$"../SpinnyPartL".position.y = randf_range(173, 682)
-	$"../SpinnyPartM".position.y = randf_range(173, 682)
-	$"../SpinnyPartR".position.y = randf_range(173, 682)
+	$"../ClippingMaskL/SpinnyPartL".position.y = randi_range(173, 682)
+	$"../ClippingMaskM/SpinnyPartM".position.y = randi_range(173, 682)
+	$"../ClippingMaskR/SpinnyPartR".position.y = randi_range(173, 682)
