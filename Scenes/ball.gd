@@ -32,5 +32,5 @@ func _process(delta):
 			self.rotation = current_angle
 func on_button_pressed():
 	#create a random power for the ball
-	spin_velocity = randf_range(-90100,-150000)
+	spin_velocity = randf_range(-1000,-10000)
 	spinning = true

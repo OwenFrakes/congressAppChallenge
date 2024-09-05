@@ -26,3 +26,10 @@ offset_top = 510.0
 offset_right = 960.0
 offset_bottom = 541.0
 text = "Spin Wheel"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 925.0
+offset_top = 393.0
+offset_right = 976.0
+offset_bottom = 424.0
+text = "Reset"
