@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvcnpudfilq4h"]
+[gd_scene load_steps=7 format=3 uid="uid://cvcnpudfilq4h"]
 
 [ext_resource type="Texture2D" uid="uid://cywlyamdicsed" path="res://Resources/SlotMachine.png" id="1_0ends"]
 [ext_resource type="Script" path="res://Scripts/player_mover.gd" id="1_3r35x"]
 [ext_resource type="Texture2D" uid="uid://diku4gi3yok6b" path="res://Resources/Spinny Part.png" id="1_lb5vh"]
 [ext_resource type="Script" path="res://Scripts/slots.gd" id="4_87nd7"]
 [ext_resource type="Texture2D" uid="uid://w6tpjke1vpwy" path="res://Resources/Clipping Mask.png" id="5_q8grc"]
+[ext_resource type="Texture2D" uid="uid://dxiid5fb4k47q" path="res://Resources/icon.svg" id="6_3hrkd"]
 
 [node name="Slots" type="Node2D"]
 
@@ -24,24 +25,6 @@ offset_bottom = 145.0
 text = "Return"
 script = ExtResource("1_3r35x")
 
-[node name="SpinnyPartTL" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(542, -92)
-scale = Vector2(1.92, 1.303)
-texture = ExtResource("1_lb5vh")
-
-[node name="SpinnyPartTM" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(638, -92)
-scale = Vector2(1.92, 1.303)
-texture = ExtResource("1_lb5vh")
-
-[node name="SpinnyPartTR" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(734, -92)
-scale = Vector2(1.92, 1.303)
-texture = ExtResource("1_lb5vh")
-
 [node name="SlotMachine" type="Sprite2D" parent="."]
 position = Vector2(639, 425)
 scale = Vector2(1.53, 1.53)
@@ -59,6 +42,11 @@ position = Vector2(-0.329681, 16.3246)
 scale = Vector2(1.26593, 0.850513)
 texture = ExtResource("1_lb5vh")
 
+[node name="SpinnyPartTL" type="Sprite2D" parent="ClippingMaskL"]
+position = Vector2(-0.329651, -323.88)
+scale = Vector2(1.26593, 0.850839)
+texture = ExtResource("1_lb5vh")
+
 [node name="ClippingMaskM" type="Sprite2D" parent="."]
 clip_children = 2
 position = Vector2(638.874, 404.349)
@@ -69,6 +57,11 @@ script = ExtResource("4_87nd7")
 [node name="SpinnyPartM" type="Sprite2D" parent="ClippingMaskM"]
 position = Vector2(-0.568, 16.325)
 scale = Vector2(1.24875, 0.853059)
+texture = ExtResource("1_lb5vh")
+
+[node name="SpinnyPartTM" type="Sprite2D" parent="ClippingMaskM"]
+position = Vector2(-0.568451, -324.955)
+scale = Vector2(1.24876, 0.853061)
 texture = ExtResource("1_lb5vh")
 
 [node name="ClippingMaskR" type="Sprite2D" parent="."]
@@ -82,6 +75,15 @@ script = ExtResource("4_87nd7")
 position = Vector2(0.33, 16.325)
 scale = Vector2(1.249, 0.853)
 texture = ExtResource("1_lb5vh")
+
+[node name="SpinnyPartTR" type="Sprite2D" parent="ClippingMaskR"]
+position = Vector2(-0.989014, -324.044)
+scale = Vector2(1.26593, 0.851178)
+texture = ExtResource("1_lb5vh")
+
+[node name="Icon" type="Sprite2D" parent="ClippingMaskR"]
+position = Vector2(-330.659, -90.8356)
+texture = ExtResource("6_3hrkd")
 
 [connection signal="pressed" from="SpinButton" to="SpinButton" method="_on_pressed"]
 [connection signal="pressed" from="ReturnButton" to="ReturnButton" method="_on_pressed"]
