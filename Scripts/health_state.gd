@@ -1,69 +1,62 @@
-extends Node
+class_name healthState
+extends Sprite2D
 
-var state = ""
-var nodeName = ""
-var nodeLabel
+#States should be, "Healthy", "Hungry", "Sick", "Hungry & Sick"
+var state = "Healthy"
+var stateLabel : Label
+var feedBtn : CheckButton
 var isFed = false
-var feedBtn = false
+@onready var heatBtn = $"../HeaterBtn"
+var isHeated = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	nodeName = getNodeName()
-	print("name: " + nodeName)
-	labelUpdate()
+	# Feed Button Code
+	feedBtn = CheckButton.new()
+	feedBtn.text = "Feed?"
+	add_child(feedBtn)
+	feedBtn.z_index += 1
+	var feedX = 0 - (feedBtn.size.x / 2)
+	var feedY = (texture.get_height() / 2)
+	feedBtn.position = Vector2(feedX, feedY)
+	
+	# Label Code
+	stateLabel = Label.new()
+	stateLabel.text = state
+	add_child(stateLabel)
+	var labelX = 0 - (stateLabel.size.x / 2)
+	var labelY = 0 - (texture.get_height()/2) - stateLabel.size.y
+	stateLabel.position = Vector2(labelX, labelY)
+	stateLabel.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 
-func labelUpdate():
-	match(nodeName):
-		"SpouseSprite":
-			state = StaticPlayerVariables.spouseState
-			nodeLabel = $"../SpouseLabel"
-			nodeLabel.text = "Spouse State: " + state
-			feedBtn = $"../SpouseFeedBtn"
-		"Child1Sprite":
-			state = StaticPlayerVariables.child1State
-			nodeLabel = $"../Child1Label"
-			nodeLabel.text = "Child 1 State: " + state
-			feedBtn = $"../Child1FeedBtn"
-		"Child2Sprite":
-			state = StaticPlayerVariables.child2State
-			nodeLabel = $"../Child2Label"
-			nodeLabel.text = "Child 2 State: " + state
-			feedBtn = $"../Child2FeedBtn"
-		"Child3Sprite":
-			state = StaticPlayerVariables.child3State
-			nodeLabel = $"../Child3Label"
-			nodeLabel.text = "Child 3 State: " + state
-			feedBtn = $"../Child3FeedBtn"
-
-func stateUpdate():
-	checkFeedBtn()
-	if(!isFed):
-		match(nodeName):
-			"SpouseSprite":
-				StaticPlayerVariables.spouseState = "Hungry"
-			"Child1Sprite":
-				StaticPlayerVariables.child1State = "Hungry"
-			"Child2Sprite":
-				StaticPlayerVariables.child2State = "Hungry"
-			"Child3Sprite":
-				StaticPlayerVariables.child3State = "Hungry"
+func passDay():
+	checkFeed()
+	checkHeat()
+	if(!isFed && !isHeated):
+		state = "Hungry & Sick"
+	elif(!isFed):
+		state = "Hungry"
+	elif(!isHeated):
+		state = "Sick"
 	else:
-		match(nodeName):
-			"SpouseSprite":
-				StaticPlayerVariables.spouseState = "Healthy"
-			"Child1Sprite":
-				StaticPlayerVariables.child1State = "Healthy"
-			"Child2Sprite":
-				StaticPlayerVariables.child2State = "Healthy"
-			"Child3Sprite":
-				StaticPlayerVariables.child3State = "Healthy"
-	labelUpdate()
+		state = "Healthy"
+	updateLabel()
 
-func checkFeedBtn():
+func checkFeed():
 	if(feedBtn.button_pressed):
 		isFed = true
 	else:
 		isFed = false
 
-func getNodeName():
-	return get_name()
+func checkHeat():
+	if(heatBtn.button_pressed):
+		isHeated = true
+	else:
+		isHeated = false
+
+func updateLabel():
+	stateLabel.text = state
+	await get_tree().create_timer(0.01).timeout
+	var labelX = 0 - (stateLabel.size.x / 2)
+	var labelY = 0 - (texture.get_height()/2) - stateLabel.size.y
+	stateLabel.position = Vector2(labelX, labelY)
