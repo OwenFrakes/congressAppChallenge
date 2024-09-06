@@ -7,16 +7,21 @@
 
 [node name="Roulette" type="Node2D"]
 
+[node name="Hidden wheel" type="Sprite2D" parent="."]
+position = Vector2(649, 332)
+texture = ExtResource("1_03cgx")
+
 [node name="Roulette wheel" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(646, 332)
-rotation = 0.00677012
+rotation = 0.0115558
 texture = ExtResource("1_03cgx")
 script = ExtResource("2_11oam")
 
 [node name="Ball" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(647, 331)
+rotation = 0.00206168
 texture = ExtResource("3_b2ls2")
 script = ExtResource("4_q07vo")
 
@@ -26,10 +31,3 @@ offset_top = 510.0
 offset_right = 960.0
 offset_bottom = 541.0
 text = "Spin Wheel"
-
-[node name="Button2" type="Button" parent="."]
-offset_left = 925.0
-offset_top = 393.0
-offset_right = 976.0
-offset_bottom = 424.0
-text = "Reset"
