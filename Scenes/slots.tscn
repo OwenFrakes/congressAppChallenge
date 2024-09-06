@@ -82,7 +82,7 @@ scale = Vector2(1.26593, 0.851178)
 texture = ExtResource("1_lb5vh")
 
 [node name="Icon" type="Sprite2D" parent="ClippingMaskR"]
-position = Vector2(-330.659, -90.8356)
+position = Vector2(-280.549, 0)
 texture = ExtResource("6_3hrkd")
 
 [connection signal="pressed" from="SpinButton" to="SpinButton" method="_on_pressed"]
