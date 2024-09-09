@@ -8,63 +8,68 @@ func _ready() -> void:
 func _on_spin_button_pressed() -> void:
 	print("button preseed")
 	#Randomize Position
-	var leftPos = randi_range(1,8)
-	var midPos = randi_range(1,8)
-	var rightPos = randi_range(1,8)
+	var leftPos = 2
+	var midPos = 2
+	var rightPos = 2
+	var betAmount = 100
+	var multiplier = 0
 	
 	#Set Position (Left)
-	if leftPos == 1:
+	if leftPos == 1 or leftPos == 9:
 		$"../ClippingMaskL/SpinnyPartL".position.y = 16 + 130
-	elif leftPos == 2:
-		$"../ClippingMaskL/SpinnyPartL".position.y = 16 + 85
-	elif leftPos == 3:
+	elif leftPos == 2 or leftPos == 10:
+		$"../ClippingMaskL/SpinnyPartL".position.y = 16 + 185
+	elif leftPos == 3 or leftPos == 11:
 		$"../ClippingMaskL/SpinnyPartL".position.y = 16 + 45
-	elif leftPos == 4:
-		$"../ClippingMaskL/SpinnyPartL".position.y = 16
-	elif leftPos == 5:
+	elif leftPos == 4 or leftPos == 12:
 		$"../ClippingMaskL/SpinnyPartL".position.y = 16 - 40
-	elif leftPos == 6:
+	elif leftPos == 5 or leftPos == 13:
 		$"../ClippingMaskL/SpinnyPartL".position.y = 16 - 85
-	elif leftPos == 7:
+	elif leftPos == 6 or leftPos == 14:
 		$"../ClippingMaskL/SpinnyPartL".position.y = 16 - 125
-	else:
+	elif leftPos == 7 or leftPos == 15:
 		$"../ClippingMaskL/SpinnyPartL".position.y = 16 - 165
+	else:
+		$"../ClippingMaskL/SpinnyPartL".position.y = 16
+		multiplier += 0.75
 	
 	#Set Position (Middle)
-	if midPos == 1:
+	if midPos == 1 or midPos == 9:
 		$"../ClippingMaskM/SpinnyPartM".position.y = 16 + 130
-	elif midPos == 2:
-		$"../ClippingMaskM/SpinnyPartM".position.y = 16 + 85
-	elif midPos == 3:
+	elif midPos == 2 or midPos == 10:
+		$"../ClippingMaskM/SpinnyPartM".position.y = 16 + 185
+	elif midPos == 3 or midPos == 11:
 		$"../ClippingMaskM/SpinnyPartM".position.y = 16 + 45
-	elif midPos == 4:
-		$"../ClippingMaskM/SpinnyPartM".position.y = 16
-	elif midPos == 5:
+	elif midPos == 4 or midPos == 12:
 		$"../ClippingMaskM/SpinnyPartM".position.y = 16 - 40
-	elif midPos == 6:
+	elif midPos == 5 or midPos == 13:
 		$"../ClippingMaskM/SpinnyPartM".position.y = 16 - 85
-	elif midPos == 7:
+	elif midPos == 6 or midPos == 14:
 		$"../ClippingMaskM/SpinnyPartM".position.y = 16 - 125
-	else:
+	elif midPos == 7 or midPos == 15:
 		$"../ClippingMaskM/SpinnyPartM".position.y = 16 - 165
+	else:
+		$"../ClippingMaskM/SpinnyPartM".position.y = 16
+		multiplier += 0.75
 	
 	#Set Position (Right)
-	if rightPos == 1:
+	if rightPos == 1 or rightPos == 9:
 		$"../ClippingMaskR/SpinnyPartR".position.y = 16 + 130
-	elif rightPos == 2:
-		$"../ClippingMaskR/SpinnyPartR".position.y = 16 + 85
-	elif rightPos == 3:
+	elif rightPos == 2 or rightPos == 10:
+		$"../ClippingMaskR/SpinnyPartR".position.y = 16 + 185
+	elif rightPos == 3 or rightPos == 11:
 		$"../ClippingMaskR/SpinnyPartR".position.y = 16 + 45
-	elif rightPos == 4:
-		$"../ClippingMaskR/SpinnyPartR".position.y = 16
-	elif rightPos == 5:
+	elif rightPos == 4 or rightPos == 12:
 		$"../ClippingMaskR/SpinnyPartR".position.y = 16 - 40
-	elif rightPos == 6:
+	elif rightPos == 5 or rightPos == 13:
 		$"../ClippingMaskR/SpinnyPartR".position.y = 16 - 85
-	elif rightPos == 7:
+	elif rightPos == 6 or rightPos == 14:
 		$"../ClippingMaskR/SpinnyPartR".position.y = 16 - 125
-	else:
+	elif rightPos == 7 or rightPos == 15:
 		$"../ClippingMaskR/SpinnyPartR".position.y = 16 - 165
+	else:
+		$"../ClippingMaskR/SpinnyPartR".position.y = 16
+		multiplier += 0.75
 
 	var SpinnyPartL = $"../ClippingMaskL/SpinnyPartL".position.y
 	var SpinnyPartM = $"../ClippingMaskM/SpinnyPartM".position.y
@@ -88,7 +93,7 @@ func _on_spin_button_pressed() -> void:
 	elif SpinnyPartR <= 16: #working
 		$"../ClippingMaskR/SpinnyPartTR".position.y = SpinnyPartR + 300
 	
-	
-	
+	print((betAmount - 20) *(1 + multiplier))
+
 func _on_pressed() -> void:
 	_on_spin_button_pressed() # Replace with function body.
