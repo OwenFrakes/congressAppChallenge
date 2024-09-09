@@ -102,14 +102,17 @@ func playerStay():
 	
 	if(handTotal(dealer.getHand()) > 21):
 		print("Dealer bust")
+		printScores()
 		betMenu.getBetNode().winBet(2)
 		betMenu.enable()
 	elif(handTotal(dealer.getHand()) > handTotal(playerRef.getHand())):
-		print("Player lost"+ str(handTotal(playerRef.getHand()))+"|Dealer's hand" + str(handTotal(dealer.getHand())))
+		print("Player Lost")
+		printScores()
 		betMenu.getBetNode().loseBet()
 		betMenu.enable()
 	else:
-		print("Player won over dealer. " + str(handTotal(playerRef.getHand())))
+		print("Player Won.")
+		printScores()
 		betMenu.getBetNode().winBet(2)
 		betMenu.enable()
 	
@@ -125,16 +128,16 @@ func handTotal(hand):
 #Automatically checks the players hand. And only the players hand.
 #"ends" the round by turning the buttons on/off, otherwise contiunes.
 func checkHand():
-	var playerTotal = handTotal(playerRef.getHand())
+	var playerTotal = int(handTotal(playerRef.getHand()))
 	
 	if(playerTotal > 21):
-		print("Player Bust: " + str(handTotal))
+		print("Player Bust: " + str(playerTotal))
 		toggleHitStay(false)
 		toggleStartBtn(true)
 		betMenu.getBetNode().loseBet()
 		betMenu.enable()
 	else:
-		print("Player under: " + str(handTotal))
+		print("Player under: " + str(playerTotal))
 
 #If boolean is true, it enables the start button, false disables it.
 func toggleStartBtn(boolean):
@@ -181,6 +184,10 @@ func arrangePlayerHand():
 		playerPos += 101
 		print(card.position)
 		print("Player" + card.getSuit() + " " + str(card.getValue()))
+
+func printScores():
+	print("Player Score: " + str(handTotal(playerRef.getHand())))
+	print("Dealer Score: " + str(handTotal(dealer.getHand())))
 
 func wait(seconds: float):
 	await get_tree().create_timer(seconds).timeout
