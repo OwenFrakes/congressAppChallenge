@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cc5lmshbii28o"]
+[gd_scene load_steps=8 format=3 uid="uid://cc5lmshbii28o"]
 
 [ext_resource type="Texture2D" uid="uid://ctc7w5efen5ce" path="res://Resources/Roulette Wheel.png" id="1_03cgx"]
 [ext_resource type="Script" path="res://Scenes/roulette_wheel.gd" id="2_11oam"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scenes/ball.gd" id="4_q07vo"]
 [ext_resource type="Texture2D" uid="uid://cg7y1shsce6m" path="res://Resources/Roulette Table.png" id="5_kh7es"]
 [ext_resource type="Script" path="res://Scenes/table.gd" id="6_yr1f4"]
+[ext_resource type="Texture2D" uid="uid://bs5urao65x1jr" path="res://Resources/$1 Poker chip.png" id="7_opi28"]
 
 [node name="Roulette" type="Node2D"]
 
@@ -409,3 +410,48 @@ offset_top = -169.424
 offset_right = 212.337
 offset_bottom = -106.424
 text = "3"
+
+[node name="1" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -146.209
+offset_top = -36.3309
+offset_right = -123.209
+offset_bottom = 26.6691
+text = "3"
+
+[node name="2" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -145.577
+offset_top = -106.835
+offset_right = -122.577
+offset_bottom = -43.8345
+text = "3"
+
+[node name="00" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -177.0
+offset_top = -170.0
+offset_right = -150.0
+offset_bottom = -79.0
+text = "3"
+
+[node name="0" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -177.804
+offset_top = -66.5468
+offset_right = -150.804
+offset_bottom = 24.4532
+text = "3"
+
+[node name="Chip" type="Sprite2D" parent="Table"]
+visible = false
+position = Vector2(-220.774, 98.2014)
+scale = Vector2(0.100448, 0.124101)
+texture = ExtResource("7_opi28")
+
+[node name="Reset" type="Button" parent="."]
+offset_left = 1051.0
+offset_top = 508.0
+offset_right = 1196.0
+offset_bottom = 539.0
+text = "Place another bet"
