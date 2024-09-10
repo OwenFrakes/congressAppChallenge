@@ -80,4 +80,3 @@ text = "Heater"
 
 [connection signal="pressed" from="TownBtn" to="TownBtn" method="_on_pressed"]
 [connection signal="pressed" from="PassDayBtn" to="HomeController" method="passDay"]
-[connection signal="toggled" from="HeaterBtn" to="HomeController" method="totalExpenses"]

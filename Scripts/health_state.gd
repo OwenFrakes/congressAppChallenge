@@ -8,9 +8,6 @@ var feedBtn : CheckButton
 var isFed = false
 @onready var heatBtn = $"../HeaterBtn"
 var isHeated = false
-var expenses = 0
-var controlExpenses = 0
-var tempMoney = 0
 @onready var homeControl = $"../HomeController"
 
 # Called when the node enters the scene tree for the first time.
@@ -24,6 +21,9 @@ func _ready() -> void:
 	var feedY = (texture.get_height() / 2.0)
 	feedBtn.position = Vector2(feedX, feedY)
 	
+	#Trying to connect a signal, Signals suck to use.
+	feedBtn.toggled.connect(homeControl.totalExpenses)
+	
 	# Label Code
 	stateLabel = Label.new()
 	stateLabel.text = state
@@ -33,7 +33,6 @@ func _ready() -> void:
 	stateLabel.position = Vector2(labelX, labelY)
 	stateLabel.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	
-	tempMoney = StaticPlayerVariables.globalPlayerMoney
 
 func passDay():
 	checkFeed()
@@ -48,27 +47,18 @@ func passDay():
 		state = "Healthy"
 	updateLabel()
 
-func sendControlExpenses(newExpenses):
-	controlExpenses = newExpenses
-
-func sendTempMoney(newMoney):
-	tempMoney = newMoney
-
-func getExpenses():
-	return expenses
-
 func checkFeed():
 	if(feedBtn.button_pressed):
 		isFed = true
-		expenses += 15
+		homeControl.expenses += 15
 	else:
 		isFed = false
 
 func updateFeed():
-	if(tempMoney - controlExpenses >= 15):
-		feedBtn.disabled = false
-	else:
+	if(!feedBtn.button_pressed && homeControl.tempMoney - homeControl.expenses < 15):
 		feedBtn.disabled = true
+	else:
+		feedBtn.disabled = false
 
 func checkHeat():
 	if(heatBtn.button_pressed):
@@ -82,3 +72,6 @@ func updateLabel():
 	var labelX = 0 - (stateLabel.size.x / 2)
 	var labelY = 0 - (texture.get_height()/2.0) - stateLabel.size.y
 	stateLabel.position = Vector2(labelX, labelY)
+
+func updateBtns(boolean : bool):
+	updateFeed()

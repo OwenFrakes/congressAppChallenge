@@ -16,29 +16,18 @@ func _ready() -> void:
 func passDay():
 	StaticPlayerVariables.dayCount += 1
 	#Total expenses first
-	heatExpenses()
-	for person in family:
-		person.passDay()
+	totalExpenses(true)
 	
 	#Solve the expenses
 	tempMoney -= expenses
 	expenses = 0
+	#StaticPlayerVariables.globalPlayerMoney = tempMoney
 	
 	#Update the labels/buttons. Updates wether the button can be pressed or not, to prevent negatives/debt.
-	updateBtns()
+	for person in family:
+		person.updateFeed()
 	updateHeatBtn()
 	updateLabels()
-
-func updateBtns():
-	#adds each persons expenses to the main expense
-	for person in family:
-		expenses += person.getExpenses()
-	
-	#updates each persons main expense and money values.
-	for person in family:
-		person.sendControlExpenses(expenses)
-		person.sendTempMoney(tempMoney)
-		person.updateFeed()
 
 func updateLabels():
 	moneyLabel.text = "Player's Money: " + str(tempMoney) + "$."
@@ -49,10 +38,23 @@ func heatExpenses():
 	if(heatBtn.button_pressed):
 		expenses += 30
 
+func totalExpenses(boolean):
+	#print("totaled")
+	expenses = 0
+	#Total the expenses
+	heatExpenses()
+	for person in family:
+		person.checkFeed()
+	
+	#Check what can be used / disabled
+	updateHeatBtn()
+	for person in family:
+		person.updateFeed()
+
 func updateHeatBtn():
 	#Check if the player can even heat the house.
-	if(tempMoney > 30):
-		heatBtn.disabled = false
-	else:
-		heatBtn.button_pressed = false
+	if(!heatBtn.button_pressed && tempMoney - expenses < 30):
 		heatBtn.disabled = true
+		heatBtn.button_pressed = false
+	else:
+		heatBtn.disabled = false
