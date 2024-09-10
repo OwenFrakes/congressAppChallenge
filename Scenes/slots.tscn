@@ -36,14 +36,14 @@ scale = Vector2(1.51667, 1.53143)
 texture = ExtResource("5_q8grc")
 script = ExtResource("4_87nd7")
 
+[node name="SpinnyPartTL" type="Sprite2D" parent="ClippingMaskL"]
+position = Vector2(-0.329987, 16.325)
+scale = Vector2(1.26593, 0.850839)
+texture = ExtResource("1_lb5vh")
+
 [node name="SpinnyPartL" type="Sprite2D" parent="ClippingMaskL"]
 position = Vector2(-0.329681, 16.3246)
 scale = Vector2(1.26593, 0.850513)
-texture = ExtResource("1_lb5vh")
-
-[node name="SpinnyPartTL" type="Sprite2D" parent="ClippingMaskL"]
-position = Vector2(-0.33, 16.325)
-scale = Vector2(1.26593, 0.850839)
 texture = ExtResource("1_lb5vh")
 
 [node name="ClippingMaskM" type="Sprite2D" parent="."]
@@ -53,14 +53,14 @@ scale = Vector2(1.53753, 1.52744)
 texture = ExtResource("5_q8grc")
 script = ExtResource("4_87nd7")
 
+[node name="SpinnyPartTM" type="Sprite2D" parent="ClippingMaskM"]
+position = Vector2(-0.567963, 16.325)
+scale = Vector2(1.24876, 0.853061)
+texture = ExtResource("1_lb5vh")
+
 [node name="SpinnyPartM" type="Sprite2D" parent="ClippingMaskM"]
 position = Vector2(-0.568, 16.325)
 scale = Vector2(1.24875, 0.853059)
-texture = ExtResource("1_lb5vh")
-
-[node name="SpinnyPartTM" type="Sprite2D" parent="ClippingMaskM"]
-position = Vector2(-0.568, 16.325)
-scale = Vector2(1.24876, 0.853061)
 texture = ExtResource("1_lb5vh")
 
 [node name="ClippingMaskR" type="Sprite2D" parent="."]
@@ -70,14 +70,14 @@ scale = Vector2(1.51667, 1.53082)
 texture = ExtResource("5_q8grc")
 script = ExtResource("4_87nd7")
 
+[node name="SpinnyPartTR" type="Sprite2D" parent="ClippingMaskR"]
+position = Vector2(0.329987, 16.325)
+scale = Vector2(1.26593, 0.851178)
+texture = ExtResource("1_lb5vh")
+
 [node name="SpinnyPartR" type="Sprite2D" parent="ClippingMaskR"]
 position = Vector2(0.33, 16.325)
 scale = Vector2(1.249, 0.853)
-texture = ExtResource("1_lb5vh")
-
-[node name="SpinnyPartTR" type="Sprite2D" parent="ClippingMaskR"]
-position = Vector2(0.33, 16.325)
-scale = Vector2(1.26593, 0.851178)
 texture = ExtResource("1_lb5vh")
 
 [connection signal="pressed" from="SpinButton" to="SpinButton" method="_on_pressed"]
