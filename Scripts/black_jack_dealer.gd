@@ -2,6 +2,8 @@ extends Node
 
 var playerRef : Gambler 
 var dealer : Gambler
+var betMenu : BetMenu
+var playerBet = 0
 
 func _ready():
 	#They may exist in script, but not the node tree, add them as children to actually use them.
@@ -9,53 +11,69 @@ func _ready():
 	add_child(dealer)
 	playerRef = Gambler.new()
 	add_child(playerRef)
+	betMenu = BetMenu.new()
+	add_child(betMenu)
 
 # Stage 1, 2 cards each, dealer has 1 face down. ---------------------------------------------------------
 func startRound():
-	#Make sure no other cards are in their hands, for whatever reason.
-	dealer.clearHand()
-	playerRef.clearHand()
-	
-	#Start with 1 card, face up.
-	dealer.getCard(true)
-	playerRef.getCard(true)
-	
-	#Arrange the hands.
-	arrangeDealerHand()
-	arrangePlayerHand()
-	
-	print("started round")
-	
-	#Disable the start round button, and wait 2 seconds before continuing.
-	toggleStartBtn(false)
-	await wait(1) # This is basically a sleep() method.
-	
-	#Next step to play blackjack.
-	dealer.getCard(false)
-	playerRef.getCard(true)
-	arrangeDealerHand()
-	arrangePlayerHand()
-	
-	#After last step, check if player or house has blackjack, otherwise continue.
-	#Blackjack is when the gambler's first 2 cards equals 21. Blackjack only ties against blackjack, not 21.
-	var playerBlackjack = false
-	var dealerBlackjack = false
-	if(handTotal(playerRef.getHand()) == 21):
-		playerBlackjack = true
-	if(handTotal(dealer.getHand()) == 21):
-		dealerBlackjack = true
+	playerBet = betMenu.getPlayerBet()
+	if(typeof(playerBet) == TYPE_NIL || playerBet < 1):
+		print("No bet, player can't play: " + str(playerBet))
+	else:
+		betMenu.disable()
+		#Make sure no other cards are in their hands, for whatever reason.
+		dealer.clearHand()
+		playerRef.clearHand()
 		
-	if(playerBlackjack && dealerBlackjack):
-		print("Blackjack Tie")
-	elif(playerBlackjack):
-		print("Player Blackjack")
-	elif(dealerBlackjack):
-		print("Dealer Blackjack")
-	
-	#Turn on the hit / stay buttons, after .5 second timeout/sleep.
-	await wait(.5)
-	#From here player chooses to hit or stay.
-	toggleHitStay(true) # End of startRound() ------------------------------------------------------------
+		#Start with 1 card, face up.
+		dealer.getCard(true)
+		playerRef.getCard(true)
+		
+		#Arrange the hands.
+		arrangeDealerHand()
+		arrangePlayerHand()
+		
+		print("started round")
+		
+		#Disable the start round button, and wait 2 seconds before continuing.
+		toggleStartBtn(false)
+		await wait(1) # This is basically a sleep() method.
+		
+		#Next step to play blackjack.
+		dealer.getCard(false)
+		playerRef.getCard(true)
+		arrangeDealerHand()
+		arrangePlayerHand()
+		
+		#After last step, check if player or house has blackjack, otherwise continue.
+		#Blackjack is when the gambler's first 2 cards equals 21. Blackjack only ties against blackjack, not 21.
+		var playerBlackjack = false
+		var dealerBlackjack = false
+		if(handTotal(playerRef.getHand()) == 21):
+			playerBlackjack = true
+		if(handTotal(dealer.getHand()) == 21):
+			dealerBlackjack = true
+			
+		if(playerBlackjack && dealerBlackjack):
+			print("Blackjack Tie")
+			toggleHitStay(false)
+			toggleStartBtn(true)
+			betMenu.enable()
+		elif(playerBlackjack):
+			print("Player Blackjack")
+			toggleHitStay(false)
+			toggleStartBtn(true)
+			betMenu.enable()
+		elif(dealerBlackjack):
+			print("Dealer Blackjack")
+			toggleHitStay(false)
+			toggleStartBtn(true)
+			betMenu.enable()
+		else:
+			#Turn on the hit / stay buttons, after .5 second timeout/sleep.
+			await wait(.5)
+			#From here player chooses to hit or stay.
+			toggleHitStay(true) # End of startRound() ------------------------------------------------------------
 
 # Player hits, or stays.
 # Add a card to the players hand, arrange, then check for blackjack or bust.
@@ -84,10 +102,19 @@ func playerStay():
 	
 	if(handTotal(dealer.getHand()) > 21):
 		print("Dealer bust")
+		printScores()
+		betMenu.getBetNode().winBet(2)
+		betMenu.enable()
 	elif(handTotal(dealer.getHand()) > handTotal(playerRef.getHand())):
-		print("Player lost"+ str(handTotal(playerRef.getHand()))+"|Dealer's hand" + str(handTotal(dealer.getHand())))
+		print("Player Lost")
+		printScores()
+		betMenu.getBetNode().loseBet()
+		betMenu.enable()
 	else:
-		print("Player won over dealer. " + str(handTotal(playerRef.getHand())))
+		print("Player Won.")
+		printScores()
+		betMenu.getBetNode().winBet(2)
+		betMenu.enable()
 	
 	toggleStartBtn(true) # End of playerStay() ----------------------------------------------------------
 
@@ -101,18 +128,16 @@ func handTotal(hand):
 #Automatically checks the players hand. And only the players hand.
 #"ends" the round by turning the buttons on/off, otherwise contiunes.
 func checkHand():
-	var playerTotal = handTotal(playerRef.getHand())
+	var playerTotal = int(handTotal(playerRef.getHand()))
 	
-	if(playerTotal == 21):
-		print("Blackjack")
+	if(playerTotal > 21):
+		print("Player Bust: " + str(playerTotal))
 		toggleHitStay(false)
 		toggleStartBtn(true)
-	elif(playerTotal > 21):
-		print("Player Bust: " + str(handTotal))
-		toggleHitStay(false)
-		toggleStartBtn(true)
+		betMenu.getBetNode().loseBet()
+		betMenu.enable()
 	else:
-		print("Player under: " + str(handTotal))
+		print("Player under: " + str(playerTotal))
 
 #If boolean is true, it enables the start button, false disables it.
 func toggleStartBtn(boolean):
@@ -159,6 +184,10 @@ func arrangePlayerHand():
 		playerPos += 101
 		print(card.position)
 		print("Player" + card.getSuit() + " " + str(card.getValue()))
+
+func printScores():
+	print("Player Score: " + str(handTotal(playerRef.getHand())))
+	print("Dealer Score: " + str(handTotal(dealer.getHand())))
 
 func wait(seconds: float):
 	await get_tree().create_timer(seconds).timeout

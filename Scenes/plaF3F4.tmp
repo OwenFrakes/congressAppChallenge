@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0no6puo6onw3"]
+[gd_scene load_steps=5 format=3 uid="uid://d0no6puo6onw3"]
 
 [ext_resource type="Script" path="res://Scripts/player_mover.gd" id="1_qnrmp"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_aa37n"]
 [ext_resource type="Script" path="res://Scripts/world.gd" id="3_of3cb"]
+[ext_resource type="Script" path="res://Scripts/chip.gd" id="4_egofb"]
 
 [node name="PlayerMovement" type="Node2D"]
 
@@ -32,6 +33,10 @@ offset_top = 30.0
 offset_right = 109.0
 offset_bottom = 61.0
 text = "Go home"
+
+[node name="Chip" type="AnimatedSprite2D" parent="."]
+position = Vector2(419, 305)
+script = ExtResource("4_egofb")
 
 [connection signal="pressed" from="BlackJackButton" to="PlayerMover" method="_on_black_jack_button_pressed"]
 [connection signal="pressed" from="HomeButton" to="PlayerMover" method="_on_home_button_pressed"]

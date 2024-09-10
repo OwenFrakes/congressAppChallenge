@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dc48lkekxqu2l"]
+[gd_scene load_steps=6 format=3 uid="uid://dc48lkekxqu2l"]
 
 [ext_resource type="Script" path="res://Scripts/black_jack_dealer.gd" id="1_ic5ah"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_h7nlf"]
 [ext_resource type="Script" path="res://Scripts/player_mover.gd" id="3_wl8o3"]
 [ext_resource type="Texture2D" uid="uid://bmdaurgbuqqbu" path="res://Resources/GreenMat.jpg" id="4_vls64"]
+[ext_resource type="Script" path="res://Scripts/easyMoneyLabel.gd" id="5_5uryu"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -42,10 +43,10 @@ text = "Stay"
 script = ExtResource("2_h7nlf")
 
 [node name="MainButton" type="Button" parent="."]
-offset_left = 40.0
-offset_top = 85.0
-offset_right = 169.0
-offset_bottom = 116.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 159.0
+offset_bottom = 61.0
 text = "Return  to Main
 "
 script = ExtResource("3_wl8o3")
@@ -61,6 +62,14 @@ z_index = -1
 position = Vector2(640, 550)
 scale = Vector2(2, 0.9)
 texture = ExtResource("4_vls64")
+
+[node name="PlayerMoneyCount" type="Label" parent="."]
+modulate = Color(0.427348, 0.412477, 0.408759, 1)
+offset_left = 34.0
+offset_top = 141.0
+offset_right = 74.0
+offset_bottom = 164.0
+script = ExtResource("5_5uryu")
 
 [connection signal="pressed" from="StartButton" to="BlackJackDealer" method="_on_start_button_pressed"]
 [connection signal="pressed" from="HitButton" to="BlackJackDealer" method="_on_hit_button_pressed"]

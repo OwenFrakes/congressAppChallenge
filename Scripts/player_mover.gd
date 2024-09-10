@@ -15,3 +15,7 @@ func changeToMain():
 
 func _on_pressed() -> void:
 	changeToMain()
+
+func _on_home_button_pressed() -> void:
+	var homeScene = load("res://Scenes/playerHome.tscn")
+	get_tree().change_scene_to_packed(homeScene)
