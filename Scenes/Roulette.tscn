@@ -450,8 +450,8 @@ scale = Vector2(0.100448, 0.124101)
 texture = ExtResource("7_opi28")
 
 [node name="Reset" type="Button" parent="."]
-offset_left = 1051.0
-offset_top = 508.0
-offset_right = 1196.0
-offset_bottom = 539.0
-text = "Place another bet"
+offset_left = 1037.0
+offset_top = 494.0
+offset_right = 1155.0
+offset_bottom = 525.0
+text = "Place New Bet"
