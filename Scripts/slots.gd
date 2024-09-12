@@ -2,7 +2,6 @@ extends Node
 
 var betMenu : BetMenu
 var playerBet = 0
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print_tree_pretty()
@@ -10,6 +9,7 @@ func _ready() -> void:
 	add_child(betMenu)
 	betMenu.position.y = -300
 	betMenu.position.x = 0
+	
 
 func _on_spin_button_pressed() -> void:
 	if(typeof(playerBet) == TYPE_NIL or betMenu.getPlayerBet() == 0  ):
@@ -120,9 +120,9 @@ func _on_spin_button_pressed() -> void:
 
 		#Check for 777, if 777 double return amount, else return amount - 20 * multiplier
 		if leftPos == 16 && midPos == 16 && rightPos == 16:
-			print(2*((playerBet - 20) *(1 + multiplier)))
+			betMenu.getBetNode().winBet(2*(.5*(1 + multiplier)))
 		else:
-			print((playerBet - 20) *(1 + multiplier))
+			betMenu.getBetNode().winBet(.5*(1 + multiplier))
 
 func _on_pressed() -> void:
 	_on_spin_button_pressed() # Replace with function body.
