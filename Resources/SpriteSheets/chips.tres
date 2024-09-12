@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bi4sfmhg5mpkm" path="res://Resources/Poker Chips/$20 Poker chip.png" id="4_t8nav"]
 [ext_resource type="Texture2D" uid="uid://ds0rjx6ctp6a0" path="res://Resources/Poker Chips/$50 Poker chip.png" id="5_lcj4n"]
 [ext_resource type="Texture2D" uid="uid://c63iqwvy7e86x" path="res://Resources/Poker Chips/$100 Poker chip.png" id="6_jlxjd"]
-[ext_resource type="Texture2D" uid="uid://d8mrcwg6m18y" path="res://Resources/error.png" id="7_4w72y"]
+[ext_resource type="Texture2D" uid="uid://d8mrcwg6m18y" path="res://Resources/Misc/error.png" id="7_4w72y"]
 
 [resource]
 animations = [{

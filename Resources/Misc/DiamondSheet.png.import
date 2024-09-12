@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3ttbameqpjn8"
-path="res://.godot/imported/HeartsSheet.png-d4eef64315007665f28d69bfabb7256c.ctex"
+uid="uid://b22te0sq4a5df"
+path="res://.godot/imported/DiamondSheet.png-de17acd51013d8e7efbab71cbfbe7424.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/HeartsSheet.png"
-dest_files=["res://.godot/imported/HeartsSheet.png-d4eef64315007665f28d69bfabb7256c.ctex"]
+source_file="res://Resources/Misc/DiamondSheet.png"
+dest_files=["res://.godot/imported/DiamondSheet.png-de17acd51013d8e7efbab71cbfbe7424.ctex"]
 
 [params]
 

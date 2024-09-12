@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/black_jack_dealer.gd" id="1_ic5ah"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_h7nlf"]
 [ext_resource type="Script" path="res://Scripts/player_mover.gd" id="3_wl8o3"]
-[ext_resource type="Texture2D" uid="uid://bmdaurgbuqqbu" path="res://Resources/GreenMat.jpg" id="4_vls64"]
+[ext_resource type="Texture2D" uid="uid://bmdaurgbuqqbu" path="res://Resources/Misc/GreenMat.jpg" id="4_vls64"]
 [ext_resource type="Script" path="res://Scripts/easyMoneyLabel.gd" id="5_5uryu"]
 
 [node name="Node2D" type="Node2D"]

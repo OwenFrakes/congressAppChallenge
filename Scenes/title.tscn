@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgq6naidafpeu"]
+
+[ext_resource type="Script" path="res://Scripts/player_mover.gd" id="1_8f67y"]
+[ext_resource type="LabelSettings" uid="uid://6xr0jqyqudef" path="res://Resources/Label Settings/titleLabelSettings.tres" id="1_nplhk"]
+[ext_resource type="FontFile" uid="uid://cpgselaefw5ia" path="res://Resources/Fonts/ARCADECLASSIC.TTF" id="2_iujm5"]
+[ext_resource type="Theme" uid="uid://b8oxguy2fsdgv" path="res://Resources/Themes/ArcadeTheme.tres" id="4_rsule"]
+[ext_resource type="Script" path="res://Scripts/slideElement.gd" id="5_b62pr"]
+
+[node name="Title" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="titleLabel" type="Label" parent="Camera2D"]
+offset_left = 324.0
+offset_top = 88.0
+offset_right = 956.0
+offset_bottom = 267.0
+text = "Gambling Game :(
+Very Sad Edition"
+label_settings = ExtResource("1_nplhk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="startBtn" type="Button" parent="."]
+offset_left = 70.0
+offset_top = 370.0
+offset_right = 320.0
+offset_bottom = 427.0
+theme = ExtResource("4_rsule")
+theme_override_fonts/font = ExtResource("2_iujm5")
+theme_override_font_sizes/font_size = 48
+text = "Start"
+script = ExtResource("1_8f67y")
+
+[node name="exitGameBtn" type="Button" parent="."]
+offset_left = 70.0
+offset_top = 570.0
+offset_right = 320.0
+offset_bottom = 627.0
+theme = ExtResource("4_rsule")
+theme_override_font_sizes/font_size = 48
+text = "Exit"
+script = ExtResource("1_8f67y")
+
+[node name="Slide" type="Node2D" parent="."]
+position = Vector2(70, 470)
+script = ExtResource("5_b62pr")
+
+[node name="settingsBtn" type="Button" parent="Slide"]
+offset_right = 250.0
+offset_bottom = 57.0
+theme = ExtResource("4_rsule")
+theme_override_font_sizes/font_size = 48
+text = "Settings"
+
+[connection signal="pressed" from="startBtn" to="startBtn" method="changeToMain"]
+[connection signal="pressed" from="exitGameBtn" to="startBtn" method="exitGame"]

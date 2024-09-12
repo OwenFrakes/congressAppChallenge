@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d8mrcwg6m18y"
-path="res://.godot/imported/error.png-47bb98aabeb0f47f2a1e1f92b80c176f.ctex"
+uid="uid://bmdaurgbuqqbu"
+path="res://.godot/imported/GreenMat.jpg-8adb71cdbb6a8004425c4a54abcea10c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/error.png"
-dest_files=["res://.godot/imported/error.png-47bb98aabeb0f47f2a1e1f92b80c176f.ctex"]
+source_file="res://Resources/Misc/GreenMat.jpg"
+dest_files=["res://.godot/imported/GreenMat.jpg-8adb71cdbb6a8004425c4a54abcea10c.ctex"]
 
 [params]
 

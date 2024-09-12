@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/homeControl.gd" id="1_g3vfg"]
 [ext_resource type="Script" path="res://Scripts/player_mover.gd" id="2_67f0d"]
-[ext_resource type="Texture2D" uid="uid://dxiid5fb4k47q" path="res://Resources/icon.svg" id="3_llfcy"]
+[ext_resource type="Texture2D" uid="uid://dxiid5fb4k47q" path="res://Resources/Misc/icon.svg" id="3_llfcy"]
 [ext_resource type="Script" path="res://Scripts/health_state.gd" id="4_m0kmb"]
 
 [node name="PlayerHome" type="Node2D"]

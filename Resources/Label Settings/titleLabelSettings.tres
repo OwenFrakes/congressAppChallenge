@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://6xr0jqyqudef"]
+
+[ext_resource type="FontFile" uid="uid://pvyu2c4b80dc" path="res://Resources/Fonts/Halo3.ttf" id="1_nxguk"]
+
+[resource]
+font = ExtResource("1_nxguk")
+font_size = 64
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)

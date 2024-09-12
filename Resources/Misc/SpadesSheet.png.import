@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmdaurgbuqqbu"
-path="res://.godot/imported/GreenMat.jpg-ddf6318d9584d776daedbc65cdf44820.ctex"
+uid="uid://8ysc1vufq5kf"
+path="res://.godot/imported/SpadesSheet.png-75285a31cc1664118d8d84dee0e15065.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/GreenMat.jpg"
-dest_files=["res://.godot/imported/GreenMat.jpg-ddf6318d9584d776daedbc65cdf44820.ctex"]
+source_file="res://Resources/Misc/SpadesSheet.png"
+dest_files=["res://.godot/imported/SpadesSheet.png-75285a31cc1664118d8d84dee0e15065.ctex"]
 
 [params]
 
