@@ -8,6 +8,7 @@ var bet_1_to_18=""
 var bet_12=""
 var bet_2_to_1=""
 var bet_number=""
+var bet_top_line=""
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#black
@@ -53,8 +54,8 @@ func _ready() -> void:
 	var reset_node = $"../Reset"
 	reset_node.connect("pressed", Callable(self, "on_reset_pressed"))
 	#1
-	var one_node = $"1"
-	one_node.connect("pressed", Callable(self, "one_button_pressed"))
+	var b1_node = $"1"
+	b1_node.connect("pressed", Callable(self, "b1_button_pressed"))
 	#2
 	var b2_node = $"2"
 	b2_node.connect("pressed", Callable(self, "b2_button_pressed"))
@@ -133,42 +134,54 @@ func _ready() -> void:
 	#27
 	var b27_node = $"27"
 	b27_node.connect("pressed", Callable(self, "b27_button_pressed"))
-	##28
-	#var one_node = $"1"
-	#one_node.connect("pressed", Callable(self, "one_button_pressed"))
-	##29
-	#var one_node = $"1"
-	#one_node.connect("pressed", Callable(self, "one_button_pressed"))
-	##30
-	#var one_node = $"1"
-	#one_node.connect("pressed", Callable(self, "one_button_pressed"))
-	##31
-	#var one_node = $"1"
-	#one_node.connect("pressed", Callable(self, "one_button_pressed"))
-	##32
-	#var one_node = $"1"
-	#one_node.connect("pressed", Callable(self, "one_button_pressed"))
-	##33
-	#var one_node = $"1"
-	#one_node.connect("pressed", Callable(self, "one_button_pressed"))
-	##34
-	#var one_node = $"1"
-	#one_node.connect("pressed", Callable(self, "one_button_pressed"))
-	##35
-	#var one_node = $"1"
-	#one_node.connect("pressed", Callable(self, "one_button_pressed"))
-	##36
-	#var one_node = $"1"
-	#one_node.connect("pressed", Callable(self, "one_button_pressed"))
-	##0
-	#var one_node = $"1"
-	#one_node.connect("pressed", Callable(self, "one_button_pressed"))
-	##00
-	#var one_node = $"1"
-	#one_node.connect("pressed", Callable(self, "one_button_pressed"))
+	#28
+	var b28_node = $"28"
+	b28_node.connect("pressed", Callable(self, "b28_button_pressed"))
+	#29
+	var b29_node = $"29"
+	b29_node.connect("pressed", Callable(self, "b29_button_pressed"))
+	#30
+	var b30_node = $"30"
+	b30_node.connect("pressed", Callable(self, "b30_button_pressed"))
+	#31
+	var b31_node = $"31"
+	b31_node.connect("pressed", Callable(self, "b31_button_pressed"))
+	#32
+	var b32_node = $"32"
+	b32_node.connect("pressed", Callable(self, "b32_button_pressed"))
+	#33
+	var b33_node = $"33"
+	b33_node.connect("pressed", Callable(self, "b33_button_pressed"))
+	#34
+	var b34_node = $"34"
+	b34_node.connect("pressed", Callable(self, "b34_button_pressed"))
+	#35
+	var b35_node = $"35"
+	b35_node.connect("pressed", Callable(self, "b35_button_pressed"))
+	#36
+	var b36_node = $"36"
+	b36_node.connect("pressed", Callable(self, "b36_button_pressed"))
+	#0
+	var b0_node = $"0"
+	b0_node.connect("pressed", Callable(self, "b0_button_pressed"))
+	#00
+	var b00_node = $"00"
+	b00_node.connect("pressed", Callable(self, "b00_button_pressed"))
+	#Top line bet
+	var bet_top_line_node = $"Top line bet"
+	bet_top_line_node.connect("pressed", Callable(self, "bet_top_line_button_pressed"))
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) -> void:
 	pass
+#code to go to the wheel
+func on_button_pressed():
+	self.hide()
+	$Chip.hide()
+#code to reset the wheel
+func on_reset_pressed():
+	self.show()
+	bet_placed=false
+	bet_amount=0
 #code for black 
 func black_button_pressed():
 	$Chip.show()
@@ -241,18 +254,237 @@ func b3_2_1_button_pressed():
 	bet_placed=true
 	bet_amount+=1
 	bet_2_to_1="3rd"
-#code to go to the wheel
-func on_button_pressed():
-	self.hide()
-	$Chip.hide()
-#code to reset the wheel
-func on_reset_pressed():
-	self.show()
-	bet_placed=false
-	bet_amount=0
 #code for 1
-func one_button_pressed():
+func b1_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="1"
+#code for 2
+func b2_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="2"
+#code for 3
+func b3_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="3"
+#code for 4
+func b4_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="4"
+#code for 5
+func b5_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="5"
+#code for 6
+func b6_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="6"
+#code for 7
+func b7_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="7"
+#code for 8
+func b8_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="8"
+#code for 9
+func b9_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="9"
+#code for 10
+func b10_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="10"
+#code for 11
+func b11_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="11"
+#code for 12
+func b12_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="12"
+#code for 13
+func b13_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="13"
+#code for 14
+func b14_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="14"
+#code for 15
+func b15_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="15"
+#code for 16
+func b16_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="16"
+#code for 17
+func b17_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="17"
+#code for 18
+func b18_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="18"
+#code for 19
+func b19_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="19"
+#code for 20
+func b20_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="20"
+#code for 21
+func b21_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="21"
+#code for 22
+func b22_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="22"
+#code for 23
+func b23_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="23"
+#code for 24
+func b24_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="24"
+#code for 25
+func b25_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="25"
+#code for 26
+func b26_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="26"
+#code for 27
+func b27_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="27"
+#code for 28
+func b28_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="28"
+#code for 29
+func b29_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="29"
+#code for 30
+func b30_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="30"
+#code for 31
+func b31_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="31"
+#code for 32
+func b32_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="32"
+#code for 33
+func b33_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="33"
+#code for 34
+func b34_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="34"
+#code for 35
+func b35_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="35"
+#code for 36
+func b36_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="36"
+#code for 0
+func b0_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="0"
+#code for 00
+func b00_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_number="00"
+#code for 00
+func bet_top_line_button_pressed():
+	$Chip.show()
+	bet_placed=true
+	bet_amount+=1
+	bet_top_line="yes"

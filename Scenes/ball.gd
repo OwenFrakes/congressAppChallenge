@@ -14,6 +14,7 @@ var bet_1_to_18="no"
 var bet_12="no"
 var bet_2_to_1="no"
 var bet_number="no"
+var bet_top_line="no"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#make ball centered
@@ -380,6 +381,12 @@ func _process(delta):
 			elif bet_number==table.bet_number:
 				#pays 35-1
 				money+=bet_amount*35
+				bet_number="no"
+				table.bet_amount=0
+				print(money)
+			elif table.bet_top_line=="yes"&&bet_number=="0"||table.bet_top_line=="yes"&&bet_number=="00"||table.bet_top_line=="yes"&&bet_number=="1"||table.bet_top_line=="yes"&&bet_number=="2"||table.bet_top_line=="yes"&&bet_number=="3":
+				#pays 6-1
+				money+=bet_amount*6
 				bet_number="no"
 				table.bet_amount=0
 				print(money)

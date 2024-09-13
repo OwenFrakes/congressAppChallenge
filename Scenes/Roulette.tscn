@@ -147,20 +147,20 @@ offset_right = -95.4044
 offset_bottom = -109.302
 text = "3"
 
-[node name="8" type="Button" parent="Table"]
-show_behind_parent = true
-offset_left = -90.6003
-offset_top = -108.993
-offset_right = -67.6003
-offset_bottom = -45.9928
-text = "3"
-
 [node name="7" type="Button" parent="Table"]
 show_behind_parent = true
 offset_left = -88.0727
 offset_top = -34.1727
 offset_right = -65.0727
 offset_bottom = 28.8273
+text = "3"
+
+[node name="8" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -90.6003
+offset_top = -108.993
+offset_right = -67.6003
+offset_bottom = -45.9928
 text = "3"
 
 [node name="9" type="Button" parent="Table"]
@@ -442,6 +442,15 @@ offset_top = -66.5468
 offset_right = -150.804
 offset_bottom = 24.4532
 text = "3"
+
+[node name="Top line bet" type="Button" parent="Table"]
+offset_left = -247.946
+offset_top = -202.518
+offset_right = -182.946
+offset_bottom = -166.518
+theme_override_font_sizes/font_size = 10
+text = "Top line bet
+(0,00,1,2,3)"
 
 [node name="Chip" type="Sprite2D" parent="Table"]
 visible = false
