@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvcnpudfilq4h"]
+[gd_scene load_steps=6 format=3 uid="uid://cvcnpudfilq4h"]
 
 [ext_resource type="Texture2D" uid="uid://cywlyamdicsed" path="res://Resources/SlotMachine.png" id="1_0ends"]
 [ext_resource type="Script" path="res://Scripts/player_mover.gd" id="1_3r35x"]
 [ext_resource type="Texture2D" uid="uid://diku4gi3yok6b" path="res://Resources/Spinny Part.png" id="1_lb5vh"]
 [ext_resource type="Script" path="res://Scripts/slots.gd" id="4_87nd7"]
 [ext_resource type="Texture2D" uid="uid://w6tpjke1vpwy" path="res://Resources/Clipping Mask.png" id="5_q8grc"]
-[ext_resource type="Script" path="res://Scripts/easyMoneyLabel.gd" id="6_ouu80"]
 
 [node name="Slots" type="Node2D"]
 
@@ -81,12 +80,12 @@ position = Vector2(0.33, 16.325)
 scale = Vector2(1.249, 0.853)
 texture = ExtResource("1_lb5vh")
 
-[node name="PlayerMoney" type="Label" parent="."]
-offset_left = 522.0
-offset_top = 19.0
-offset_right = 752.0
-offset_bottom = 94.0
-script = ExtResource("6_ouu80")
+[node name="MoneyAmount" type="Label" parent="."]
+offset_left = 1001.0
+offset_top = 72.0
+offset_right = 1041.0
+offset_bottom = 95.0
+text = "Money:"
 
 [connection signal="pressed" from="SpinButton" to="SpinButton" method="_on_pressed"]
 [connection signal="pressed" from="ReturnButton" to="ReturnButton" method="_on_pressed"]

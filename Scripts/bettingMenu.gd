@@ -75,6 +75,9 @@ func getBetNode():
 func getPlayerBet():
 	return betNode.getPlayerBet()
 
+func getPlayerAmount():
+	return betNode.getPlayerAmount()
+
 func disable():
 	disabled = true
 
