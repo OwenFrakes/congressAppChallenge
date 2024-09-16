@@ -443,6 +443,15 @@ offset_right = -150.804
 offset_bottom = 24.4532
 text = "3"
 
+[node name="MenuButton" type="MenuButton" parent="Table"]
+offset_left = -364.218
+offset_top = -183.813
+offset_right = -283.218
+offset_bottom = -147.813
+theme_override_font_sizes/font_size = 10
+text = "Six line bet on six numbers"
+autowrap_mode = 2
+
 [node name="Top line bet" type="Button" parent="Table"]
 offset_left = -247.946
 offset_top = -202.518
@@ -451,6 +460,39 @@ offset_bottom = -166.518
 theme_override_font_sizes/font_size = 10
 text = "Top line bet
 (0,00,1,2,3)"
+
+[node name="Six line bet on six numbers" type="OptionButton" parent="Table"]
+offset_left = -390.758
+offset_top = -103.237
+offset_right = -189.758
+offset_bottom = -67.2374
+theme_override_font_sizes/font_size = 13
+selected = 0
+allow_reselect = true
+item_count = 12
+popup/item_0/text = "Six line bet on six numbers"
+popup/item_1/text = "1-6"
+popup/item_1/id = 1
+popup/item_2/text = "4-9"
+popup/item_2/id = 2
+popup/item_3/text = "7-12"
+popup/item_3/id = 3
+popup/item_4/text = "10-15"
+popup/item_4/id = 4
+popup/item_5/text = "13-18"
+popup/item_5/id = 5
+popup/item_6/text = "16-21"
+popup/item_6/id = 6
+popup/item_7/text = "19-24"
+popup/item_7/id = 7
+popup/item_8/text = "22-27"
+popup/item_8/id = 8
+popup/item_9/text = "25-30"
+popup/item_9/id = 9
+popup/item_10/text = "28-33"
+popup/item_10/id = 10
+popup/item_11/text = "31-36"
+popup/item_11/id = 11
 
 [node name="Chip" type="Sprite2D" parent="Table"]
 visible = false
@@ -464,3 +506,5 @@ offset_top = 494.0
 offset_right = 1155.0
 offset_bottom = 525.0
 text = "Place New Bet"
+
+[connection signal="item_selected" from="Table/Six line bet on six numbers" to="Roulette wheel" method="_on_six_line_bet_on_six_numbers_item_selected"]

@@ -482,9 +482,12 @@ func b00_button_pressed():
 	bet_placed=true
 	bet_amount+=1
 	bet_number="00"
-#code for 00
+#code for top line bet
 func bet_top_line_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_top_line="yes"
+#code for six line bet
+func _on_six_line_bet_on_six_numbers_item_selected(index: int) -> void:
+	pass # Replace with function body.
