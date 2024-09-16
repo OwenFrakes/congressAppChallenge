@@ -126,13 +126,13 @@ func _on_spin_button_pressed() -> void:
 		#Check for 777, if 777 double return amount, else return amount - 20 * multiplier
 		if leftPos == 16 && midPos == 16 && rightPos == 16:
 			betMenu.getBetNode().winBet(2*(.5*(1 + multiplier)))
+		elif leftPos == midPos && midPos == rightPos:
+			betMenu.getBetNode().winBet(1.5)
+		elif leftPos == midPos or midPos == rightPos or leftPos == rightPos:
+			betMenu.getBetNode().winBet(1.2)
 		else:
 			betMenu.getBetNode().winBet(.5*(1 + multiplier))
 
 func _on_pressed() -> void:
 	_on_spin_button_pressed() # Replace with function body.
 	$"../MoneyAmount".text = "Money: " + str(betMenu.getPlayerAmount())
-
-func _process(_delta) -> void:
-	pass
-	#score += 1
