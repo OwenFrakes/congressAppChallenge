@@ -1,8 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0no6puo6onw3"]
+[gd_scene load_steps=9 format=3 uid="uid://d0no6puo6onw3"]
 
+[ext_resource type="Theme" uid="uid://b24gd6hnrglck" path="res://Resources/Themes/ButtonThemes/ButtonNexusTheme.tres" id="1_ksdjp"]
 [ext_resource type="Script" path="res://Scripts/player_mover.gd" id="1_qnrmp"]
+[ext_resource type="Texture2D" uid="uid://dfykugpa6x1q5" path="res://Resources/Misc/blackJackImage.png" id="2_4g0bd"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_aa37n"]
 [ext_resource type="Script" path="res://Scripts/world.gd" id="3_of3cb"]
+[ext_resource type="Texture2D" uid="uid://vkmc2wxex3ey" path="res://Resources/Misc/houseImage2.jpg" id="6_8ry2k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g3mui"]
+texture = ExtResource("2_4g0bd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tbwap"]
+texture = ExtResource("6_8ry2k")
+modulate_color = Color(0.877616, 0.877616, 0.877616, 1)
 
 [node name="PlayerMovement" type="Node2D"]
 
@@ -10,10 +20,13 @@
 anchor_mode = 0
 
 [node name="BlackJackButton" type="Button" parent="."]
-offset_left = 30.0
-offset_top = 90.0
-offset_right = 111.0
-offset_bottom = 121.0
+offset_top = 360.0
+offset_right = 640.0
+offset_bottom = 720.0
+theme = ExtResource("1_ksdjp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_g3mui")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_g3mui")
+theme_override_styles/normal = SubResource("StyleBoxTexture_g3mui")
 text = "Blackjack
 "
 
@@ -27,10 +40,12 @@ script = ExtResource("3_of3cb")
 script = ExtResource("2_aa37n")
 
 [node name="HomeButton" type="Button" parent="."]
-offset_left = 30.0
-offset_top = 30.0
-offset_right = 109.0
-offset_bottom = 61.0
+offset_right = 640.0
+offset_bottom = 360.0
+theme = ExtResource("1_ksdjp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tbwap")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tbwap")
+theme_override_styles/normal = SubResource("StyleBoxTexture_tbwap")
 text = "Go home"
 
 [connection signal="pressed" from="BlackJackButton" to="PlayerMover" method="_on_black_jack_button_pressed"]

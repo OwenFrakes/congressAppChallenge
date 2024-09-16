@@ -3,64 +3,76 @@
 [ext_resource type="Script" path="res://Scripts/player_mover.gd" id="1_8f67y"]
 [ext_resource type="LabelSettings" uid="uid://6xr0jqyqudef" path="res://Resources/Label Settings/titleLabelSettings.tres" id="1_nplhk"]
 [ext_resource type="Script" path="res://Scripts/slideMaster.gd" id="2_f6aym"]
-[ext_resource type="FontFile" uid="uid://cpgselaefw5ia" path="res://Resources/Fonts/ARCADECLASSIC.TTF" id="2_iujm5"]
-[ext_resource type="Theme" uid="uid://b8oxguy2fsdgv" path="res://Resources/Themes/ArcadeTheme.tres" id="4_rsule"]
+[ext_resource type="Theme" uid="uid://b8oxguy2fsdgv" path="res://Resources/Themes/ButtonThemes/ButtonTitleTheme.tres" id="4_rsule"]
 [ext_resource type="Script" path="res://Scripts/slideElement.gd" id="5_b62pr"]
+[ext_resource type="Texture2D" uid="uid://bba5m2th7dosp" path="res://Resources/Misc/CasinoPic.png" id="7_rj5e8"]
 
 [node name="Title" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 
-[node name="titleLabel" type="Label" parent="Camera2D"]
-offset_left = 324.0
-offset_top = 88.0
-offset_right = 956.0
-offset_bottom = 267.0
-text = "Gambling Game :(
-Very Sad Edition"
-label_settings = ExtResource("1_nplhk")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="SlideMaster" type="Node" parent="."]
 script = ExtResource("2_f6aym")
 
 [node name="Slide1" type="Node2D" parent="SlideMaster"]
-position = Vector2(70, 400)
+position = Vector2(425, 301)
 script = ExtResource("5_b62pr")
 
 [node name="startBtn" type="Button" parent="SlideMaster/Slide1"]
-offset_right = 250.0
-offset_bottom = 57.0
+offset_right = 430.0
+offset_bottom = 81.0
 theme = ExtResource("4_rsule")
-theme_override_fonts/font = ExtResource("2_iujm5")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 64
 text = "Start"
 script = ExtResource("1_8f67y")
 
 [node name="Slide2" type="Node2D" parent="SlideMaster"]
-position = Vector2(70, 500)
+position = Vector2(425, 401)
 script = ExtResource("5_b62pr")
 
 [node name="settingsBtn" type="Button" parent="SlideMaster/Slide2"]
-offset_right = 250.0
-offset_bottom = 57.0
+offset_right = 430.0
+offset_bottom = 81.0
 theme = ExtResource("4_rsule")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 64
 text = "Settings"
+metadata/_edit_use_anchors_ = true
 
 [node name="Slide3" type="Node2D" parent="SlideMaster"]
-position = Vector2(70, 600)
+position = Vector2(425, 501)
 script = ExtResource("5_b62pr")
 
 [node name="exitGameBtn" type="Button" parent="SlideMaster/Slide3"]
-offset_right = 250.0
-offset_bottom = 57.0
+offset_right = 430.0
+offset_bottom = 81.0
 theme = ExtResource("4_rsule")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 64
 text = "Exit"
 script = ExtResource("1_8f67y")
+
+[node name="titleLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 213.0
+offset_top = 41.0
+offset_right = 1066.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Life Lottery"
+label_settings = ExtResource("1_nplhk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="titleBackground" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(1.93939, 1.63636)
+texture = ExtResource("7_rj5e8")
+centered = false
 
 [connection signal="pressed" from="SlideMaster/Slide1/startBtn" to="SlideMaster/Slide1/startBtn" method="changeToMain"]
 [connection signal="pressed" from="SlideMaster/Slide3/exitGameBtn" to="SlideMaster/Slide1/startBtn" method="exitGame"]

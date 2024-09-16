@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b24gd6hnrglck"]
+
+[ext_resource type="FontFile" uid="uid://cugm6v202xdbf" path="res://Resources/Fonts/joystix monospace.otf" id="1_gabpm"]
+
+[resource]
+Button/constants/outline_size = 8
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_gabpm")

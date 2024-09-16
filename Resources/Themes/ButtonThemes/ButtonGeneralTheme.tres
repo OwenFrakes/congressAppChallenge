@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dq8dn270k6tor"]
+
+[ext_resource type="FontFile" uid="uid://cugm6v202xdbf" path="res://Resources/Fonts/joystix monospace.otf" id="1_ksqj2"]
+[ext_resource type="StyleBox" uid="uid://btbh3gxrkaute" path="res://Resources/Themes/Styles/GeneralDisabled.tres" id="2_hnjt4"]
+[ext_resource type="StyleBox" uid="uid://dik42abthbf0m" path="res://Resources/Themes/Styles/GeneralHovered.tres" id="3_gwv0v"]
+[ext_resource type="StyleBox" uid="uid://cew3xe0yeapdo" path="res://Resources/Themes/Styles/GeneralNormal.tres" id="4_xeu05"]
+[ext_resource type="StyleBox" uid="uid://cram8ptkrxnny" path="res://Resources/Themes/Styles/GeneralPressed.tres" id="5_prqpm"]
+
+[resource]
+Button/constants/outline_size = 6
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_ksqj2")
+Button/styles/disabled = ExtResource("2_hnjt4")
+Button/styles/hover = ExtResource("3_gwv0v")
+Button/styles/normal = ExtResource("4_xeu05")
+Button/styles/pressed = ExtResource("5_prqpm")
