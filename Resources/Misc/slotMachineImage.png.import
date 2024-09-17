@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w6tpjke1vpwy"
-path="res://.godot/imported/Clipping Mask.png-1efd68f9c2c3f0b77e4b4cce4da58f88.ctex"
+uid="uid://djadhfvou3ik0"
+path="res://.godot/imported/slotMachineImage.png-e966bc82cc47cebd5c6e1f9539b46515.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Clipping Mask.png"
-dest_files=["res://.godot/imported/Clipping Mask.png-1efd68f9c2c3f0b77e4b4cce4da58f88.ctex"]
+source_file="res://Resources/Misc/slotMachineImage.png"
+dest_files=["res://.godot/imported/slotMachineImage.png-e966bc82cc47cebd5c6e1f9539b46515.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cywlyamdicsed"
-path="res://.godot/imported/SlotMachine.png-487d6d7752b0962831f6867da59707d6.ctex"
+uid="uid://diku4gi3yok6b"
+path="res://.godot/imported/Spinny Part.png-e7a35b3fd85bbbcec17e8a435e0c7832.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/SlotMachine.png"
-dest_files=["res://.godot/imported/SlotMachine.png-487d6d7752b0962831f6867da59707d6.ctex"]
+source_file="res://Resources/Misc/Spinny Part.png"
+dest_files=["res://.godot/imported/Spinny Part.png-e7a35b3fd85bbbcec17e8a435e0c7832.ctex"]
 
 [params]
 
