@@ -54,6 +54,9 @@ func winBet(returnMultipler : float):
 	playerBet = 0
 	sortChips()
 
+func getPlayerAmount():
+	return playerAmount
+
 func getPlayerBet():
 	return playerBet
 
