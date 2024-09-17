@@ -182,6 +182,10 @@ func on_reset_pressed():
 	self.show()
 	bet_placed=false
 	bet_amount=0
+	$"Six line bet on six numbers".selected=0
+	$"../Table/Split bet".selected=0
+	$"../Table/Street bet".selected=0
+	$"../Table/Corner bet".selected=0
 #code for black 
 func black_button_pressed():
 	$Chip.show()
@@ -488,6 +492,3 @@ func bet_top_line_button_pressed():
 	bet_placed=true
 	bet_amount+=1
 	bet_top_line="yes"
-#code for six line bet
-func _on_six_line_bet_on_six_numbers_item_selected(index: int) -> void:
-	pass # Replace with function body.

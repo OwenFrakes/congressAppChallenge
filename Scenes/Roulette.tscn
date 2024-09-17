@@ -149,10 +149,10 @@ text = "3"
 
 [node name="7" type="Button" parent="Table"]
 show_behind_parent = true
-offset_left = -88.0727
-offset_top = -34.1727
-offset_right = -65.0727
-offset_bottom = 28.8273
+offset_left = -89.9684
+offset_top = -34.8921
+offset_right = -66.9684
+offset_bottom = 28.1079
 text = "3"
 
 [node name="8" type="Button" parent="Table"]
@@ -443,15 +443,6 @@ offset_right = -150.804
 offset_bottom = 24.4532
 text = "3"
 
-[node name="MenuButton" type="MenuButton" parent="Table"]
-offset_left = -364.218
-offset_top = -183.813
-offset_right = -283.218
-offset_bottom = -147.813
-theme_override_font_sizes/font_size = 10
-text = "Six line bet on six numbers"
-autowrap_mode = 2
-
 [node name="Top line bet" type="Button" parent="Table"]
 offset_left = -247.946
 offset_top = -202.518
@@ -461,12 +452,19 @@ theme_override_font_sizes/font_size = 10
 text = "Top line bet
 (0,00,1,2,3)"
 
+[node name="Chip" type="Sprite2D" parent="Table"]
+visible = false
+position = Vector2(-220.774, 98.2014)
+scale = Vector2(0.100448, 0.124101)
+texture = ExtResource("7_opi28")
+
 [node name="Six line bet on six numbers" type="OptionButton" parent="Table"]
-offset_left = -390.758
-offset_top = -103.237
-offset_right = -189.758
-offset_bottom = -67.2374
-theme_override_font_sizes/font_size = 13
+offset_left = -390.126
+offset_top = -101.799
+offset_right = -228.126
+offset_bottom = -71.7986
+theme_override_font_sizes/font_size = 10
+autowrap_mode = 2
 selected = 0
 allow_reselect = true
 item_count = 12
@@ -494,11 +492,103 @@ popup/item_10/id = 10
 popup/item_11/text = "31-36"
 popup/item_11/id = 11
 
-[node name="Chip" type="Sprite2D" parent="Table"]
-visible = false
-position = Vector2(-220.774, 98.2014)
-scale = Vector2(0.100448, 0.124101)
-texture = ExtResource("7_opi28")
+[node name="Split bet" type="OptionButton" parent="Table"]
+offset_left = -390.126
+offset_top = -195.324
+offset_right = -318.126
+offset_bottom = -164.324
+theme_override_font_sizes/font_size = 10
+selected = 0
+item_count = 1
+popup/item_0/text = "Split bet"
+
+[node name="Street bet" type="OptionButton" parent="Table"]
+offset_left = -390.126
+offset_top = -163.669
+offset_right = -310.126
+offset_bottom = -132.669
+theme_override_font_sizes/font_size = 10
+selected = 0
+item_count = 13
+popup/item_0/text = "Street bet"
+popup/item_1/text = "1,2,3"
+popup/item_1/id = 1
+popup/item_2/text = "4,5,6"
+popup/item_2/id = 2
+popup/item_3/text = "7,8,9"
+popup/item_3/id = 3
+popup/item_4/text = "10,11,12"
+popup/item_4/id = 4
+popup/item_5/text = "13,14,15"
+popup/item_5/id = 5
+popup/item_6/text = "16,17,18"
+popup/item_6/id = 6
+popup/item_7/text = "19,20,21"
+popup/item_7/id = 7
+popup/item_8/text = "22,23,24"
+popup/item_8/id = 8
+popup/item_9/text = "25,26,27"
+popup/item_9/id = 9
+popup/item_10/text = "28,29,30"
+popup/item_10/id = 10
+popup/item_11/text = "31,32,33"
+popup/item_11/id = 11
+popup/item_12/text = "34,35,36"
+popup/item_12/id = 12
+
+[node name="Corner bet" type="OptionButton" parent="Table"]
+offset_left = -390.126
+offset_top = -132.734
+offset_right = -304.126
+offset_bottom = -101.734
+theme_override_font_sizes/font_size = 10
+selected = 0
+item_count = 23
+popup/item_0/text = "Corner bet"
+popup/item_1/text = "1,2,4,5"
+popup/item_1/id = 1
+popup/item_2/text = "2,3,5,6"
+popup/item_2/id = 2
+popup/item_3/text = "4,5,7,8"
+popup/item_3/id = 3
+popup/item_4/text = "5,6,8,9"
+popup/item_4/id = 4
+popup/item_5/text = "7,8,10,11"
+popup/item_5/id = 5
+popup/item_6/text = "8,9,11,12"
+popup/item_6/id = 6
+popup/item_7/text = "10,11,13,14"
+popup/item_7/id = 7
+popup/item_8/text = "11,12,14,15"
+popup/item_8/id = 8
+popup/item_9/text = "13,14,16,17"
+popup/item_9/id = 9
+popup/item_10/text = "14,15,17,18"
+popup/item_10/id = 10
+popup/item_11/text = "16,17,19,20"
+popup/item_11/id = 11
+popup/item_12/text = "17,18,20,21"
+popup/item_12/id = 12
+popup/item_13/text = "19,20,22,23"
+popup/item_13/id = 13
+popup/item_14/text = "20,21,23,24"
+popup/item_14/id = 14
+popup/item_15/text = "22,23,25,26"
+popup/item_15/id = 15
+popup/item_16/text = "23,24,26,27"
+popup/item_16/id = 16
+popup/item_17/text = "25,26,28,29"
+popup/item_17/id = 17
+popup/item_18/text = "26,27,29,30"
+popup/item_18/id = 18
+popup/item_19/text = "28,29,31,32"
+popup/item_19/id = 19
+popup/item_20/text = "29,30,32,33"
+popup/item_20/id = 20
+popup/item_21/text = "31,32,34,35"
+popup/item_21/id = 21
+popup/item_22/text = "32,33,35,36"
+popup/item_22/id = 22
 
 [node name="Reset" type="Button" parent="."]
 offset_left = 1037.0
@@ -508,3 +598,6 @@ offset_bottom = 525.0
 text = "Place New Bet"
 
 [connection signal="item_selected" from="Table/Six line bet on six numbers" to="Roulette wheel" method="_on_six_line_bet_on_six_numbers_item_selected"]
+[connection signal="item_selected" from="Table/Split bet" to="Roulette wheel" method="_on_split_bet_item_selected"]
+[connection signal="item_selected" from="Table/Street bet" to="Roulette wheel" method="_on_street_bet_item_selected"]
+[connection signal="item_selected" from="Table/Corner bet" to="Roulette wheel" method="_on_corner_bet_item_selected"]
