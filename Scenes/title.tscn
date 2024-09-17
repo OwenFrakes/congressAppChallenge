@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Scripts/slideMaster.gd" id="2_f6aym"]
 [ext_resource type="Theme" uid="uid://b8oxguy2fsdgv" path="res://Resources/Themes/ButtonThemes/ButtonTitleTheme.tres" id="4_rsule"]
 [ext_resource type="Script" path="res://Scripts/slideElement.gd" id="5_b62pr"]
-[ext_resource type="Texture2D" uid="uid://bba5m2th7dosp" path="res://Resources/Misc/CasinoPic.png" id="7_rj5e8"]
+[ext_resource type="Texture2D" uid="uid://dqopi68p6ea3m" path="res://Resources/Misc/titleImage2.jpg" id="6_u2cov"]
 
 [node name="Title" type="Node2D"]
 
@@ -70,8 +70,8 @@ vertical_alignment = 1
 
 [node name="titleBackground" type="Sprite2D" parent="."]
 z_index = -1
-scale = Vector2(1.93939, 1.63636)
-texture = ExtResource("7_rj5e8")
+scale = Vector2(1.6, 1.2)
+texture = ExtResource("6_u2cov")
 centered = false
 
 [connection signal="pressed" from="SlideMaster/Slide1/startBtn" to="SlideMaster/Slide1/startBtn" method="changeToMain"]

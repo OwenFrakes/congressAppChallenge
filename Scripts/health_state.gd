@@ -48,9 +48,11 @@ func passDay():
 	updateLabel()
 
 func checkFeed():
-	if(feedBtn.button_pressed):
+	if(feedBtn.button_pressed && homeControl.tempMoney - homeControl.expenses >= 15):
 		isFed = true
 		homeControl.expenses += 15
+	elif(homeControl.tempMoney - homeControl.expenses < 15):
+		feedBtn.disabled = true
 	else:
 		isFed = false
 
@@ -73,5 +75,5 @@ func updateLabel():
 	var labelY = 0 - (texture.get_height()/2.0) - stateLabel.size.y
 	stateLabel.position = Vector2(labelX, labelY)
 
-func updateBtns(boolean : bool):
+func updateBtns(_boolean : bool):
 	updateFeed()
