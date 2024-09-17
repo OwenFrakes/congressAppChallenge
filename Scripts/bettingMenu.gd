@@ -37,6 +37,9 @@ func _ready() -> void:
 	get_popup().add_item("Remove 100", 12)
 	#Connect via signal, this stuff is a mess.
 	get_popup().id_pressed.connect(_on_pressed)
+	
+	#Correct theme
+	theme = load("res://Resources/Themes/ButtonThemes/ButtonGeneralTheme.tres")
 
 func _on_pressed(id: int):
 	print(str(id))

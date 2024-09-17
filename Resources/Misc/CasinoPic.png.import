@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b22te0sq4a5df"
-path="res://.godot/imported/DiamondSheet.png-552b713286edcca3415f1bbe8425fe37.ctex"
+uid="uid://bba5m2th7dosp"
+path="res://.godot/imported/CasinoPic.png-a6265c0a4c6841c287cfd35816f38794.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/DiamondSheet.png"
-dest_files=["res://.godot/imported/DiamondSheet.png-552b713286edcca3415f1bbe8425fe37.ctex"]
+source_file="res://Resources/Misc/CasinoPic.png"
+dest_files=["res://.godot/imported/CasinoPic.png-a6265c0a4c6841c287cfd35816f38794.ctex"]
 
 [params]
 

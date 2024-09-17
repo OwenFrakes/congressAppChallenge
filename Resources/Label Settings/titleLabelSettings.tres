@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://6xr0jqyqudef"]
+
+[ext_resource type="FontFile" uid="uid://c360bm4x11xxj" path="res://Resources/Fonts/Minecraft Evenings.otf" id="1_m05rp"]
+
+[resource]
+font = ExtResource("1_m05rp")
+font_size = 128
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
