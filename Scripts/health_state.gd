@@ -15,23 +15,27 @@ func _ready() -> void:
 	# Feed Button Code
 	feedBtn = CheckButton.new()
 	feedBtn.text = "Feed?"
+	feedBtn.theme = load("res://Resources/Themes/ButtonThemes/ButtonGeneralTheme.tres")
 	add_child(feedBtn)
 	feedBtn.z_index += 1
 	var feedX = 0 - (feedBtn.size.x / 2)
 	var feedY = (texture.get_height() / 2.0)
 	feedBtn.position = Vector2(feedX, feedY)
-	
+	#feedBtn.set_size(Vector2(1,1))
 	#Trying to connect a signal, Signals suck to use.
 	feedBtn.toggled.connect(homeControl.totalExpenses)
 	
 	# Label Code
 	stateLabel = Label.new()
 	stateLabel.text = state
+	stateLabel.theme = load("res://Resources/Themes/LabelThemes/LabelGeneralTheme.tres")
 	add_child(stateLabel)
 	var labelX = 0 - (stateLabel.size.x / 2)
 	var labelY = 0 - (texture.get_height()/2.0) - stateLabel.size.y
 	stateLabel.position = Vector2(labelX, labelY)
 	stateLabel.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	
+	
 	
 
 func passDay():
@@ -45,14 +49,13 @@ func passDay():
 		state = "Sick"
 	else:
 		state = "Healthy"
+	print(state)
 	updateLabel()
 
 func checkFeed():
 	if(feedBtn.button_pressed && homeControl.tempMoney - homeControl.expenses >= 15):
 		isFed = true
 		homeControl.expenses += 15
-	elif(homeControl.tempMoney - homeControl.expenses < 15):
-		feedBtn.disabled = true
 	else:
 		isFed = false
 

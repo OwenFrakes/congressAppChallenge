@@ -16,6 +16,20 @@ func _ready() -> void:
 	updateLabels()
 	updateHeatBtn()
 	totalExpenses(true)
+	
+	family[0].state = StaticPlayerVariables.spouseState
+	family[1].state = StaticPlayerVariables.child1State
+	family[2].state = StaticPlayerVariables.child2State  
+	family[3].state = StaticPlayerVariables.child3State
+	
+	for person in family:
+		person.updateLabel()
+
+func _exit_tree() -> void:
+	StaticPlayerVariables.spouseState = family[0].state
+	StaticPlayerVariables.child1State = family[1].state
+	StaticPlayerVariables.child2State = family[2].state
+	StaticPlayerVariables.child3State = family[3].state
 
 func passDay():
 	StaticPlayerVariables.dayCount += 1
@@ -30,6 +44,7 @@ func passDay():
 	
 	#Update the labels/buttons. Updates wether the button can be pressed or not, to prevent negatives/debt.
 	for person in family:
+		person.passDay()
 		person.updateFeed()
 	updateHeatBtn()
 	updateLabels()
@@ -61,6 +76,8 @@ func totalExpenses(_boolean):
 	updateHeatBtn()
 	for person in family:
 		person.updateFeed()
+	
+	totalExpensesLabel.text = ("Total Expenses: " + str(expenses) + "$")
 
 func updateHeatBtn():
 	#Check if the player can even heat the house.
