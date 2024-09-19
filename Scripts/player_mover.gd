@@ -22,7 +22,11 @@ func changeToMain():
 	var mainScene = load("res://Scenes/playerMovement.tscn")
 	get_tree().change_scene_to_packed(mainScene)
 
-#Routes to changeToMain().
+func changeToRoulette():
+	var mainScene = load("res://Scenes/Roulette.tscn")
+	get_tree().change_scene_to_packed(mainScene)
+
+
 func _on_pressed() -> void:
 	changeToMain()
 
