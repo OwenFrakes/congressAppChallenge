@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w6tpjke1vpwy"
-path="res://.godot/imported/Clipping Mask.png-1efd68f9c2c3f0b77e4b4cce4da58f88.ctex"
+uid="uid://8ysc1vufq5kf"
+path="res://.godot/imported/SpadesSheet.png-75285a31cc1664118d8d84dee0e15065.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Clipping Mask.png"
-dest_files=["res://.godot/imported/Clipping Mask.png-1efd68f9c2c3f0b77e4b4cce4da58f88.ctex"]
+source_file="res://Resources/Misc/SpadesSheet.png"
+dest_files=["res://.godot/imported/SpadesSheet.png-75285a31cc1664118d8d84dee0e15065.ctex"]
 
 [params]
 

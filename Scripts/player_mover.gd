@@ -7,11 +7,17 @@ extends Node
 func _on_black_jack_button_pressed() -> void:
 	var newScene = load("res://Scenes/blackjack.tscn")
 	get_tree().change_scene_to_packed(newScene)
-	
+
 func _on_slots_button_pressed() -> void:
 	var newScene = load("res://Scenes/slots.tscn")
 	get_tree().change_scene_to_packed(newScene)
 
+#Changes to scene to home.
+func _on_home_button_pressed() -> void:
+	var homeScene = load("res://Scenes/playerHome.tscn")
+	get_tree().change_scene_to_packed(homeScene)
+
+#Changes scene to main/playerMovement.
 func changeToMain():
 	var mainScene = load("res://Scenes/playerMovement.tscn")
 	get_tree().change_scene_to_packed(mainScene)
@@ -20,9 +26,9 @@ func changeToRoulette():
 	var mainScene = load("res://Scenes/Roulette.tscn")
 	get_tree().change_scene_to_packed(mainScene)
 
+
 func _on_pressed() -> void:
 	changeToMain()
 
-func _on_home_button_pressed() -> void:
-	var homeScene = load("res://Scenes/playerHome.tscn")
-	get_tree().change_scene_to_packed(homeScene)
+func exitGame():
+	get_tree().quit()

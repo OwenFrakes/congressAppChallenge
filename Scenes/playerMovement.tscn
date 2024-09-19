@@ -1,8 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0no6puo6onw3"]
+[gd_scene load_steps=11 format=3 uid="uid://d0no6puo6onw3"]
 
+[ext_resource type="Theme" uid="uid://b24gd6hnrglck" path="res://Resources/Themes/ButtonThemes/ButtonNexusTheme.tres" id="1_ksdjp"]
 [ext_resource type="Script" path="res://Scripts/player_mover.gd" id="1_qnrmp"]
+[ext_resource type="Texture2D" uid="uid://dfykugpa6x1q5" path="res://Resources/Misc/blackJackImage.png" id="2_4g0bd"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_aa37n"]
 [ext_resource type="Script" path="res://Scripts/world.gd" id="3_of3cb"]
+[ext_resource type="Texture2D" uid="uid://vkmc2wxex3ey" path="res://Resources/Misc/houseImage2.jpg" id="6_8ry2k"]
+[ext_resource type="Texture2D" uid="uid://baat8tcd8p22k" path="res://Resources/Misc/slotMachineImage2.png" id="7_e6bdh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g3mui"]
+texture = ExtResource("2_4g0bd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tbwap"]
+texture = ExtResource("6_8ry2k")
+modulate_color = Color(0.877616, 0.877616, 0.877616, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bo2ap"]
+texture = ExtResource("7_e6bdh")
 
 [node name="PlayerMovement" type="Node2D"]
 
@@ -10,10 +24,13 @@
 anchor_mode = 0
 
 [node name="BlackJackButton" type="Button" parent="."]
-offset_left = 30.0
-offset_top = 90.0
-offset_right = 111.0
-offset_bottom = 121.0
+offset_top = 360.0
+offset_right = 640.0
+offset_bottom = 720.0
+theme = ExtResource("1_ksdjp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_g3mui")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_g3mui")
+theme_override_styles/normal = SubResource("StyleBoxTexture_g3mui")
 text = "Blackjack
 "
 
@@ -27,17 +44,23 @@ script = ExtResource("3_of3cb")
 script = ExtResource("2_aa37n")
 
 [node name="HomeButton" type="Button" parent="."]
-offset_left = 30.0
-offset_top = 30.0
-offset_right = 109.0
-offset_bottom = 61.0
+offset_right = 640.0
+offset_bottom = 360.0
+theme = ExtResource("1_ksdjp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tbwap")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tbwap")
+theme_override_styles/normal = SubResource("StyleBoxTexture_tbwap")
 text = "Go home"
 
 [node name="SlotsButton" type="Button" parent="."]
-offset_left = 29.0
-offset_top = 147.0
-offset_right = 108.0
-offset_bottom = 178.0
+offset_left = 640.0
+offset_right = 1280.0
+offset_bottom = 360.0
+theme = ExtResource("1_ksdjp")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_bo2ap")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bo2ap")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bo2ap")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bo2ap")
 text = "Slots"
 
 [node name="RouletteButton" type="Button" parent="."]

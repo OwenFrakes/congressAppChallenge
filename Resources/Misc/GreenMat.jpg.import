@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b22te0sq4a5df"
-path="res://.godot/imported/DiamondSheet.png-552b713286edcca3415f1bbe8425fe37.ctex"
+uid="uid://bmdaurgbuqqbu"
+path="res://.godot/imported/GreenMat.jpg-8adb71cdbb6a8004425c4a54abcea10c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/DiamondSheet.png"
-dest_files=["res://.godot/imported/DiamondSheet.png-552b713286edcca3415f1bbe8425fe37.ctex"]
+source_file="res://Resources/Misc/GreenMat.jpg"
+dest_files=["res://.godot/imported/GreenMat.jpg-8adb71cdbb6a8004425c4a54abcea10c.ctex"]
 
 [params]
 

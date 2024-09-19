@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3ttbameqpjn8"
-path="res://.godot/imported/HeartsSheet.png-d4eef64315007665f28d69bfabb7256c.ctex"
+uid="uid://bbdullxku1bmm"
+path="res://.godot/imported/kid1edit.png-aad145dbb6253e393c81192e9f0408e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/HeartsSheet.png"
-dest_files=["res://.godot/imported/HeartsSheet.png-d4eef64315007665f28d69bfabb7256c.ctex"]
+source_file="res://Resources/Misc/Family/kid1edit.png"
+dest_files=["res://.godot/imported/kid1edit.png-aad145dbb6253e393c81192e9f0408e0.ctex"]
 
 [params]
 
