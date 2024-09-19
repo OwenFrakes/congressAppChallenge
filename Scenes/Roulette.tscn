@@ -1,0 +1,717 @@
+[gd_scene load_steps=8 format=3 uid="uid://cc5lmshbii28o"]
+
+[ext_resource type="Texture2D" uid="uid://ctc7w5efen5ce" path="res://Resources/Roulette Wheel.png" id="1_03cgx"]
+[ext_resource type="Script" path="res://Scenes/roulette_wheel.gd" id="2_11oam"]
+[ext_resource type="Texture2D" uid="uid://bxub2d4eblfn4" path="res://Resources/Roulette Wheel ball.png" id="3_b2ls2"]
+[ext_resource type="Script" path="res://Scenes/ball.gd" id="4_q07vo"]
+[ext_resource type="Texture2D" uid="uid://cg7y1shsce6m" path="res://Resources/Roulette Table.png" id="5_kh7es"]
+[ext_resource type="Script" path="res://Scenes/table.gd" id="6_yr1f4"]
+[ext_resource type="Texture2D" uid="uid://bs5urao65x1jr" path="res://Resources/$1 Poker chip.png" id="7_opi28"]
+
+[node name="Roulette" type="Node2D"]
+
+[node name="Roulette wheel" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(646, 332)
+rotation = 0.0115558
+texture = ExtResource("1_03cgx")
+script = ExtResource("2_11oam")
+
+[node name="Ball" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(647, 331)
+rotation = 0.00206168
+texture = ExtResource("3_b2ls2")
+script = ExtResource("4_q07vo")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1050.0
+offset_top = 443.0
+offset_right = 1144.0
+offset_bottom = 474.0
+text = "Spin Wheel"
+
+[node name="Table" type="Sprite2D" parent="."]
+position = Vector2(617.375, 333.5)
+scale = Vector2(1.5825, 1.39)
+texture = ExtResource("5_kh7es")
+script = ExtResource("6_yr1f4")
+
+[node name="4" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -119.036
+offset_top = -36.3309
+offset_right = -96.0363
+offset_bottom = 26.6691
+text = "3"
+
+[node name="3" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -146.0
+offset_top = -172.0
+offset_right = -123.0
+offset_bottom = -109.0
+text = "3"
+
+[node name="5" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -119.036
+offset_top = -106.835
+offset_right = -96.0363
+offset_bottom = -43.8345
+text = "3"
+
+[node name="1 to 18" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -144.945
+offset_top = 101.799
+offset_right = -95.9447
+offset_bottom = 160.799
+text = "Place
+Bet"
+
+[node name="EVEN" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -89.9684
+offset_top = 101.799
+offset_right = -40.9684
+offset_bottom = 160.799
+text = "Place
+Bet"
+
+[node name="RED" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -34.0
+offset_top = 100.0
+offset_right = 17.0
+offset_bottom = 160.0
+text = "Place
+Bet"
+
+[node name="Black" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 22.0
+offset_top = 102.0
+offset_right = 72.0
+offset_bottom = 161.0
+text = "Place
+Bet"
+
+[node name="ODD" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 77.0
+offset_top = 103.0
+offset_right = 128.0
+offset_bottom = 162.0
+text = "Place
+Bet"
+
+[node name="19 to 36" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 134.992
+offset_top = 99.6403
+offset_right = 183.992
+offset_bottom = 158.64
+text = "Place
+Bet"
+
+[node name="3rd 12" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 75.5924
+offset_top = 37.7698
+offset_right = 186.592
+offset_bottom = 97.7698
+text = "1st 12"
+
+[node name="2nd 12" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -37.5197
+offset_top = 35.6115
+offset_right = 73.4803
+offset_bottom = 95.6115
+text = "1st 12"
+
+[node name="1st 12" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -148.0
+offset_top = 36.0
+offset_right = -37.0
+offset_bottom = 96.0
+text = "1st 12"
+
+[node name="6" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -118.404
+offset_top = -172.302
+offset_right = -95.4044
+offset_bottom = -109.302
+text = "3"
+
+[node name="7" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -89.9684
+offset_top = -34.8921
+offset_right = -66.9684
+offset_bottom = 28.1079
+text = "3"
+
+[node name="8" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -90.6003
+offset_top = -108.993
+offset_right = -67.6003
+offset_bottom = -45.9928
+text = "3"
+
+[node name="9" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -91.2322
+offset_top = -170.144
+offset_right = -68.2322
+offset_bottom = -107.144
+text = "3"
+
+[node name="10" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -62.7962
+offset_top = -35.6115
+offset_right = -39.7962
+offset_bottom = 27.3885
+text = "3"
+
+[node name="11" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -61.5324
+offset_top = -108.993
+offset_right = -38.5324
+offset_bottom = -45.9928
+text = "3"
+
+[node name="12" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -62.7962
+offset_top = -173.022
+offset_right = -39.7962
+offset_bottom = -110.022
+text = "3"
+
+[node name="13" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -34.9921
+offset_top = -39.2086
+offset_right = -11.9921
+offset_bottom = 23.7914
+text = "3"
+
+[node name="14" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -36.2559
+offset_top = -107.554
+offset_right = -13.2559
+offset_bottom = -44.554
+text = "3"
+
+[node name="15" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -35.624
+offset_top = -172.302
+offset_right = -12.624
+offset_bottom = -109.302
+text = "3"
+
+[node name="16" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -5.92416
+offset_top = -37.7698
+offset_right = 17.0758
+offset_bottom = 25.2302
+text = "3"
+
+[node name="17" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -7.18799
+offset_top = -106.115
+offset_right = 15.812
+offset_bottom = -43.1151
+text = "3"
+
+[node name="18" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -5.92416
+offset_top = -170.863
+offset_right = 17.0758
+offset_bottom = -107.863
+text = "3"
+
+[node name="19" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 21.8799
+offset_top = -36.3309
+offset_right = 44.8799
+offset_bottom = 26.6691
+text = "3"
+
+[node name="20" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 21.8799
+offset_top = -105.396
+offset_right = 44.8799
+offset_bottom = -42.3957
+text = "3"
+
+[node name="21" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 21.8799
+offset_top = -170.144
+offset_right = 44.8799
+offset_bottom = -107.144
+text = "3"
+
+[node name="22" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 49.0521
+offset_top = -37.7698
+offset_right = 72.0521
+offset_bottom = 25.2302
+text = "3"
+
+[node name="23" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 50.316
+offset_top = -106.835
+offset_right = 73.316
+offset_bottom = -43.8345
+text = "3"
+
+[node name="24" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 50.9479
+offset_top = -170.863
+offset_right = 73.9479
+offset_bottom = -107.863
+text = "3"
+
+[node name="25" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 77.4882
+offset_top = -37.0504
+offset_right = 100.488
+offset_bottom = 25.9496
+text = "3"
+
+[node name="26" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 77.4882
+offset_top = -106.835
+offset_right = 100.488
+offset_bottom = -43.8345
+text = "3"
+
+[node name="27" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 76.8562
+offset_top = -170.144
+offset_right = 99.8562
+offset_bottom = -107.144
+text = "3"
+
+[node name="28" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 107.188
+offset_top = -38.4892
+offset_right = 130.188
+offset_bottom = 24.5108
+text = "3"
+
+[node name="29" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 105.292
+offset_top = -104.676
+offset_right = 128.292
+offset_bottom = -41.6763
+text = "3"
+
+[node name="30" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 104.66
+offset_top = -170.863
+offset_right = 127.66
+offset_bottom = -107.863
+text = "3"
+
+[node name="31" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 132.464
+offset_top = -37.7698
+offset_right = 155.464
+offset_bottom = 25.2302
+text = "3"
+
+[node name="32" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 133.728
+offset_top = -108.993
+offset_right = 156.728
+offset_bottom = -45.9928
+text = "3"
+
+[node name="33" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 133.728
+offset_top = -170.863
+offset_right = 156.728
+offset_bottom = -107.863
+text = "3"
+
+[node name="34" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 160.9
+offset_top = -34.1727
+offset_right = 183.9
+offset_bottom = 28.8273
+text = "3"
+
+[node name="35" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 161.532
+offset_top = -107.554
+offset_right = 184.532
+offset_bottom = -44.554
+text = "3"
+
+[node name="36" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 160.269
+offset_top = -172.302
+offset_right = 183.269
+offset_bottom = -109.302
+text = "3"
+
+[node name="1st 2 to 1" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 190.6
+offset_top = -34.8921
+offset_right = 213.6
+offset_bottom = 28.1079
+text = "3"
+
+[node name="2nd 2 to 1" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 189.337
+offset_top = -107.554
+offset_right = 212.337
+offset_bottom = -44.554
+text = "3"
+
+[node name="3rd 2 to 1" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = 189.337
+offset_top = -169.424
+offset_right = 212.337
+offset_bottom = -106.424
+text = "3"
+
+[node name="1" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -146.209
+offset_top = -36.3309
+offset_right = -123.209
+offset_bottom = 26.6691
+text = "3"
+
+[node name="2" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -145.577
+offset_top = -106.835
+offset_right = -122.577
+offset_bottom = -43.8345
+text = "3"
+
+[node name="00" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -177.0
+offset_top = -170.0
+offset_right = -150.0
+offset_bottom = -79.0
+text = "3"
+
+[node name="0" type="Button" parent="Table"]
+show_behind_parent = true
+offset_left = -177.804
+offset_top = -66.5468
+offset_right = -150.804
+offset_bottom = 24.4532
+text = "3"
+
+[node name="Top line bet" type="Button" parent="Table"]
+offset_left = -247.946
+offset_top = -202.518
+offset_right = -182.946
+offset_bottom = -166.518
+theme_override_font_sizes/font_size = 10
+text = "Top line bet
+(0,00,1,2,3)"
+
+[node name="Chip" type="Sprite2D" parent="Table"]
+visible = false
+position = Vector2(-220.774, 98.2014)
+scale = Vector2(0.100448, 0.124101)
+texture = ExtResource("7_opi28")
+
+[node name="Six line bet on six numbers" type="OptionButton" parent="Table"]
+offset_left = -390.126
+offset_top = -101.799
+offset_right = -228.126
+offset_bottom = -71.7986
+theme_override_font_sizes/font_size = 10
+autowrap_mode = 2
+selected = 0
+allow_reselect = true
+item_count = 12
+popup/item_0/text = "Six line bet on six numbers"
+popup/item_1/text = "1-6"
+popup/item_1/id = 1
+popup/item_2/text = "4-9"
+popup/item_2/id = 2
+popup/item_3/text = "7-12"
+popup/item_3/id = 3
+popup/item_4/text = "10-15"
+popup/item_4/id = 4
+popup/item_5/text = "13-18"
+popup/item_5/id = 5
+popup/item_6/text = "16-21"
+popup/item_6/id = 6
+popup/item_7/text = "19-24"
+popup/item_7/id = 7
+popup/item_8/text = "22-27"
+popup/item_8/id = 8
+popup/item_9/text = "25-30"
+popup/item_9/id = 9
+popup/item_10/text = "28-33"
+popup/item_10/id = 10
+popup/item_11/text = "31-36"
+popup/item_11/id = 11
+
+[node name="Split bet" type="OptionButton" parent="Table"]
+offset_left = -390.126
+offset_top = -195.324
+offset_right = -318.126
+offset_bottom = -164.324
+theme_override_font_sizes/font_size = 10
+selected = 0
+item_count = 58
+popup/item_0/text = "Split bet"
+popup/item_1/text = "1,2"
+popup/item_1/id = 1
+popup/item_2/text = "2,3"
+popup/item_2/id = 2
+popup/item_3/text = "4,5"
+popup/item_3/id = 3
+popup/item_4/text = "5,6"
+popup/item_4/id = 4
+popup/item_5/text = "7,8"
+popup/item_5/id = 5
+popup/item_6/text = "8,9"
+popup/item_6/id = 6
+popup/item_7/text = "10,11"
+popup/item_7/id = 7
+popup/item_8/text = "11,12"
+popup/item_8/id = 8
+popup/item_9/text = "13,14"
+popup/item_9/id = 9
+popup/item_10/text = "14,15"
+popup/item_10/id = 10
+popup/item_11/text = "16,17"
+popup/item_11/id = 11
+popup/item_12/text = "17,18"
+popup/item_12/id = 12
+popup/item_13/text = "19,20"
+popup/item_13/id = 13
+popup/item_14/text = "20,21"
+popup/item_14/id = 14
+popup/item_15/text = "22,23"
+popup/item_15/id = 15
+popup/item_16/text = "23,24"
+popup/item_16/id = 16
+popup/item_17/text = "25,26"
+popup/item_17/id = 17
+popup/item_18/text = "26,27"
+popup/item_18/id = 18
+popup/item_19/text = "28,29"
+popup/item_19/id = 19
+popup/item_20/text = "29,30"
+popup/item_20/id = 20
+popup/item_21/text = "31,32"
+popup/item_21/id = 21
+popup/item_22/text = "32,33"
+popup/item_22/id = 22
+popup/item_23/text = "34,35"
+popup/item_23/id = 23
+popup/item_24/text = "35,36"
+popup/item_24/id = 24
+popup/item_25/text = "1,4"
+popup/item_25/id = 25
+popup/item_26/text = "2,5"
+popup/item_26/id = 26
+popup/item_27/text = "3,6"
+popup/item_27/id = 27
+popup/item_28/text = "4,7"
+popup/item_28/id = 28
+popup/item_29/text = "5,8"
+popup/item_29/id = 29
+popup/item_30/text = "6,9"
+popup/item_30/id = 30
+popup/item_31/text = "7,10"
+popup/item_31/id = 31
+popup/item_32/text = "8,11"
+popup/item_32/id = 32
+popup/item_33/text = "9,12"
+popup/item_33/id = 33
+popup/item_34/text = "10,13"
+popup/item_34/id = 34
+popup/item_35/text = "11,14"
+popup/item_35/id = 35
+popup/item_36/text = "12,15"
+popup/item_36/id = 36
+popup/item_37/text = "13,16"
+popup/item_37/id = 37
+popup/item_38/text = "14,17"
+popup/item_38/id = 38
+popup/item_39/text = "15,18"
+popup/item_39/id = 39
+popup/item_40/text = "16,19"
+popup/item_40/id = 40
+popup/item_41/text = "17,20"
+popup/item_41/id = 41
+popup/item_42/text = "18,21"
+popup/item_42/id = 42
+popup/item_43/text = "19,22"
+popup/item_43/id = 43
+popup/item_44/text = "20,23"
+popup/item_44/id = 44
+popup/item_45/text = "21,24"
+popup/item_45/id = 45
+popup/item_46/text = "22,25"
+popup/item_46/id = 46
+popup/item_47/text = "23,26"
+popup/item_47/id = 47
+popup/item_48/text = "24,27"
+popup/item_48/id = 48
+popup/item_49/text = "25,28"
+popup/item_49/id = 49
+popup/item_50/text = "26,29"
+popup/item_50/id = 50
+popup/item_51/text = "27,30"
+popup/item_51/id = 51
+popup/item_52/text = "28,31"
+popup/item_52/id = 52
+popup/item_53/text = "29,32"
+popup/item_53/id = 53
+popup/item_54/text = "30,33"
+popup/item_54/id = 54
+popup/item_55/text = "31,34"
+popup/item_55/id = 55
+popup/item_56/text = "32,35"
+popup/item_56/id = 56
+popup/item_57/text = "33,36"
+popup/item_57/id = 57
+
+[node name="Street bet" type="OptionButton" parent="Table"]
+offset_left = -390.126
+offset_top = -163.669
+offset_right = -310.126
+offset_bottom = -132.669
+theme_override_font_sizes/font_size = 10
+selected = 0
+item_count = 13
+popup/item_0/text = "Street bet"
+popup/item_1/text = "1,2,3"
+popup/item_1/id = 1
+popup/item_2/text = "4,5,6"
+popup/item_2/id = 2
+popup/item_3/text = "7,8,9"
+popup/item_3/id = 3
+popup/item_4/text = "10,11,12"
+popup/item_4/id = 4
+popup/item_5/text = "13,14,15"
+popup/item_5/id = 5
+popup/item_6/text = "16,17,18"
+popup/item_6/id = 6
+popup/item_7/text = "19,20,21"
+popup/item_7/id = 7
+popup/item_8/text = "22,23,24"
+popup/item_8/id = 8
+popup/item_9/text = "25,26,27"
+popup/item_9/id = 9
+popup/item_10/text = "28,29,30"
+popup/item_10/id = 10
+popup/item_11/text = "31,32,33"
+popup/item_11/id = 11
+popup/item_12/text = "34,35,36"
+popup/item_12/id = 12
+
+[node name="Corner bet" type="OptionButton" parent="Table"]
+offset_left = -390.126
+offset_top = -132.734
+offset_right = -304.126
+offset_bottom = -101.734
+theme_override_font_sizes/font_size = 10
+selected = 0
+item_count = 23
+popup/item_0/text = "Corner bet"
+popup/item_1/text = "1,2,4,5"
+popup/item_1/id = 1
+popup/item_2/text = "2,3,5,6"
+popup/item_2/id = 2
+popup/item_3/text = "4,5,7,8"
+popup/item_3/id = 3
+popup/item_4/text = "5,6,8,9"
+popup/item_4/id = 4
+popup/item_5/text = "7,8,10,11"
+popup/item_5/id = 5
+popup/item_6/text = "8,9,11,12"
+popup/item_6/id = 6
+popup/item_7/text = "10,11,13,14"
+popup/item_7/id = 7
+popup/item_8/text = "11,12,14,15"
+popup/item_8/id = 8
+popup/item_9/text = "13,14,16,17"
+popup/item_9/id = 9
+popup/item_10/text = "14,15,17,18"
+popup/item_10/id = 10
+popup/item_11/text = "16,17,19,20"
+popup/item_11/id = 11
+popup/item_12/text = "17,18,20,21"
+popup/item_12/id = 12
+popup/item_13/text = "19,20,22,23"
+popup/item_13/id = 13
+popup/item_14/text = "20,21,23,24"
+popup/item_14/id = 14
+popup/item_15/text = "22,23,25,26"
+popup/item_15/id = 15
+popup/item_16/text = "23,24,26,27"
+popup/item_16/id = 16
+popup/item_17/text = "25,26,28,29"
+popup/item_17/id = 17
+popup/item_18/text = "26,27,29,30"
+popup/item_18/id = 18
+popup/item_19/text = "28,29,31,32"
+popup/item_19/id = 19
+popup/item_20/text = "29,30,32,33"
+popup/item_20/id = 20
+popup/item_21/text = "31,32,34,35"
+popup/item_21/id = 21
+popup/item_22/text = "32,33,35,36"
+popup/item_22/id = 22
+
+[node name="Reset" type="Button" parent="."]
+offset_left = 1037.0
+offset_top = 494.0
+offset_right = 1155.0
+offset_bottom = 525.0
+text = "Place New Bet"
+
+[connection signal="item_selected" from="Table/Six line bet on six numbers" to="Roulette wheel" method="_on_six_line_bet_on_six_numbers_item_selected"]
+[connection signal="item_selected" from="Table/Split bet" to="Roulette wheel" method="_on_split_bet_item_selected"]
+[connection signal="item_selected" from="Table/Street bet" to="Roulette wheel" method="_on_street_bet_item_selected"]
+[connection signal="item_selected" from="Table/Corner bet" to="Roulette wheel" method="_on_corner_bet_item_selected"]
