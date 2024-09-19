@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://cc5lmshbii28o"]
+[gd_scene load_steps=11 format=3 uid="uid://cc5lmshbii28o"]
 
 [ext_resource type="Texture2D" uid="uid://ctc7w5efen5ce" path="res://Resources/Roulette Wheel.png" id="1_03cgx"]
 [ext_resource type="Script" path="res://Scripts/roulette_wheel.gd" id="2_11oam"]
 [ext_resource type="Texture2D" uid="uid://bxub2d4eblfn4" path="res://Resources/Roulette Wheel ball.png" id="3_b2ls2"]
 [ext_resource type="Script" path="res://Scripts/ball.gd" id="4_q07vo"]
+[ext_resource type="Theme" uid="uid://dq8dn270k6tor" path="res://Resources/Themes/ButtonThemes/ButtonGeneralTheme.tres" id="5_8aph0"]
 [ext_resource type="Texture2D" uid="uid://cg7y1shsce6m" path="res://Resources/Roulette Table.png" id="5_kh7es"]
 [ext_resource type="Script" path="res://Scripts/table.gd" id="6_yr1f4"]
 [ext_resource type="Texture2D" uid="uid://bs5urao65x1jr" path="res://Resources/$1 Poker chip.png" id="7_opi28"]
 [ext_resource type="Script" path="res://Scripts/player_mover.gd" id="8_n5b3e"]
+[ext_resource type="Script" path="res://Scripts/easyMoneyLabel.gd" id="9_b8r8h"]
 
 [node name="Roulette" type="Node2D"]
 
@@ -30,6 +32,7 @@ offset_left = 1050.0
 offset_top = 443.0
 offset_right = 1144.0
 offset_bottom = 474.0
+theme = ExtResource("5_8aph0")
 text = "Spin Wheel"
 
 [node name="Table" type="Sprite2D" parent="."]
@@ -449,6 +452,7 @@ offset_left = -247.946
 offset_top = -202.518
 offset_right = -182.946
 offset_bottom = -166.518
+theme = ExtResource("5_8aph0")
 theme_override_font_sizes/font_size = 10
 text = "Top line bet
 (0,00,1,2,3)"
@@ -464,6 +468,7 @@ offset_left = -390.126
 offset_top = -24.1009
 offset_right = -228.126
 offset_bottom = 5.89951
+theme = ExtResource("5_8aph0")
 theme_override_font_sizes/font_size = 10
 autowrap_mode = 2
 selected = 0
@@ -498,6 +503,7 @@ offset_left = -390.126
 offset_top = -117.626
 offset_right = -318.126
 offset_bottom = -86.6259
+theme = ExtResource("5_8aph0")
 theme_override_font_sizes/font_size = 10
 selected = 0
 item_count = 58
@@ -622,6 +628,7 @@ offset_left = -390.126
 offset_top = -85.9709
 offset_right = -310.126
 offset_bottom = -54.9709
+theme = ExtResource("5_8aph0")
 theme_override_font_sizes/font_size = 10
 selected = 0
 item_count = 13
@@ -656,6 +663,7 @@ offset_left = -390.126
 offset_top = -55.0359
 offset_right = -304.126
 offset_bottom = -24.0359
+theme = ExtResource("5_8aph0")
 theme_override_font_sizes/font_size = 10
 selected = 0
 item_count = 23
@@ -710,13 +718,22 @@ offset_left = 1037.0
 offset_top = 494.0
 offset_right = 1155.0
 offset_bottom = 525.0
+theme = ExtResource("5_8aph0")
 text = "Place New Bet"
 
+[node name="PlayerMoneyLabel" type="Label" parent="."]
+offset_left = 375.0
+offset_top = 16.0
+offset_right = 415.0
+offset_bottom = 39.0
+script = ExtResource("9_b8r8h")
+
 [node name="MainButton" type="Button" parent="."]
-offset_left = 30.0
-offset_top = 30.0
-offset_right = 159.0
-offset_bottom = 61.0
+offset_left = 19.0
+offset_top = 17.0
+offset_right = 222.0
+offset_bottom = 48.0
+theme = ExtResource("5_8aph0")
 text = "Return  to Main
 "
 script = ExtResource("8_n5b3e")

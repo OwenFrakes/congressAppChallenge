@@ -69,11 +69,10 @@ scale = Vector2(2, 0.9)
 texture = ExtResource("4_vls64")
 
 [node name="PlayerMoneyCount" type="Label" parent="."]
-modulate = Color(0.427348, 0.412477, 0.408759, 1)
-offset_left = 34.0
-offset_top = 141.0
-offset_right = 74.0
-offset_bottom = 164.0
+offset_left = 238.0
+offset_top = 352.0
+offset_right = 278.0
+offset_bottom = 375.0
 script = ExtResource("5_5uryu")
 
 [connection signal="pressed" from="StartButton" to="BlackJackDealer" method="_on_start_button_pressed"]
