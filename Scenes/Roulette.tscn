@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://cc5lmshbii28o"]
+[gd_scene load_steps=9 format=3 uid="uid://cc5lmshbii28o"]
 
 [ext_resource type="Texture2D" uid="uid://ctc7w5efen5ce" path="res://Resources/Roulette Wheel.png" id="1_03cgx"]
-[ext_resource type="Script" path="res://Scenes/roulette_wheel.gd" id="2_11oam"]
+[ext_resource type="Script" path="res://Scripts/roulette_wheel.gd" id="2_11oam"]
 [ext_resource type="Texture2D" uid="uid://bxub2d4eblfn4" path="res://Resources/Roulette Wheel ball.png" id="3_b2ls2"]
-[ext_resource type="Script" path="res://Scenes/ball.gd" id="4_q07vo"]
+[ext_resource type="Script" path="res://Scripts/ball.gd" id="4_q07vo"]
 [ext_resource type="Texture2D" uid="uid://cg7y1shsce6m" path="res://Resources/Roulette Table.png" id="5_kh7es"]
-[ext_resource type="Script" path="res://Scenes/table.gd" id="6_yr1f4"]
+[ext_resource type="Script" path="res://Scripts/table.gd" id="6_yr1f4"]
 [ext_resource type="Texture2D" uid="uid://bs5urao65x1jr" path="res://Resources/$1 Poker chip.png" id="7_opi28"]
+[ext_resource type="Script" path="res://Scripts/player_mover.gd" id="8_n5b3e"]
 
 [node name="Roulette" type="Node2D"]
 
@@ -460,9 +461,9 @@ texture = ExtResource("7_opi28")
 
 [node name="Six line bet on six numbers" type="OptionButton" parent="Table"]
 offset_left = -390.126
-offset_top = -101.799
+offset_top = -24.1009
 offset_right = -228.126
-offset_bottom = -71.7986
+offset_bottom = 5.89951
 theme_override_font_sizes/font_size = 10
 autowrap_mode = 2
 selected = 0
@@ -494,9 +495,9 @@ popup/item_11/id = 11
 
 [node name="Split bet" type="OptionButton" parent="Table"]
 offset_left = -390.126
-offset_top = -195.324
+offset_top = -117.626
 offset_right = -318.126
-offset_bottom = -164.324
+offset_bottom = -86.6259
 theme_override_font_sizes/font_size = 10
 selected = 0
 item_count = 58
@@ -618,9 +619,9 @@ popup/item_57/id = 57
 
 [node name="Street bet" type="OptionButton" parent="Table"]
 offset_left = -390.126
-offset_top = -163.669
+offset_top = -85.9709
 offset_right = -310.126
-offset_bottom = -132.669
+offset_bottom = -54.9709
 theme_override_font_sizes/font_size = 10
 selected = 0
 item_count = 13
@@ -652,9 +653,9 @@ popup/item_12/id = 12
 
 [node name="Corner bet" type="OptionButton" parent="Table"]
 offset_left = -390.126
-offset_top = -132.734
+offset_top = -55.0359
 offset_right = -304.126
-offset_bottom = -101.734
+offset_bottom = -24.0359
 theme_override_font_sizes/font_size = 10
 selected = 0
 item_count = 23
@@ -711,7 +712,17 @@ offset_right = 1155.0
 offset_bottom = 525.0
 text = "Place New Bet"
 
+[node name="MainButton" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 159.0
+offset_bottom = 61.0
+text = "Return  to Main
+"
+script = ExtResource("8_n5b3e")
+
 [connection signal="item_selected" from="Table/Six line bet on six numbers" to="Roulette wheel" method="_on_six_line_bet_on_six_numbers_item_selected"]
 [connection signal="item_selected" from="Table/Split bet" to="Roulette wheel" method="_on_split_bet_item_selected"]
 [connection signal="item_selected" from="Table/Street bet" to="Roulette wheel" method="_on_street_bet_item_selected"]
 [connection signal="item_selected" from="Table/Corner bet" to="Roulette wheel" method="_on_corner_bet_item_selected"]
+[connection signal="pressed" from="MainButton" to="MainButton" method="_on_pressed"]
