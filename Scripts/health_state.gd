@@ -6,9 +6,10 @@ var state = "Healthy"
 var stateLabel : Label
 var feedBtn : CheckButton
 var isFed = false
-@onready var heatBtn = $"../HeaterBtn"
+@onready var heatBtn = $"../ElectricalBtn"
 var isHeated = false
 @onready var homeControl = $"../HomeController"
+@onready var clickNoise = $"../ButtonClickNoise"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,8 +23,9 @@ func _ready() -> void:
 	var feedY = (texture.get_height() / 2.0)
 	feedBtn.position = Vector2(feedX, feedY)
 	#feedBtn.set_size(Vector2(1,1))
-	#Trying to connect a signal, Signals suck to use.
+	#Signals aren't that bad.
 	feedBtn.toggled.connect(homeControl.totalExpenses)
+	feedBtn.toggled.connect(buttonSound)
 	
 	# Label Code
 	stateLabel = Label.new()
@@ -77,6 +79,9 @@ func updateLabel():
 	var labelX = 0 - (stateLabel.size.x / 2)
 	var labelY = 0 - (texture.get_height()/2.0) - stateLabel.size.y
 	stateLabel.position = Vector2(labelX, labelY)
+
+func buttonSound(_boolean):
+	clickNoise.play()
 
 func updateBtns(_boolean : bool):
 	updateFeed()
