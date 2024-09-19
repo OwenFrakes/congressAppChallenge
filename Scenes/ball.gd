@@ -429,599 +429,1687 @@ func _process(delta):
 				#pays 1-1
 				money+=bet_amount
 				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
+				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
 				table.bet_amount=0
+				wheel.inside_bet=0
 				print(money)
 			elif bet_even_odd==table.bet_even_odd:
 				#pays 1-1
 				money+=bet_amount
+				bet_color="no"
 				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
+				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
 				table.bet_amount=0
+				wheel.inside_bet=0
 				print(money)
 			elif bet_1_to_18==table.bet_1_to_18:
 				#pays 1-1
 				money+=bet_amount
+				bet_color="no"
+				bet_even_odd="no"
 				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
+				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
 				table.bet_amount=0
+				wheel.inside_bet=0
 				print(money)
 			elif bet_12==table.bet_12:
 				#pays 2-1
 				money+=bet_amount*2
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
 				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
+				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
 				table.bet_amount=0
+				wheel.inside_bet=0
 				print(money)
 			elif bet_2_to_1==table.bet_2_to_1:
 				#pays 2-1
 				money+=bet_amount*2
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
 				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
+				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
 				table.bet_amount=0
+				wheel.inside_bet=0
 				print(money)
 			elif bet_number==table.bet_number:
 				#pays 35-1
 				money+=bet_amount*35
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
 				bet_number="no"
+				bet_top_line="no"
+				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
 				table.bet_amount=0
+				wheel.inside_bet=0
 				print(money)
 			elif table.bet_top_line=="yes"&&bet_number=="0"||table.bet_top_line=="yes"&&bet_number=="00"||table.bet_top_line=="yes"&&bet_number=="1"||table.bet_top_line=="yes"&&bet_number=="2"||table.bet_top_line=="yes"&&bet_number=="3":
 				#pays 6-1
 				money+=bet_amount*6
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
 				bet_number="no"
+				bet_top_line="no"
+				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
 				table.bet_amount=0
+				wheel.inside_bet=0
 				print(money)
 			elif (six_line>0&&six_line<7)&&wheel.six_line==1:
 				#pays 5-1
 				money+=inside_bet*5
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line>3&&six_line<10)&&wheel.six_line==2:
 				#pays 5-1
 				money+=inside_bet*5
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line>6&&six_line<13)&&wheel.six_line==3:
 				#pays 5-1
 				money+=inside_bet*5
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line>9&&six_line<16)&&wheel.six_line==4:
 				#pays 5-1
 				money+=inside_bet*5
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line>12&&six_line<19)&&wheel.six_line==5:
 				#pays 5-1
 				money+=inside_bet*5
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line>15&&six_line<22)&&wheel.six_line==6:
 				#pays 5-1
 				money+=inside_bet*5
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line>18&&six_line<25)&&wheel.six_line==7:
 				#pays 5-1
 				money+=inside_bet*5
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line>21&&six_line<28)&&wheel.six_line==8:
 				#pays 5-1
 				money+=inside_bet*5
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line>24&&six_line<31)&&wheel.six_line==9:
 				#pays 5-1
 				money+=inside_bet*5
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line>27&&six_line<34)&&wheel.six_line==10:
 				#pays 5-1
 				money+=inside_bet*5
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line>30&&six_line<37)&&wheel.six_line==11:
 				#pays 5-1
 				money+=inside_bet*5
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif wheel.street_bet==street_bet:
 				#pays 11-1
 				money+=inside_bet*11
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
+				six_line=0
 				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==1||six_line==2||six_line==5||six_line==4)&&wheel.corner_bet==1:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==3||six_line==2||six_line==5||six_line==6)&&wheel.corner_bet==2:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==4||six_line==5||six_line==7||six_line==8)&&wheel.corner_bet==3:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==8||six_line==9||six_line==5||six_line==6)&&wheel.corner_bet==4:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==7||six_line==8||six_line==10||six_line==11)&&wheel.corner_bet==5:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==8||six_line==9||six_line==11||six_line==12)&&wheel.corner_bet==6:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==10||six_line==11||six_line==13||six_line==14)&&wheel.corner_bet==7:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==11||six_line==12||six_line==15||six_line==14)&&wheel.corner_bet==8:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==13||six_line==14||six_line==17||six_line==16)&&wheel.corner_bet==9:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==14||six_line==15||six_line==17||six_line==18)&&wheel.corner_bet==10:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==16||six_line==17||six_line==19||six_line==20)&&wheel.corner_bet==11:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==18||six_line==17||six_line==21||six_line==20)&&wheel.corner_bet==12:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==19||six_line==20||six_line==22||six_line==23)&&wheel.corner_bet==13:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==20||six_line==21||six_line==23||six_line==24)&&wheel.corner_bet==14:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==22||six_line==23||six_line==25||six_line==26)&&wheel.corner_bet==15:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==23||six_line==24||six_line==26||six_line==27)&&wheel.corner_bet==16:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==25||six_line==26||six_line==28||six_line==29)&&wheel.corner_bet==17:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==26||six_line==27||six_line==29||six_line==30)&&wheel.corner_bet==18:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==28||six_line==29||six_line==31||six_line==32)&&wheel.corner_bet==19:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==29||six_line==30||six_line==32||six_line==33)&&wheel.corner_bet==20:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==31||six_line==32||six_line==34||six_line==35)&&wheel.corner_bet==21:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==32||six_line==33||six_line==35||six_line==36)&&wheel.corner_bet==22:
 				#pays 8-1
 				money+=inside_bet*8
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==1||six_line==2)&&wheel.split_bet==1:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==2||six_line==3)&&wheel.split_bet==2:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==4||six_line==5)&&wheel.split_bet==3:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==5||six_line==6)&&wheel.split_bet==4:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==7||six_line==8)&&wheel.split_bet==5:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==8||six_line==9)&&wheel.split_bet==6:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==10||six_line==11)&&wheel.split_bet==7:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==11||six_line==12)&&wheel.split_bet==8:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==13||six_line==14)&&wheel.split_bet==9:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==14||six_line==15)&&wheel.split_bet==10:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==16||six_line==17)&&wheel.split_bet==11:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==17||six_line==18)&&wheel.split_bet==12:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==19||six_line==20)&&wheel.split_bet==13:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==20||six_line==21)&&wheel.split_bet==14:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==22||six_line==23)&&wheel.split_bet==15:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==23||six_line==24)&&wheel.split_bet==16:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==25||six_line==26)&&wheel.split_bet==17:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==26||six_line==27)&&wheel.split_bet==18:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==28||six_line==29)&&wheel.split_bet==19:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==29||six_line==30)&&wheel.split_bet==20:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==31||six_line==32)&&wheel.split_bet==21:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==32||six_line==33)&&wheel.split_bet==22:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==34||six_line==35)&&wheel.split_bet==23:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==35||six_line==36)&&wheel.split_bet==24:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==1||six_line==4)&&wheel.split_bet==25:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==2||six_line==5)&&wheel.split_bet==26:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==3||six_line==6)&&wheel.split_bet==27:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==4||six_line==7)&&wheel.split_bet==28:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==5||six_line==8)&&wheel.split_bet==29:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==6||six_line==9)&&wheel.split_bet==30:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==7||six_line==10)&&wheel.split_bet==31:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==8||six_line==11)&&wheel.split_bet==32:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==9||six_line==12)&&wheel.split_bet==33:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==10||six_line==13)&&wheel.split_bet==34:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==11||six_line==14)&&wheel.split_bet==35:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==12||six_line==15)&&wheel.split_bet==36:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==13||six_line==16)&&wheel.split_bet==37:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==14||six_line==17)&&wheel.split_bet==38:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==15||six_line==18)&&wheel.split_bet==39:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==16||six_line==19)&&wheel.split_bet==40:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==17||six_line==20)&&wheel.split_bet==41:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==18||six_line==21)&&wheel.split_bet==42:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==19||six_line==22)&&wheel.split_bet==43:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==20||six_line==23)&&wheel.split_bet==44:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==21||six_line==24)&&wheel.split_bet==45:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==22||six_line==25)&&wheel.split_bet==46:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==23||six_line==26)&&wheel.split_bet==47:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==24||six_line==27)&&wheel.split_bet==48:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==25||six_line==28)&&wheel.split_bet==49:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==26||six_line==29)&&wheel.split_bet==50:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==27||six_line==30)&&wheel.split_bet==51:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==28||six_line==31)&&wheel.split_bet==52:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==29||six_line==32)&&wheel.split_bet==53:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==30||six_line==33)&&wheel.split_bet==54:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==31||six_line==34)&&wheel.split_bet==55:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==32||six_line==35)&&wheel.split_bet==56:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			elif (six_line==33||six_line==36)&&wheel.split_bet==57:
 				#pays 17-1
 				money+=inside_bet*17
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
 				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
+				table.bet_amount=0
 				wheel.inside_bet=0
 				print(money)
 			else:
-				money-=bet_amount
-				money-=inside_bet
+				money-=abs(bet_amount)
+				money-=abs(inside_bet)
 				table.bet_amount=0
 				wheel.inside_bet=0
+				bet_color="no"
+				bet_even_odd="no"
+				bet_1_to_18="no"
+				bet_12="no"
+				bet_2_to_1="no"
+				bet_number="no"
+				bet_top_line="no"
+				six_line=0
+				street_bet=0
+				bet_amount=0
+				inside_bet=0
 				print(money)
 			
 func on_button_pressed():
 	#create a random power for the ball
 	spin_velocity = randf_range(-1000,-10000)
 	spinning = true
-	

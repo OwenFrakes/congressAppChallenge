@@ -9,6 +9,7 @@ var bet_12=""
 var bet_2_to_1=""
 var bet_number=""
 var bet_top_line=""
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#black
@@ -179,9 +180,12 @@ func on_button_pressed():
 	$Chip.hide()
 #code to reset the wheel
 func on_reset_pressed():
+	var wheel=$"../Roulette wheel"
 	self.show()
 	bet_placed=false
 	bet_amount=0
+	wheel.inside_bet=0
+	#reset option button to show words
 	$"Six line bet on six numbers".selected=0
 	$"../Table/Split bet".selected=0
 	$"../Table/Street bet".selected=0
