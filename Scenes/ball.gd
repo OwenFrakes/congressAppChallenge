@@ -24,10 +24,11 @@ func _ready() -> void:
 	self.centered = true
 	#create var for button
 	var button_node = $"../Button"
-	button_node.connect("pressed", Callable(self, "on_button_pressed"))
-	
+	button_node.connect("pressed", Callable(self, "on_button_pressed"))	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if money<bet_amount:
+		$"../Button".hide()
 	#when ball is spinning
 	if spinning:
 		if spin_velocity!=0:
