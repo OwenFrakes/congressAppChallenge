@@ -54,6 +54,7 @@ text = "Back to Town"
 script = ExtResource("2_67f0d")
 
 [node name="SpouseSprite" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(182, 344)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("3_llfcy")

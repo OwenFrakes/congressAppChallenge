@@ -25,6 +25,10 @@ func _ready() -> void:
 	family[2].state = StaticPlayerVariables.child2State  
 	family[3].state = StaticPlayerVariables.child3State
 	
+	family[1].health = StaticPlayerVariables.child1Health
+	family[2].health = StaticPlayerVariables.child2Health  
+	family[3].health = StaticPlayerVariables.child3Health
+	
 	#Bad code, I got lazy.
 	heatBtn.toggled.connect(family[0].buttonSound)
 	
@@ -37,6 +41,10 @@ func _exit_tree() -> void:
 	StaticPlayerVariables.child1State = family[1].state
 	StaticPlayerVariables.child2State = family[2].state
 	StaticPlayerVariables.child3State = family[3].state
+	
+	StaticPlayerVariables.child1Health = family[1].health
+	StaticPlayerVariables.child2Health = family[2].health
+	StaticPlayerVariables.child3Health = family[3].health 
 
 func passDay():
 	StaticPlayerVariables.dayCount += 1
@@ -68,7 +76,7 @@ func updateLabels():
 func heatExpenses():
 	#Called from check day, if heat is pressed, take money away.
 	if(heatBtn.button_pressed):
-		expenses += 30
+		expenses += 15
 
 func totalExpenses(_boolean):
 	#print("totaled")
@@ -88,7 +96,7 @@ func totalExpenses(_boolean):
 
 func updateHeatBtn():
 	#Check if the player can even heat the house.
-	if(!heatBtn.button_pressed && tempMoney - expenses < 30):
+	if(!heatBtn.button_pressed && tempMoney - expenses < 15):
 		heatBtn.disabled = true
 		heatBtn.button_pressed = false
 	else:
