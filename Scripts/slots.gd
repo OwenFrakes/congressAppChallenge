@@ -9,10 +9,10 @@ func _ready() -> void:
 	print_tree_pretty()
 	betMenu = BetMenu.new()
 	add_child(betMenu)
-	betMenu.position.y = -300
+	#betMenu.position.y = -300
 	betMenu.position.x = 0
 	
-	$"../MoneyAmount".text = "Money: " + str(betMenu.getPlayerAmount())
+	#$"../MoneyAmount".text = "Money: " + str(betMenu.getPlayerAmount())
 	
 func _on_spin_button_pressed() -> void:
 	score = 10
@@ -135,4 +135,4 @@ func _on_spin_button_pressed() -> void:
 
 func _on_pressed() -> void:
 	_on_spin_button_pressed() # Replace with function body.
-	$"../MoneyAmount".text = "Money: " + str(betMenu.getPlayerAmount())
+	#$"../MoneyAmount".text = "Money: " + str(betMenu.getPlayerAmount())
