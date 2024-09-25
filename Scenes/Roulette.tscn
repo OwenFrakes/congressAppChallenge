@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://cc5lmshbii28o"]
 
-[ext_resource type="Texture2D" uid="uid://ctc7w5efen5ce" path="res://Resources/Roulette Wheel.png" id="1_03cgx"]
-[ext_resource type="Script" path="res://Scripts/roulette_wheel.gd" id="2_11oam"]
-[ext_resource type="Texture2D" uid="uid://bxub2d4eblfn4" path="res://Resources/Roulette Wheel ball.png" id="3_b2ls2"]
-[ext_resource type="Script" path="res://Scripts/ball.gd" id="4_q07vo"]
-[ext_resource type="Theme" uid="uid://dq8dn270k6tor" path="res://Resources/Themes/ButtonThemes/ButtonGeneralTheme.tres" id="5_8aph0"]
-[ext_resource type="Texture2D" uid="uid://cg7y1shsce6m" path="res://Resources/Roulette Table.png" id="5_kh7es"]
-[ext_resource type="Script" path="res://Scripts/table.gd" id="6_yr1f4"]
-[ext_resource type="Texture2D" uid="uid://bs5urao65x1jr" path="res://Resources/$1 Poker chip.png" id="7_opi28"]
-[ext_resource type="Script" path="res://Scripts/player_mover.gd" id="8_n5b3e"]
-[ext_resource type="Script" path="res://Scripts/easyMoneyLabel.gd" id="9_b8r8h"]
+[ext_resource type="Texture2D" uid="uid://ctc7w5efen5ce" path="res://Resources/Roulette Wheel.png" id="1_rux2h"]
+[ext_resource type="Script" path="res://Scripts/roulette_wheel.gd" id="2_e66vm"]
+[ext_resource type="Texture2D" uid="uid://bxub2d4eblfn4" path="res://Resources/Roulette Wheel ball.png" id="3_m7g4t"]
+[ext_resource type="Script" path="res://Scripts/ball.gd" id="4_pxh8c"]
+[ext_resource type="Theme" uid="uid://dq8dn270k6tor" path="res://Resources/Themes/ButtonThemes/ButtonGeneralTheme.tres" id="5_rvmwp"]
+[ext_resource type="Texture2D" uid="uid://cg7y1shsce6m" path="res://Resources/Roulette Table.png" id="6_3p2lt"]
+[ext_resource type="Script" path="res://Scripts/table.gd" id="7_dqsmr"]
+[ext_resource type="Texture2D" uid="uid://bs5urao65x1jr" path="res://Resources/$1 Poker chip.png" id="8_crnky"]
+[ext_resource type="Script" path="res://Scripts/easyMoneyLabel.gd" id="9_tfhbh"]
+[ext_resource type="Script" path="res://Scripts/player_mover.gd" id="10_c1wam"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0g8g"]
 bg_color = Color(0.184314, 0.466667, 0.12549, 1)
@@ -20,29 +20,29 @@ bg_color = Color(0.184314, 0.466667, 0.12549, 1)
 texture_filter = 1
 position = Vector2(646, 332)
 rotation = 0.0115558
-texture = ExtResource("1_03cgx")
-script = ExtResource("2_11oam")
+texture = ExtResource("1_rux2h")
+script = ExtResource("2_e66vm")
 
 [node name="Ball" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(647, 331)
 rotation = 0.00206168
-texture = ExtResource("3_b2ls2")
-script = ExtResource("4_q07vo")
+texture = ExtResource("3_m7g4t")
+script = ExtResource("4_pxh8c")
 
 [node name="Button" type="Button" parent="."]
 offset_left = 1037.0
 offset_top = 330.0
 offset_right = 1214.0
 offset_bottom = 360.0
-theme = ExtResource("5_8aph0")
+theme = ExtResource("5_rvmwp")
 text = "Spin Wheel"
 
 [node name="Table" type="Sprite2D" parent="."]
 position = Vector2(617.375, 333.5)
 scale = Vector2(1.5825, 1.39)
-texture = ExtResource("5_kh7es")
-script = ExtResource("6_yr1f4")
+texture = ExtResource("6_3p2lt")
+script = ExtResource("7_dqsmr")
 
 [node name="4" type="Button" parent="Table"]
 show_behind_parent = true
@@ -455,7 +455,7 @@ offset_left = -200.553
 offset_top = -219.784
 offset_right = -96.5529
 offset_bottom = -183.784
-theme = ExtResource("5_8aph0")
+theme = ExtResource("5_rvmwp")
 theme_override_font_sizes/font_size = 10
 text = "Top line bet
 (0,00,1,2,3)"
@@ -464,14 +464,14 @@ text = "Top line bet
 visible = false
 position = Vector2(-220.774, 98.2014)
 scale = Vector2(0.100448, 0.124101)
-texture = ExtResource("7_opi28")
+texture = ExtResource("8_crnky")
 
 [node name="Six line bet on six numbers" type="OptionButton" parent="Table"]
 offset_left = -371.169
 offset_top = -77.1439
 offset_right = -209.169
 offset_bottom = -47.1435
-theme = ExtResource("5_8aph0")
+theme = ExtResource("5_rvmwp")
 theme_override_font_sizes/font_size = 10
 alignment = 1
 autowrap_mode = 2
@@ -507,7 +507,7 @@ offset_left = -371.169
 offset_top = -170.144
 offset_right = -209.169
 offset_bottom = -140.144
-theme = ExtResource("5_8aph0")
+theme = ExtResource("5_rvmwp")
 theme_override_font_sizes/font_size = 15
 alignment = 1
 selected = 0
@@ -633,7 +633,7 @@ offset_left = -371.169
 offset_top = -139.144
 offset_right = -209.169
 offset_bottom = -109.144
-theme = ExtResource("5_8aph0")
+theme = ExtResource("5_rvmwp")
 theme_override_font_sizes/font_size = 15
 alignment = 1
 selected = 0
@@ -669,7 +669,7 @@ offset_left = -371.169
 offset_top = -108.144
 offset_right = -209.169
 offset_bottom = -78.1439
-theme = ExtResource("5_8aph0")
+theme = ExtResource("5_rvmwp")
 theme_override_font_sizes/font_size = 15
 alignment = 1
 selected = 0
@@ -725,7 +725,7 @@ offset_left = 1037.0
 offset_top = 390.0
 offset_right = 1214.0
 offset_bottom = 420.0
-theme = ExtResource("5_8aph0")
+theme = ExtResource("5_rvmwp")
 text = "Place New Bet"
 
 [node name="PlayerMoneyLabel" type="Label" parent="."]
@@ -733,17 +733,17 @@ offset_left = 540.0
 offset_top = 15.0
 offset_right = 580.0
 offset_bottom = 38.0
-script = ExtResource("9_b8r8h")
+script = ExtResource("9_tfhbh")
 
 [node name="MainButton" type="Button" parent="."]
 offset_left = 20.0
 offset_top = 20.0
 offset_right = 223.0
 offset_bottom = 51.0
-theme = ExtResource("5_8aph0")
+theme = ExtResource("5_rvmwp")
 text = "Return to Main
 "
-script = ExtResource("8_n5b3e")
+script = ExtResource("10_c1wam")
 
 [node name="Background" type="Panel" parent="."]
 z_index = -5

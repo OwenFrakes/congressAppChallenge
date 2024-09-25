@@ -5,16 +5,16 @@ var playerBet = 0
 var playerAmount = 0
 var chips = []
 
-func _process(delta: float) -> void:
-	await get_tree().create_timer(0.1).timeout
-	StaticPlayerVariables.globalPlayerMoney = playerAmount
-
 func _exit_tree() -> void:
 	StaticPlayerVariables.globalPlayerMoney = playerAmount
 
 func _ready() -> void:
 	playerAmount = StaticPlayerVariables.globalPlayerMoney
 	print(str(playerAmount))
+	
+	#while(true):
+	#	await get_tree().create_timer(0.1).timeout
+	#	StaticPlayerVariables.globalPlayerMoney = playerAmount
 
 # Sorts chips to a given position.
 func sortChips():
@@ -47,12 +47,16 @@ func sortChips():
 func loseBet():
 	playerBet = 0
 	sortChips()
+	
+	StaticPlayerVariables.globalPlayerMoney = playerAmount
 
 # Guess what, you do returnMultiplyer < 1, and the eplayer loses money, rM > 1, they get money.
 func winBet(returnMultipler : float):
 	playerAmount += playerBet * returnMultipler
 	playerBet = 0
 	sortChips()
+	
+	StaticPlayerVariables.globalPlayerMoney = playerAmount
 
 func getPlayerAmount():
 	return playerAmount

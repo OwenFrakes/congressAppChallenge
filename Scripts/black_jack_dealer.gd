@@ -110,6 +110,11 @@ func playerStay():
 		printScores()
 		betMenu.getBetNode().loseBet()
 		betMenu.enable()
+	elif(handTotal(dealer.getHand()) == handTotal(playerRef.getHand())):
+		print("tie")
+		printScores()
+		betMenu.getBetNode().winBet(1)
+		betMenu.enable()
 	else:
 		print("Player Won.")
 		printScores()
@@ -121,8 +126,20 @@ func playerStay():
 # Gets the total of a given hand, needs a hand as a parameter.
 func handTotal(hand):
 	var total = 0
+	var aces = 0
 	for card in hand:
-		total += card.getValue()
+		if(card.getCardType() == 1):
+			aces += 1
+		else:
+			total += card.getValue()
+	
+	while(aces > 0):
+		if(total + 11 < 22):
+			total += 11
+		else:
+			total += 1
+		aces -= 1
+	
 	return total
 
 #Automatically checks the players hand. And only the players hand.
