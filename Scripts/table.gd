@@ -173,7 +173,10 @@ func _ready() -> void:
 	bet_top_line_node.connect("pressed", Callable(self, "bet_top_line_button_pressed"))
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) -> void:
-	pass
+	var ball=$"../Ball".money
+	var money=ball
+	if bet_amount>money:
+		$"../Button".hide()
 #code to go to the wheel
 func on_button_pressed():
 	self.hide()
