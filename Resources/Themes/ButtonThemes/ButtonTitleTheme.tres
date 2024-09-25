@@ -1,31 +1,9 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://b8oxguy2fsdgv"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://b8oxguy2fsdgv"]
 
 [ext_resource type="FontFile" uid="uid://cugm6v202xdbf" path="res://Resources/Fonts/joystix monospace.otf" id="1_afe0g"]
 [ext_resource type="FontFile" uid="uid://cpgselaefw5ia" path="res://Resources/Fonts/ARCADECLASSIC.TTF" id="2_xxvh3"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6fcp"]
-bg_color = Color(0.860392, 0.667625, 0.229943, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7cdm"]
-bg_color = Color(0.743158, 0.570937, 0.173481, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8oam7"]
 
 [resource]
 default_font = ExtResource("2_xxvh3")
@@ -33,6 +11,6 @@ default_font_size = 24
 Button/constants/outline_size = 8
 Button/font_sizes/font_size = 16
 Button/fonts/font = ExtResource("1_afe0g")
-Button/styles/hover = SubResource("StyleBoxFlat_h6fcp")
-Button/styles/normal = SubResource("StyleBoxFlat_v7cdm")
-Button/styles/pressed = SubResource("StyleBoxFlat_v7cdm")
+Button/styles/hover = SubResource("StyleBoxEmpty_8oam7")
+Button/styles/normal = SubResource("StyleBoxEmpty_8oam7")
+Button/styles/pressed = SubResource("StyleBoxEmpty_8oam7")

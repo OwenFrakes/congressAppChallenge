@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwx21t5hsy7i"]
+
+[ext_resource type="Theme" uid="uid://35aq0k03jvcq" path="res://Resources/Themes/fadeTheme.tres" id="1_7sanc"]
+[ext_resource type="Theme" uid="uid://cr2yybmttkqv" path="res://Resources/Themes/LabelThemes/LabelGeneralTheme.tres" id="1_t8t3j"]
+
+[node name="GameOver" type="Node2D"]
+
+[node name="Background" type="Panel" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+theme = ExtResource("1_7sanc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 267.5
+offset_top = 37.0
+offset_right = 1012.5
+offset_bottom = 157.0
+theme = ExtResource("1_t8t3j")
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 100
+text = "GAME OVER"

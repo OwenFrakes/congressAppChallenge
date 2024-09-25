@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cvcnpudfilq4h"]
+[gd_scene load_steps=10 format=3 uid="uid://cvcnpudfilq4h"]
 
 [ext_resource type="Texture2D" uid="uid://cywlyamdicsed" path="res://Resources/Misc/SlotMachine.png" id="1_0ends"]
 [ext_resource type="Script" path="res://Scripts/player_mover.gd" id="1_3r35x"]
@@ -6,27 +6,20 @@
 [ext_resource type="Texture2D" uid="uid://diku4gi3yok6b" path="res://Resources/Misc/Spinny Part.png" id="1_lb5vh"]
 [ext_resource type="Script" path="res://Scripts/slots.gd" id="4_87nd7"]
 [ext_resource type="Texture2D" uid="uid://w6tpjke1vpwy" path="res://Resources/Misc/Clipping Mask.png" id="5_q8grc"]
+[ext_resource type="Script" path="res://Scripts/easyMoneyLabel.gd" id="7_r2u7j"]
 [ext_resource type="Theme" uid="uid://cr2yybmttkqv" path="res://Resources/Themes/LabelThemes/LabelGeneralTheme.tres" id="7_sf7ec"]
+[ext_resource type="Texture2D" uid="uid://ynvunlh5nh7j" path="res://Resources/Misc/SlotsWall.png" id="9_qnbi0"]
 
 [node name="Slots" type="Node2D"]
 
 [node name="SpinButton" type="Button" parent="."]
-offset_left = 39.0
-offset_top = 515.0
-offset_right = 149.0
-offset_bottom = 560.0
+offset_left = 942.0
+offset_top = 225.0
+offset_right = 1052.0
+offset_bottom = 270.0
 theme = ExtResource("1_dn8ss")
 text = "Spin"
 script = ExtResource("4_87nd7")
-
-[node name="ReturnButton" type="Button" parent="."]
-offset_left = 36.0
-offset_top = 100.0
-offset_right = 146.0
-offset_bottom = 145.0
-theme = ExtResource("1_dn8ss")
-text = "Return"
-script = ExtResource("1_3r35x")
 
 [node name="SlotMachine" type="Sprite2D" parent="."]
 position = Vector2(639, 425)
@@ -84,13 +77,30 @@ position = Vector2(0.33, 16.325)
 scale = Vector2(1.249, 0.853)
 texture = ExtResource("1_lb5vh")
 
-[node name="MoneyAmount" type="Label" parent="."]
-offset_left = 1001.0
-offset_top = 72.0
-offset_right = 1041.0
-offset_bottom = 95.0
+[node name="MoneyAmount2" type="Label" parent="."]
+offset_left = 560.0
+offset_top = 46.0
+offset_right = 640.0
+offset_bottom = 69.0
 theme = ExtResource("7_sf7ec")
 text = "Money:"
+script = ExtResource("7_r2u7j")
+
+[node name="MainButton" type="Button" parent="."]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 223.0
+offset_bottom = 51.0
+theme = ExtResource("1_dn8ss")
+text = "Return to Main
+"
+script = ExtResource("1_3r35x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -5
+scale = Vector2(1.42222, 1.30909)
+texture = ExtResource("9_qnbi0")
+centered = false
 
 [connection signal="pressed" from="SpinButton" to="SpinButton" method="_on_pressed"]
-[connection signal="pressed" from="ReturnButton" to="ReturnButton" method="_on_pressed"]
+[connection signal="pressed" from="MainButton" to="MainButton" method="_on_pressed"]

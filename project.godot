@@ -18,6 +18,7 @@ config/icon="res://Resources/Misc/icon.svg"
 [autoload]
 
 StaticPlayerVariables="*res://Scripts/static_player_variables.gd"
+GameOverCheck="*res://Scripts/gameOverCheck.gd"
 
 [display]
 
