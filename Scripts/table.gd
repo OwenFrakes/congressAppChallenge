@@ -190,309 +190,622 @@ func on_reset_pressed():
 	$"../Table/Split bet".selected=0
 	$"../Table/Street bet".selected=0
 	$"../Table/Corner bet".selected=0
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_number=""
+	bet_top_line=""
 #code for black 
 func black_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_color="black"
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_number=""
+	bet_top_line=""
 #code for red
 func red_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_color="red"
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_number=""
+	bet_top_line=""
 #code for even
 func even_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_even_odd="even"
+	bet_color=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_number=""
+	bet_top_line=""
 #code for odd
 func odd_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_even_odd="odd"
+	bet_color=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_number=""
+	bet_top_line=""
 #code for 1 to 18
 func to_18_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_1_to_18="1-18"
+	bet_color=""
+	bet_even_odd=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_number=""
+	bet_top_line=""
 #code for 19 to 36
 func to_36_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_1_to_18="19-36"
+	bet_color=""
+	bet_even_odd=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_number=""
+	bet_top_line=""
 #1st 12
 func b1_12_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_12="1st"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_2_to_1=""
+	bet_number=""
+	bet_top_line=""
 #2nd 12
 func b2_12_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_12="2nd"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_2_to_1=""
+	bet_number=""
+	bet_top_line=""
 #3rd 12
 func b3_12_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_12="3rd"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_2_to_1=""
+	bet_number=""
+	bet_top_line=""
 #1st 2-1
 func b1_2_1_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_2_to_1="1st"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_number=""
+	bet_top_line=""
 #2nd 2-1
 func b2_2_1_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_2_to_1="2nd"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_number=""
+	bet_top_line=""
 #3rd 2-1
 func b3_2_1_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_2_to_1="3rd"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_number=""
+	bet_top_line=""
 #code for 1
 func b1_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="1"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 2
 func b2_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="2"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 3
 func b3_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="3"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 4
 func b4_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="4"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 5
 func b5_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="5"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 6
 func b6_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="6"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 7
 func b7_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="7"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 8
 func b8_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="8"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 9
 func b9_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="9"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 10
 func b10_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="10"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 11
 func b11_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="11"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 12
 func b12_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="12"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 13
 func b13_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="13"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 14
 func b14_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="14"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 15
 func b15_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="15"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 16
 func b16_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="16"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 17
 func b17_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="17"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 18
 func b18_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="18"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 19
 func b19_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="19"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 20
 func b20_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="20"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 21
 func b21_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="21"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 22
 func b22_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="22"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 23
 func b23_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="23"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 24
 func b24_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="24"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 25
 func b25_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="25"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 26
 func b26_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="26"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 27
 func b27_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="27"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 28
 func b28_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="28"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 29
 func b29_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="29"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 30
 func b30_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="30"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 31
 func b31_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="31"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 32
 func b32_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="32"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 33
 func b33_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="33"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 34
 func b34_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="34"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 35
 func b35_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="35"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 36
 func b36_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="36"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 0
 func b0_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="0"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for 00
 func b00_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_number="00"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_top_line=""
 #code for top line bet
 func bet_top_line_button_pressed():
 	$Chip.show()
 	bet_placed=true
 	bet_amount+=1
 	bet_top_line="yes"
+	bet_color=""
+	bet_even_odd=""
+	bet_1_to_18=""
+	bet_12=""
+	bet_2_to_1=""
+	bet_number=""
