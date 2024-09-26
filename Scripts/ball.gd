@@ -9,7 +9,6 @@ var friction = 0.9
 var inside_bet=0
 var bet_amount=0
 var bet_color="no"
-var money=100
 var bet_even_odd="no"
 var bet_1_to_18="no"
 var bet_12="no"
@@ -423,6 +422,7 @@ func _process(delta):
 				bet_number="00"
 			var table=$"../Table"
 			var wheel=$"../Roulette wheel"
+			var money=table.betMenu
 			bet_amount=table.bet_amount
 			inside_bet=wheel.inside_bet
 			if bet_color==table.bet_color:

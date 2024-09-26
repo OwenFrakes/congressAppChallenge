@@ -18,6 +18,7 @@ func _ready() -> void:
 	#create var for button
 	var button_node = $"../Button"
 	button_node.connect("pressed", Callable(self, "on_button_pressed"))
+	var table=$"../Table"
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	#create var angle
@@ -44,7 +45,7 @@ func on_button_pressed():
 #six line bet
 func _on_six_line_bet_on_six_numbers_item_selected(index: int) -> void:
 	six_line=index
-	inside_bet+=1
+	inside_bet=$"../Table".betMenu.getPlayerBet()
 	$"../Table/Split bet".selected=0
 	$"../Table/Street bet".selected=0
 	$"../Table/Corner bet".selected=0
@@ -52,7 +53,7 @@ func _on_six_line_bet_on_six_numbers_item_selected(index: int) -> void:
 #corner bet
 func _on_corner_bet_item_selected(index: int) -> void:
 	corner_bet=index
-	inside_bet+=1
+	inside_bet=$"../Table".betMenu.getPlayerBet()
 	$"../Table/Split bet".selected=0
 	$"../Table/Street bet".selected=0
 	$"../Table/Six line bet on six numbers".selected=0
@@ -60,7 +61,7 @@ func _on_corner_bet_item_selected(index: int) -> void:
 #street bet
 func _on_street_bet_item_selected(index: int) -> void:
 	street_bet=index
-	inside_bet+=1
+	inside_bet=$"../Table".betMenu.getPlayerBet()
 	$"../Table/Split bet".selected=0
 	$"../Table/Corner bet".selected=0
 	$"../Table/Six line bet on six numbers".selected=0
@@ -68,7 +69,7 @@ func _on_street_bet_item_selected(index: int) -> void:
 
 func _on_split_bet_item_selected(index: int) -> void:
 	split_bet=index
-	inside_bet+=1
+	inside_bet=$"../Table".betMenu.getPlayerBet()
 	$"../Table/Street bet".selected=0
 	$"../Table/Corner bet".selected=0
 	$"../Table/Six line bet on six numbers".selected=0
