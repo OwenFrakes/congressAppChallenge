@@ -19,6 +19,7 @@ config/icon="res://Resources/Misc/icon.svg"
 
 StaticPlayerVariables="*res://Scripts/static_player_variables.gd"
 GameOverCheck="*res://Scripts/gameOverCheck.gd"
+Energy="*res://Scripts/energy.gd"
 
 [display]
 

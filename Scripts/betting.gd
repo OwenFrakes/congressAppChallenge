@@ -49,6 +49,8 @@ func loseBet():
 	sortChips()
 	
 	StaticPlayerVariables.globalPlayerMoney = playerAmount
+	StaticPlayerVariables.playerEnergy -= 1
+	print("Player energy: " + str(StaticPlayerVariables.playerEnergy))
 
 # Guess what, you do returnMultiplyer < 1, and the eplayer loses money, rM > 1, they get money.
 func winBet(returnMultipler : float):
@@ -57,6 +59,7 @@ func winBet(returnMultipler : float):
 	sortChips()
 	
 	StaticPlayerVariables.globalPlayerMoney = playerAmount
+	StaticPlayerVariables.playerEnergy -= 1
 
 func getPlayerAmount():
 	return playerAmount

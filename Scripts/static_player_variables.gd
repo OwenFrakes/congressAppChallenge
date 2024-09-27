@@ -1,5 +1,6 @@
 extends Node
 
+var playerEnergy = 6
 var globalPlayerMoney = 100 # The amount of money the player has.
 var dayCount = 1 # The day, 1 is monday.
 var spouseState = "Healty"
