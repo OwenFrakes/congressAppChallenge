@@ -19,6 +19,8 @@ func startRound():
 	playerBet = betMenu.getPlayerBet()
 	if(typeof(playerBet) == TYPE_NIL || playerBet < 1):
 		print("No bet, player can't play: " + str(playerBet))
+	elif(StaticPlayerVariables.playerEnergy <= 0):
+		print("Can't play, no energy.")
 	else:
 		betMenu.disable()
 		#Make sure no other cards are in their hands, for whatever reason.
@@ -56,18 +58,27 @@ func startRound():
 			
 		if(playerBlackjack && dealerBlackjack):
 			print("Blackjack Tie")
+			#Turn dealer card up.
+			dealer.getHand()[0].faceUp = true
+			dealer.getHand()[0].updateCardFace()
 			toggleHitStay(false)
 			toggleStartBtn(true)
+			betMenu.getBetNode().winBet(1)
 			betMenu.enable()
 		elif(playerBlackjack):
 			print("Player Blackjack")
 			toggleHitStay(false)
 			toggleStartBtn(true)
+			betMenu.getBetNode().winBet(1.5)
 			betMenu.enable()
 		elif(dealerBlackjack):
 			print("Dealer Blackjack")
+			#Turn dealer card up.
+			dealer.getHand()[0].faceUp = true
+			dealer.getHand()[0].updateCardFace()
 			toggleHitStay(false)
 			toggleStartBtn(true)
+			betMenu.getBetNode().loseBet()
 			betMenu.enable()
 		else:
 			#Turn on the hit / stay buttons, after .5 second timeout/sleep.
@@ -178,7 +189,7 @@ func arrangeDealerHand():
 	var dealerHand = dealer.getHand()
 	var dealerPos = 0 # Shifts each of the cards over.
 	var dVisLayer = 1 # Changes the order the cards are seen when overlaping.
-	var dCardOffset = ((101 * (len(dealerHand) - 1))) / 2 # Positions the group of cards dead center on x.
+	var dCardOffset = ((101 * (len(dealerHand) - 1))) / 2.0 # Positions the group of cards dead center on x.
 	for card in dealerHand:
 		card.updateCardFace()
 		card.position = Vector2(((1280.0/2.0) - dCardOffset + dealerPos), 150 + 20)
@@ -192,7 +203,7 @@ func arrangePlayerHand():
 	var playerHand = playerRef.getHand()
 	var playerPos = 0 # Shifts each of the cards over.
 	var pVisLayer = 1 # Changes the order the cards are seen when overlaping.
-	var pCardOffset = ((101 * (len(playerHand) - 1))) / 2
+	var pCardOffset = ((101 * (len(playerHand) - 1))) / 2.0
 	for card in playerHand:
 		card.updateCardFace()
 		card.position = Vector2(((1280.0/2.0) - pCardOffset + playerPos), (720 - 150) - 20)

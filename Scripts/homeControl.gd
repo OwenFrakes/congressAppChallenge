@@ -47,7 +47,12 @@ func _exit_tree() -> void:
 	StaticPlayerVariables.child3Health = family[3].health 
 
 func passDay():
+	#Up the counter
 	StaticPlayerVariables.dayCount += 1
+	
+	#Reset player's energy
+	StaticPlayerVariables.playerEnergy = 6
+	
 	#Total expenses first
 	totalExpenses(true)
 	
