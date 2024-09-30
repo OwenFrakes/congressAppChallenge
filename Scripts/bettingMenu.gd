@@ -35,6 +35,9 @@ func _ready() -> void:
 	# 100's
 	get_popup().add_item("Bet 100", 11)
 	get_popup().add_item("Remove 100", 12)
+	#All
+	get_popup().add_item("Bet All", 13)
+	get_popup().add_item("Remove All", 14)
 	#Connect via signal, this stuff is a mess.
 	get_popup().id_pressed.connect(_on_pressed)
 	
@@ -58,6 +61,8 @@ func _on_pressed(id: int):
 			betNode.add(50)
 		11:
 			betNode.add(100)
+		13:
+			betNode.add(betNode.getPlayerAmount())
 		#Begining of remove ids.
 		2:
 			betNode.remove(1)
@@ -71,6 +76,8 @@ func _on_pressed(id: int):
 			betNode.remove(50)
 		12:
 			betNode.remove(100)
+		14:
+			betNode.remove(betNode.getPlayerBet())
 
 func getBetNode():
 	return betNode

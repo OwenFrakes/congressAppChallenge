@@ -3,7 +3,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	while(StaticPlayerVariables.globalPlayerMoney > 1):
+	while(StaticPlayerVariables.globalPlayerMoney > 1 && (StaticPlayerVariables.child1Health > 0) && (StaticPlayerVariables.child2Health > 0) && (StaticPlayerVariables.child3Health > 0)):
 		#print("Game Over Check")
 		await get_tree().create_timer(1).timeout
 	

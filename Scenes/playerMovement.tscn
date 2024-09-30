@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d0no6puo6onw3"]
+[gd_scene load_steps=15 format=3 uid="uid://d0no6puo6onw3"]
 
 [ext_resource type="Theme" uid="uid://b24gd6hnrglck" path="res://Resources/Themes/ButtonThemes/ButtonNexusTheme.tres" id="1_ksdjp"]
 [ext_resource type="Script" path="res://Scripts/player_mover.gd" id="1_qnrmp"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://vkmc2wxex3ey" path="res://Resources/Misc/houseImage2.jpg" id="6_8ry2k"]
 [ext_resource type="Texture2D" uid="uid://baat8tcd8p22k" path="res://Resources/Misc/slotMachineImage2.png" id="7_e6bdh"]
 [ext_resource type="Texture2D" uid="uid://c1488pburbtly" path="res://Resources/Misc/Roulette.jpg" id="8_fd7wo"]
+[ext_resource type="Texture2D" uid="uid://bry374rtaeiw4" path="res://Resources/Misc/fade2.png" id="9_7x1by"]
+[ext_resource type="Script" path="res://Scripts/energy.gd" id="9_lxr05"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g3mui"]
 texture = ExtResource("2_4g0bd")
@@ -77,6 +79,12 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_wxbcg")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_wxbcg")
 theme_override_styles/normal = SubResource("StyleBoxTexture_wxbcg")
 text = "Roulette"
+
+[node name="EnergyBorder" type="Sprite2D" parent="."]
+scale = Vector2(4.94208, 3.71134)
+texture = ExtResource("9_7x1by")
+centered = false
+script = ExtResource("9_lxr05")
 
 [connection signal="pressed" from="BlackJackButton" to="PlayerMover" method="_on_black_jack_button_pressed"]
 [connection signal="pressed" from="HomeButton" to="PlayerMover" method="_on_home_button_pressed"]

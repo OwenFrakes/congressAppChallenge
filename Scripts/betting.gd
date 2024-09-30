@@ -79,25 +79,27 @@ func makeChip(value):
 	return chip
 
 func add(value):
-	var tempChip = Chip.new()
-	tempChip.setValue(value)
-	if(typeof(tempChip.getValue()) != TYPE_STRING && playerAmount >= value):
+	#var tempChip = Chip.new()
+	#tempChip.setValue(value)
+	#typeof(tempChip.getValue()) != TYPE_STRING &&
+	if(playerAmount >= value):
 		print("Bet +" + str(value))
 		playerBet += value
 		playerAmount -= value
 	else:
 		print("Player cannot afford $" + str(value))
-	tempChip.free()
+	#tempChip.free()
 	sortChips()
 
 func remove(value):
-	var tempChip = Chip.new()
-	tempChip.setValue(value)
-	if(typeof(tempChip.getValue()) != TYPE_STRING && playerBet >= value):
+	#var tempChip = Chip.new()
+	#tempChip.setValue(value)
+	#typeof(tempChip.getValue()) != TYPE_STRING &&
+	if( playerBet >= value):
 		print("Bet -" + str(value))
 		playerAmount += value
 		playerBet -= value
 	else:
 		print("Player has not bet enough to take out " + str(value))
-	tempChip.free()
+	#tempChip.free()
 	sortChips()

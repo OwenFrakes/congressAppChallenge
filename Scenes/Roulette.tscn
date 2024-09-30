@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cc5lmshbii28o"]
+[gd_scene load_steps=14 format=3 uid="uid://cc5lmshbii28o"]
 
 [ext_resource type="Texture2D" uid="uid://ctc7w5efen5ce" path="res://Resources/Roulette Wheel.png" id="1_rux2h"]
 [ext_resource type="Script" path="res://Scripts/roulette_wheel.gd" id="2_e66vm"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://bs5urao65x1jr" path="res://Resources/$1 Poker chip.png" id="8_crnky"]
 [ext_resource type="Script" path="res://Scripts/easyMoneyLabel.gd" id="9_tfhbh"]
 [ext_resource type="Script" path="res://Scripts/player_mover.gd" id="10_c1wam"]
+[ext_resource type="Texture2D" uid="uid://bry374rtaeiw4" path="res://Resources/Misc/fade2.png" id="11_ty6jk"]
+[ext_resource type="Script" path="res://Scripts/energy.gd" id="12_x100r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0g8g"]
 bg_color = Color(0.184314, 0.466667, 0.12549, 1)
@@ -751,6 +753,12 @@ offset_right = 1280.0
 offset_bottom = 720.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_s0g8g")
+
+[node name="EnergyBorder" type="Sprite2D" parent="."]
+scale = Vector2(4.94208, 3.71134)
+texture = ExtResource("11_ty6jk")
+centered = false
+script = ExtResource("12_x100r")
 
 [connection signal="item_selected" from="Table/Six line bet on six numbers" to="Roulette wheel" method="_on_six_line_bet_on_six_numbers_item_selected"]
 [connection signal="item_selected" from="Table/Split bet" to="Roulette wheel" method="_on_split_bet_item_selected"]

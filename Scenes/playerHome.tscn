@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dcvn32dyf1qv7"]
+[gd_scene load_steps=14 format=3 uid="uid://dcvn32dyf1qv7"]
 
 [ext_resource type="Script" path="res://Scripts/homeControl.gd" id="1_g3vfg"]
 [ext_resource type="Theme" uid="uid://cr2yybmttkqv" path="res://Resources/Themes/LabelThemes/LabelGeneralTheme.tres" id="1_hxh7a"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://bj5qegok6fds2" path="res://Resources/Misc/Family/kid3edit.png" id="9_jtcos"]
 [ext_resource type="Texture2D" uid="uid://te3ln4va3js7" path="res://Resources/Misc/Family/livingroom.jpeg" id="10_fv4tv"]
 [ext_resource type="AudioStream" uid="uid://bjo83d0fcxdo4" path="res://Resources/Sounds/blipSelect.wav" id="11_d2crb"]
+[ext_resource type="Texture2D" uid="uid://bry374rtaeiw4" path="res://Resources/Misc/fade2.png" id="12_ld2yo"]
+[ext_resource type="Script" path="res://Scripts/energy.gd" id="13_bkf8x"]
 
 [node name="PlayerHome" type="Node2D"]
 
@@ -102,6 +104,12 @@ centered = false
 
 [node name="ButtonClickNoise" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_d2crb")
+
+[node name="EnergyBorder" type="Sprite2D" parent="."]
+scale = Vector2(4.94208, 3.71134)
+texture = ExtResource("12_ld2yo")
+centered = false
+script = ExtResource("13_bkf8x")
 
 [connection signal="toggled" from="ElectricalBtn" to="HomeController" method="totalExpenses"]
 [connection signal="pressed" from="TownBtn" to="TownBtn" method="_on_pressed"]

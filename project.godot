@@ -13,13 +13,12 @@ config_version=5
 config/name="congressAppChallenge"
 run/main_scene="res://Scenes/title.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://Resources/Misc/icon.svg"
+config/icon="res://Resources/Misc/LifeLotteryPNG.png"
 
 [autoload]
 
 StaticPlayerVariables="*res://Scripts/static_player_variables.gd"
 GameOverCheck="*res://Scripts/gameOverCheck.gd"
-Energy="*res://Scripts/energy.gd"
 
 [display]
 

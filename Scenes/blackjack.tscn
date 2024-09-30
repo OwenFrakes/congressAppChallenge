@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dc48lkekxqu2l"]
+[gd_scene load_steps=11 format=3 uid="uid://dc48lkekxqu2l"]
 
 [ext_resource type="Script" path="res://Scripts/black_jack_dealer.gd" id="1_ic5ah"]
 [ext_resource type="Theme" uid="uid://dq8dn270k6tor" path="res://Resources/Themes/ButtonThemes/ButtonGeneralTheme.tres" id="2_05x1n"]
@@ -7,6 +7,9 @@
 [ext_resource type="Script" path="res://Scripts/easyMoneyLabel.gd" id="5_5uryu"]
 [ext_resource type="Texture2D" uid="uid://vfhm1s30vkmb" path="res://Resources/Misc/GreenMat(2).png" id="5_ucb2o"]
 [ext_resource type="Texture2D" uid="uid://cq8c06tte18mo" path="res://Resources/Misc/TableFace.jpg" id="7_nqvmc"]
+[ext_resource type="Texture2D" uid="uid://bry374rtaeiw4" path="res://Resources/Misc/fade2.png" id="8_vgqom"]
+[ext_resource type="Script" path="res://Scripts/energy.gd" id="9_64xn2"]
+[ext_resource type="Theme" uid="uid://cr2yybmttkqv" path="res://Resources/Themes/LabelThemes/LabelGeneralTheme.tres" id="10_40t26"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -81,6 +84,36 @@ z_index = -5
 scale = Vector2(2.37918, 2)
 texture = ExtResource("7_nqvmc")
 centered = false
+
+[node name="EnergyBorder" type="Sprite2D" parent="."]
+scale = Vector2(4.94208, 3.71134)
+texture = ExtResource("8_vgqom")
+centered = false
+script = ExtResource("9_64xn2")
+
+[node name="DealerText" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_left = 481.0
+offset_top = 119.0
+offset_right = 799.0
+offset_bottom = 196.0
+theme = ExtResource("10_40t26")
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 64
+text = "WINNER"
+
+[node name="PlayerText" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_left = 481.0
+offset_top = 503.0
+offset_right = 799.0
+offset_bottom = 580.0
+theme = ExtResource("10_40t26")
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 64
+text = "WINNER"
 
 [connection signal="pressed" from="StartButton" to="BlackJackDealer" method="_on_start_button_pressed"]
 [connection signal="pressed" from="HitButton" to="BlackJackDealer" method="_on_hit_button_pressed"]

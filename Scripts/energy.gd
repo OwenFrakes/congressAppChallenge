@@ -1,17 +1,19 @@
-extends Node
+class_name EnergyBorder
+extends Sprite2D
 
 func _ready():
 	
-	#var tiredBorder = Sprite2D.new()
-	#tiredBorder.texture = load("res://Resources/Misc/fade2.png")
-	#tiredBorder.scale = Vector2(4.942, 3.711)
-	#tiredBorder.centered = false
-	#add_child(tiredBorder)
-	#tiredBorder.z_index = 50
-	
-	#var alpha = -(StaticPlayerVariables.playerEnergy/6.0) + 1
+	texture = load("res://Resources/Misc/fade2.png")
+	centered = false
+	scale = Vector2(4.942,3.711)
+	z_index = 100
 	
 	while(true):
-		#tiredBorder.modulate = Color(1,1,1,alpha)
+		#Calculate Alpha
+		var alpha = -(StaticPlayerVariables.playerEnergy/6.0) + 1
 		
-		await get_tree().create_timer(0.01).timeout
+		self_modulate = Color(1,1,1,alpha)
+		
+		if(typeof(get_tree) != null):
+			await get_tree().create_timer(0.1).timeout
+	

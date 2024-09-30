@@ -18,6 +18,8 @@ func _on_spin_button_pressed() -> void:
 	score = 10
 	if(typeof(playerBet) == TYPE_NIL or betMenu.getPlayerBet() == 0  ):
 		print("player needs to bet")
+	elif(StaticPlayerVariables.playerEnergy <= 0):
+		print("Player too tired")
 	else:
 		playerBet = betMenu.getPlayerBet()
 		#Randomize Position

@@ -204,6 +204,8 @@ func on_reset_pressed():
 func black_button_pressed():
 	if(typeof(bet_amount) == TYPE_NIL or betMenu.getPlayerBet() == 0  ):
 		print("player needs to bet")
+	elif(StaticPlayerVariables.playerEnergy <= 0):
+		print("Player too tired")
 	else:
 		bet_placed=true
 		bet_amount = betMenu.getPlayerBet()

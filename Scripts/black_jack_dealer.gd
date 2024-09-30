@@ -4,6 +4,8 @@ var playerRef : Gambler
 var dealer : Gambler
 var betMenu : BetMenu
 var playerBet = 0
+@onready var playerText = $"../PlayerText"
+@onready var dealerText = $"../DealerText"
 
 func _ready():
 	#They may exist in script, but not the node tree, add them as children to actually use them.
@@ -16,6 +18,8 @@ func _ready():
 
 # Stage 1, 2 cards each, dealer has 1 face down. ---------------------------------------------------------
 func startRound():
+	dealerText.visible = false
+	playerText.visible = false
 	playerBet = betMenu.getPlayerBet()
 	if(typeof(playerBet) == TYPE_NIL || playerBet < 1):
 		print("No bet, player can't play: " + str(playerBet))
@@ -71,6 +75,7 @@ func startRound():
 			toggleStartBtn(true)
 			betMenu.getBetNode().winBet(1.5)
 			betMenu.enable()
+			playerText.visible = true
 		elif(dealerBlackjack):
 			print("Dealer Blackjack")
 			#Turn dealer card up.
@@ -80,6 +85,7 @@ func startRound():
 			toggleStartBtn(true)
 			betMenu.getBetNode().loseBet()
 			betMenu.enable()
+			dealerText.visible = true
 		else:
 			#Turn on the hit / stay buttons, after .5 second timeout/sleep.
 			await wait(.5)
@@ -116,11 +122,13 @@ func playerStay():
 		printScores()
 		betMenu.getBetNode().winBet(2)
 		betMenu.enable()
+		playerText.visible = true
 	elif(handTotal(dealer.getHand()) > handTotal(playerRef.getHand())):
 		print("Player Lost")
 		printScores()
 		betMenu.getBetNode().loseBet()
 		betMenu.enable()
+		dealerText.visible = true
 	elif(handTotal(dealer.getHand()) == handTotal(playerRef.getHand())):
 		print("tie")
 		printScores()
@@ -131,6 +139,7 @@ func playerStay():
 		printScores()
 		betMenu.getBetNode().winBet(2)
 		betMenu.enable()
+		playerText.visible = true
 	
 	toggleStartBtn(true) # End of playerStay() ----------------------------------------------------------
 
