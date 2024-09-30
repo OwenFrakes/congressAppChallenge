@@ -89,6 +89,7 @@ text = "Money:"
 script = ExtResource("7_r2u7j")
 
 [node name="MainButton" type="Button" parent="."]
+z_index = 15
 offset_left = 20.0
 offset_top = 20.0
 offset_right = 223.0

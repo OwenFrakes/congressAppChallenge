@@ -6,7 +6,7 @@ func _ready():
 	texture = load("res://Resources/Misc/fade2.png")
 	centered = false
 	scale = Vector2(4.942,3.711)
-	z_index = 100
+	z_index = 50
 	
 	while(StaticPlayerVariables.playerEnergy > 0):
 		#Calculate Alpha

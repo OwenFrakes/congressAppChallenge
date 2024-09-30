@@ -738,6 +738,7 @@ offset_bottom = 38.0
 script = ExtResource("9_tfhbh")
 
 [node name="MainButton" type="Button" parent="."]
+z_index = 15
 offset_left = 20.0
 offset_top = 20.0
 offset_right = 223.0

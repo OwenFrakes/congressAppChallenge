@@ -28,6 +28,7 @@ text = "Electrical"
 anchor_mode = 0
 
 [node name="moneyLabel" type="Label" parent="."]
+z_index = 15
 offset_left = 211.0
 offset_top = 75.0
 offset_right = 423.0
@@ -36,6 +37,7 @@ theme = ExtResource("1_hxh7a")
 text = "Player's Money: "
 
 [node name="totalExpensesLabel" type="Label" parent="."]
+z_index = 15
 offset_left = 211.0
 offset_top = 111.0
 offset_right = 423.0
@@ -47,6 +49,7 @@ text = "Total Expenses: "
 script = ExtResource("1_g3vfg")
 
 [node name="TownBtn" type="Button" parent="."]
+z_index = 15
 offset_left = 30.0
 offset_top = 30.0
 offset_right = 142.0
@@ -81,6 +84,7 @@ texture = ExtResource("9_jtcos")
 script = ExtResource("4_m0kmb")
 
 [node name="DayLabel" type="Label" parent="."]
+z_index = 15
 offset_left = 211.0
 offset_top = 35.0
 offset_right = 278.0
@@ -89,6 +93,7 @@ theme = ExtResource("1_hxh7a")
 text = "Day: "
 
 [node name="PassDayBtn" type="Button" parent="."]
+z_index = 15
 offset_left = 30.0
 offset_top = 70.0
 offset_right = 107.0

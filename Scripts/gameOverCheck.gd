@@ -13,7 +13,7 @@ func _ready() -> void:
 	fadePanel.theme = styleOverride
 	
 	fadePanel.size = Vector2(1280,720)
-	fadePanel.z_index = 10
+	fadePanel.z_index = 60
 	
 	add_child(fadePanel)
 	
