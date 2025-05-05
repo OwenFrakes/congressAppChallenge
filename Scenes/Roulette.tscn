@@ -1,17 +1,17 @@
 [gd_scene load_steps=14 format=3 uid="uid://cc5lmshbii28o"]
 
 [ext_resource type="Texture2D" uid="uid://ctc7w5efen5ce" path="res://Resources/Roulette Wheel.png" id="1_rux2h"]
-[ext_resource type="Script" path="res://Scripts/roulette_wheel.gd" id="2_e66vm"]
+[ext_resource type="Script" uid="uid://2u3iop2jaed4" path="res://Scripts/roulette_wheel.gd" id="2_e66vm"]
 [ext_resource type="Texture2D" uid="uid://bxub2d4eblfn4" path="res://Resources/Roulette Wheel ball.png" id="3_m7g4t"]
-[ext_resource type="Script" path="res://Scripts/ball.gd" id="4_pxh8c"]
+[ext_resource type="Script" uid="uid://bws24xc363ykp" path="res://Scripts/ball.gd" id="4_pxh8c"]
 [ext_resource type="Theme" uid="uid://dq8dn270k6tor" path="res://Resources/Themes/ButtonThemes/ButtonGeneralTheme.tres" id="5_rvmwp"]
 [ext_resource type="Texture2D" uid="uid://cg7y1shsce6m" path="res://Resources/Roulette Table.png" id="6_3p2lt"]
-[ext_resource type="Script" path="res://Scripts/table.gd" id="7_dqsmr"]
+[ext_resource type="Script" uid="uid://bpytafghq1t6f" path="res://Scripts/table.gd" id="7_dqsmr"]
 [ext_resource type="Texture2D" uid="uid://bs5urao65x1jr" path="res://Resources/$1 Poker chip.png" id="8_crnky"]
-[ext_resource type="Script" path="res://Scripts/easyMoneyLabel.gd" id="9_tfhbh"]
-[ext_resource type="Script" path="res://Scripts/player_mover.gd" id="10_c1wam"]
+[ext_resource type="Script" uid="uid://crmx8qssuxqt" path="res://Scripts/easyMoneyLabel.gd" id="9_tfhbh"]
+[ext_resource type="Script" uid="uid://dkjem2y8aa8tt" path="res://Scripts/player_mover.gd" id="10_c1wam"]
 [ext_resource type="Texture2D" uid="uid://bry374rtaeiw4" path="res://Resources/Misc/fade2.png" id="11_ty6jk"]
-[ext_resource type="Script" path="res://Scripts/energy.gd" id="12_x100r"]
+[ext_resource type="Script" uid="uid://b68o2eryilshx" path="res://Scripts/energy.gd" id="12_x100r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0g8g"]
 bg_color = Color(0.184314, 0.466667, 0.12549, 1)

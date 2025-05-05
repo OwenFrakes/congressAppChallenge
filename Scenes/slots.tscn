@@ -1,16 +1,16 @@
 [gd_scene load_steps=12 format=3 uid="uid://cvcnpudfilq4h"]
 
 [ext_resource type="Texture2D" uid="uid://cywlyamdicsed" path="res://Resources/Misc/SlotMachine.png" id="1_0ends"]
-[ext_resource type="Script" path="res://Scripts/player_mover.gd" id="1_3r35x"]
+[ext_resource type="Script" uid="uid://dkjem2y8aa8tt" path="res://Scripts/player_mover.gd" id="1_3r35x"]
 [ext_resource type="Theme" uid="uid://dq8dn270k6tor" path="res://Resources/Themes/ButtonThemes/ButtonGeneralTheme.tres" id="1_dn8ss"]
 [ext_resource type="Texture2D" uid="uid://diku4gi3yok6b" path="res://Resources/Misc/Spinny Part.png" id="1_lb5vh"]
-[ext_resource type="Script" path="res://Scripts/slots.gd" id="4_87nd7"]
+[ext_resource type="Script" uid="uid://bf40b53kl6sun" path="res://Scripts/slots.gd" id="4_87nd7"]
 [ext_resource type="Texture2D" uid="uid://w6tpjke1vpwy" path="res://Resources/Misc/Clipping Mask.png" id="5_q8grc"]
-[ext_resource type="Script" path="res://Scripts/easyMoneyLabel.gd" id="7_r2u7j"]
+[ext_resource type="Script" uid="uid://crmx8qssuxqt" path="res://Scripts/easyMoneyLabel.gd" id="7_r2u7j"]
 [ext_resource type="Theme" uid="uid://cr2yybmttkqv" path="res://Resources/Themes/LabelThemes/LabelGeneralTheme.tres" id="7_sf7ec"]
 [ext_resource type="Texture2D" uid="uid://ynvunlh5nh7j" path="res://Resources/Misc/SlotsWall.png" id="9_qnbi0"]
 [ext_resource type="Texture2D" uid="uid://bry374rtaeiw4" path="res://Resources/Misc/fade2.png" id="10_4gva6"]
-[ext_resource type="Script" path="res://Scripts/energy.gd" id="11_pee81"]
+[ext_resource type="Script" uid="uid://b68o2eryilshx" path="res://Scripts/energy.gd" id="11_pee81"]
 
 [node name="Slots" type="Node2D"]
 
